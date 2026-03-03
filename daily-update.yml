@@ -1,0 +1,112 @@
+name: 🗞️ Generate Daily SIGNAL Newsletter
+
+on:
+  schedule:
+    # Runs every weekday at 06:00 UTC = 07:00 CET (08:00 CEST in summer)
+    - cron: '0 6 * * 1-5'
+  workflow_dispatch: # Also allows manual trigger from GitHub UI
+
+jobs:
+  generate-newsletter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🤖 Generate daily-data.js via Claude API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          TODAY=$(date -u +"%A · %B %-d, %Y")
+
+          PROMPT="Today is ${TODAY}. Generate a fresh daily-data.js file for the SIGNAL stock market newsletter.
+
+          ASSETS TO COVER: RHM.DE (Rheinmetall), NVDA (NVIDIA), AMD, MSFT (Microsoft), EUNL.DE (iShares MSCI World), 4MMR.DE (Global X Defence Tech ETF), ITA (iShares US Aerospace & Defense ETF).
+
+          Search for and include today's:
+          - Latest market prices and % changes for all assets
+          - Top 1-2 news stories per stock (most important catalyst today)
+          - Main macro themes and their market impact
+          - This week's key economic calendar events
+          - One relevant market quote from today
+
+          CRITICAL RULES:
+          1. Output ONLY valid JavaScript — no markdown, no backticks, no explanation
+          2. Start with exactly: window.SIGNAL_DATA = {
+          3. Follow this EXACT JSON structure (copy structure, replace values with today's data):
+
+          window.SIGNAL_DATA = {
+            date: \"${TODAY}\",
+            alert: { type: \"critical|warning|positive\", icon: \"emoji\", title: \"TITLE\", body: \"body text\" },
+            ticker: [ { label: \"S&P 500\", value: \"0,000\", dir: \"up|down|flat\", arrow: \"▲|▼|→ X.X%\" }, ... ],
+            market: [ { label: \"S&P 500\", value: \"0,000\", change: \"▲ X.X%\", dir: \"up|down|flat\" }, ... ],
+            marketSummary: \"2-3 sentence summary of today's market mood. HTML allowed.\",
+            stocks: [
+              {
+                ticker: \"RHM.DE\",
+                name: \"Rheinmetall AG · XETRA\",
+                price: \"€X,XXX\",
+                change: \"▲/▼ X.X%\",
+                dir: \"up|down|flat\",
+                news: \"<strong>🔑 Today:</strong> 2-3 sentences of today's top news for this stock. HTML allowed.\",
+                outlook: \"1-2 sentences static 2026 outlook. HTML allowed.\",
+                badge: \"emoji + label\",
+                badgeClass: \"badge-buy|badge-hold|badge-watch\"
+              }
+            ],
+            etfs: [
+              {
+                ticker: \"EUNL.DE\",
+                name: \"full name\",
+                stats: \"Price: X\\nChange: X\\nTER: X\\nExchange: X\",
+                badge: \"label\",
+                badgeClass: \"badge-buy|badge-hold|badge-watch\",
+                desc: \"2-3 sentence description with today's context. HTML allowed.\",
+                verdict: \"1-2 sentence verdict. HTML allowed.\"
+              }
+            ],
+            macro: [ { theme: \"emoji + name\", what: \"explanation\", impact: \"market impact\" } ],
+            calendar: [ { date: \"Day Mon DD\", event: \"event name\", why: \"why it matters\" } ],
+            quote: { text: \"quote text\", source: \"Name, Title · Date\" }
+          };
+
+          Include 6 market cards, 4 stocks (RHM, NVDA, AMD, MSFT), 3 ETFs (EUNL, 4MMR, ITA), 4-5 macro themes, 5-6 calendar events. Output ONLY the JavaScript, nothing else."
+
+          # Call Claude API - only generating the small dynamic JSON (~1000 tokens output)
+          RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -d "{
+              \"model\": \"claude-sonnet-4-20250514\",
+              \"max_tokens\": 2000,
+              \"tools\": [{\"type\": \"web_search_20250305\", \"name\": \"web_search\"}],
+              \"messages\": [{\"role\": \"user\", \"content\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]
+            }")
+
+          # Extract the text content from the response
+          echo "$RESPONSE" | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          content = data.get('content', [])
+          for block in content:
+              if block.get('type') == 'text':
+                  print(block['text'])
+                  break
+          " > daily-data.js
+
+          echo "✅ daily-data.js generated successfully"
+          echo "--- Preview (first 5 lines) ---"
+          head -5 daily-data.js
+
+      - name: ✅ Validate JavaScript syntax
+        run: node --check daily-data.js && echo "✅ JS syntax valid" || echo "⚠️ JS syntax error — keeping previous version"
+
+      - name: 📤 Commit and push updated daily-data.js
+        run: |
+          git config --local user.email "signal-bot@github-actions"
+          git config --local user.name "SIGNAL Newsletter Bot"
+          git add daily-data.js
+          git diff --staged --quiet || git commit -m "📈 Daily update: $(date -u +'%Y-%m-%d')"
+          git push

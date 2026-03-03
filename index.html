@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGNAL — Daily Market Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0f; --paper: #f5f0e8; --cream: #ede8dc;
+    --gold: #c9a84c; --red: #c0392b; --green: #27795a;
+    --blue: #1a3a5c; --muted: #6b6560; --rule: #d4cfc3;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.65; }
+
+  .masthead { background: var(--ink); color: var(--paper); text-align: center; padding: 48px 24px 36px; position: relative; overflow: hidden; }
+  .masthead::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 12px, transparent 12px, transparent 18px); }
+  .masthead-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
+  .masthead h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 12vw, 120px); letter-spacing: 8px; line-height: 0.9; }
+  .masthead-sub { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 18px; color: var(--gold); margin-top: 14px; }
+  .masthead-date { margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; color: rgba(245,240,232,0.5); text-transform: uppercase; }
+  .masthead-pills { margin-top: 16px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+  .pill { background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); padding: 4px 14px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--gold); }
+
+  .ticker-wrap { background: var(--gold); overflow: hidden; padding: 10px 0; white-space: nowrap; }
+  .ticker-inner { display: inline-block; animation: ticker 45s linear infinite; }
+  .ticker-item { display: inline-block; margin: 0 28px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .up { color: #1a5c3a; } .down { color: #8b1a1a; } .flat { color: #555; }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  .section-header { display: flex; align-items: center; gap: 16px; padding: 32px 0 16px; border-bottom: 2px solid var(--ink); margin-bottom: 24px; }
+  .section-number { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 1; color: var(--gold); min-width: 48px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 3px; text-transform: uppercase; }
+  .section-tag { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
+
+  .alert-banner { color: white; padding: 16px 24px; display: flex; align-items: center; gap: 16px; margin: 24px 0; border-radius: 2px; }
+  .alert-banner.critical { background: var(--red); }
+  .alert-banner.warning  { background: #b7770d; }
+  .alert-banner.positive { background: var(--green); }
+  .alert-icon { font-size: 22px; flex-shrink: 0; }
+  .alert-text strong { font-size: 15px; display: block; margin-bottom: 2px; }
+  .alert-text { font-size: 14px; line-height: 1.5; }
+
+  .market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2px; background: var(--rule); border: 2px solid var(--ink); margin-bottom: 32px; }
+  .market-card { background: var(--paper); padding: 18px 16px; }
+  .market-card-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .market-card-value { font-family: 'Bebas Neue', sans-serif; font-size: 28px; line-height: 1; }
+  .market-card-change { font-family: 'JetBrains Mono', monospace; font-size: 12px; margin-top: 4px; font-weight: 600; }
+
+  .stock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; margin-bottom: 32px; }
+  .stock-card { border: 1.5px solid var(--rule); background: white; padding: 24px; transition: border-color .2s, box-shadow .2s; }
+  .stock-card:hover { border-color: var(--gold); box-shadow: 4px 4px 0 var(--gold); }
+  .stock-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+  .stock-ticker { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 2px; line-height: 1; }
+  .stock-price { text-align: right; }
+  .stock-price-value { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; }
+  .stock-price-change { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; }
+  .stock-name { font-size: 12px; color: var(--muted); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  .stock-divider { height: 1px; background: var(--rule); margin: 14px 0; }
+  .stock-news { font-size: 13.5px; line-height: 1.6; color: #2a2a2a; margin-bottom: 12px; }
+  .stock-news strong { color: var(--ink); }
+  .stock-static { background: var(--cream); padding: 12px 14px; font-size: 13px; line-height: 1.55; border-left: 3px solid var(--gold); margin-bottom: 10px; }
+  .stock-static .label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 2px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; }
+  .badge-buy { background: #d4edda; color: #1a5c3a; }
+  .badge-hold { background: #fff3cd; color: #8a6300; }
+  .badge-watch { background: #cce5ff; color: #1a3a5c; }
+
+  .etf-row { border: 1.5px solid var(--rule); background: white; padding: 24px; margin-bottom: 16px; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 24px; align-items: start; transition: border-color .2s, box-shadow .2s; }
+  .etf-row:hover { border-color: var(--blue); box-shadow: 4px 4px 0 var(--blue); }
+  .etf-ticker { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 2px; line-height: 1; }
+  .etf-fullname { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; margin-bottom: 10px; }
+  .etf-stat { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); line-height: 1.8; }
+  .etf-desc { font-size: 13.5px; line-height: 1.65; color: #2a2a2a; }
+  .etf-verdict { background: var(--cream); padding: 16px; border-left: 3px solid var(--blue); font-size: 13px; }
+  .verdict-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+
+  .macro-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 32px; }
+  .macro-table th { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-align: left; padding: 10px 14px; border-bottom: 2px solid var(--ink); background: var(--cream); }
+  .macro-table td { padding: 12px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .macro-table tr:nth-child(even) td { background: var(--cream); }
+  .topic { font-weight: 600; font-size: 13.5px; }
+  .detail { font-size: 13px; color: #333; line-height: 1.55; }
+
+  .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 2px; background: var(--rule); border: 2px solid var(--ink); margin-bottom: 32px; }
+  .plan-item { background: var(--paper); padding: 20px 16px; }
+  .plan-ticker { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: var(--blue); margin-bottom: 6px; }
+  .plan-action { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; }
+  .plan-note { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  .action-buy { color: var(--green); } .action-hold { color: #8a6300; } .action-watch { color: var(--blue); }
+
+  .quote-block { background: var(--ink); color: var(--paper); padding: 32px 36px; margin: 32px 0; position: relative; }
+  .quote-block::before { content: '"'; font-family: 'DM Serif Display', serif; font-size: 120px; color: var(--gold); position: absolute; top: -20px; left: 20px; line-height: 1; opacity: 0.4; }
+  .quote-text { font-family: 'DM Serif Display', serif; font-size: 20px; font-style: italic; line-height: 1.55; position: relative; z-index: 1; padding-left: 40px; }
+  .quote-source { margin-top: 12px; padding-left: 40px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); }
+
+  .rule-ornament { text-align: center; padding: 8px 0; color: var(--gold); font-size: 18px; letter-spacing: 8px; margin: 8px 0 24px; }
+  .loading { text-align: center; padding: 80px 24px; font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 13px; letter-spacing: 2px; }
+  .loading-dot { animation: blink 1.2s infinite; display: inline-block; } @keyframes blink { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+
+  footer { background: var(--ink); color: rgba(245,240,232,0.4); text-align: center; padding: 32px 24px; margin-top: 56px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; line-height: 2; }
+  footer strong { color: var(--gold); display: block; font-size: 13px; margin-bottom: 8px; }
+
+  @media (max-width: 700px) {
+    .etf-row { grid-template-columns: 1fr; }
+    .masthead h1 { font-size: 64px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ STATIC MASTHEAD ═══ -->
+<div class="masthead">
+  <div class="masthead-label">Daily Market Intelligence Briefing</div>
+  <h1>SIGNAL</h1>
+  <div class="masthead-sub">The numbers that move money</div>
+  <div class="masthead-date" id="today-date">Loading...</div>
+  <div class="masthead-pills">
+    <span class="pill">RHM.DE</span><span class="pill">AMD</span><span class="pill">MSFT</span>
+    <span class="pill">NVDA</span><span class="pill">EUNL.DE</span><span class="pill">4MMR.DE</span><span class="pill">ITA</span>
+  </div>
+</div>
+
+<!-- ═══ DYNAMIC TICKER ═══ -->
+<div class="ticker-wrap"><div class="ticker-inner" id="ticker-content">
+  <span class="ticker-item">Loading market data<span class="loading-dot">...</span></span>
+</div></div>
+
+<div class="container">
+
+  <!-- ═══ DYNAMIC: ALERT BANNER ═══ -->
+  <div id="alert-section"></div>
+
+  <!-- 01 — MARKET OVERVIEW -->
+  <div class="section-header">
+    <div class="section-number">01</div>
+    <div class="section-title">Today's Market Overview</div>
+    <div class="section-tag" id="overview-tag">Loading...</div>
+  </div>
+  <div class="market-grid" id="market-grid">
+    <div class="loading">Fetching market data <span class="loading-dot">●</span></div>
+  </div>
+  <p id="market-summary" style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:32px;"></p>
+
+  <!-- 02 — STOCK DEEP DIVES (dynamic prices + news, static outlook) -->
+  <div class="section-header">
+    <div class="section-number">02</div>
+    <div class="section-title">Stock Deep Dives</div>
+    <div class="section-tag">RHM · AMD · MSFT · NVDA</div>
+  </div>
+  <div class="stock-grid" id="stock-grid">
+    <div class="loading">Fetching stock data <span class="loading-dot">●</span></div>
+  </div>
+
+  <!-- 03 — ETF INTELLIGENCE (mostly static, dynamic price only) -->
+  <div class="section-header">
+    <div class="section-number">03</div>
+    <div class="section-title">ETF Intelligence</div>
+    <div class="section-tag">EUNL · 4MMR · ITA</div>
+  </div>
+  <div id="etf-section">
+    <div class="loading">Fetching ETF data <span class="loading-dot">●</span></div>
+  </div>
+
+  <!-- 04 — MACRO THEMES (dynamic) -->
+  <div class="section-header">
+    <div class="section-number">04</div>
+    <div class="section-title">Macro Themes to Watch</div>
+    <div class="section-tag">Key Drivers Today</div>
+  </div>
+  <table class="macro-table" id="macro-table">
+    <tr><td class="loading">Loading macro themes <span class="loading-dot">●</span></td></tr>
+  </table>
+
+  <!-- 05 — PLAYBOOK (static — updates weekly) -->
+  <div class="section-header">
+    <div class="section-number">05</div>
+    <div class="section-title">2026 Investment Playbook</div>
+    <div class="section-tag">Updated Weekly</div>
+  </div>
+  <div class="plan-grid">
+    <div class="plan-item"><div class="plan-ticker">RHM.DE</div><div class="plan-action action-buy">Strong Buy</div><div class="plan-note">Avg target €2,127. March 11 earnings catalyst. €67bn German order pipeline. Structural NATO spending tailwind through 2030.</div></div>
+    <div class="plan-item"><div class="plan-ticker">NVDA</div><div class="plan-action action-buy">Strong Buy</div><div class="plan-note">$500bn revenue pipeline (Blackwell+Rubin). 73% YoY growth. $120bn net income. Buy dips below $190. Consensus target $263.</div></div>
+    <div class="plan-item"><div class="plan-ticker">AMD</div><div class="plan-action action-watch">Buy on Dips</div><div class="plan-note">12GW in GPU commitments (Meta + OpenAI). Revenue converts H2 2026. Accumulate below $200. Target $261. H2 story.</div></div>
+    <div class="plan-item"><div class="plan-ticker">MSFT</div><div class="plan-action action-buy">Buy Dip</div><div class="plan-note">Azure $50bn/qtr, $625bn commercial backlog. Rare quality at a discount (~29x fwd). ATH $555 vs current $427.</div></div>
+    <div class="plan-item"><div class="plan-ticker">EUNL.DE</div><div class="plan-action action-hold">DCA Monthly</div><div class="plan-note">Core portfolio anchor. Don't react to geopolitical noise. Use any 5%+ dip to add. Long-term compound machine.</div></div>
+    <div class="plan-item"><div class="plan-ticker">4MMR.DE</div><div class="plan-action action-buy">Accumulate</div><div class="plan-note">+57% in 12 months. NATO 5% GDP spending + EU €800bn defense = structural tailwind. Best combined with ITA.</div></div>
+    <div class="plan-item"><div class="plan-ticker">ITA</div><div class="plan-action action-buy">Tactical Buy</div><div class="plan-note">U.S. defense surging on conflict escalation. $900bn Congress budget. Pair with 4MMR.DE for global coverage. 10Y: 17.4% p.a.</div></div>
+    <div class="plan-item"><div class="plan-ticker">GOLD</div><div class="plan-action action-watch">Hedge 5–10%</div><div class="plan-note">Safe haven on 5-day rally. Inflation + geopolitical risk = tailwind. 5–10% portfolio allocation as insurance.</div></div>
+  </div>
+
+  <!-- 06 — CALENDAR (dynamic) -->
+  <div class="section-header">
+    <div class="section-number">06</div>
+    <div class="section-title">This Week's Catalyst Calendar</div>
+    <div class="section-tag">Key Events</div>
+  </div>
+  <table class="macro-table" id="calendar-table" style="margin-bottom:40px;">
+    <tr><td class="loading">Loading calendar <span class="loading-dot">●</span></td></tr>
+  </table>
+
+  <!-- QUOTE (dynamic) -->
+  <div id="quote-block"></div>
+
+  <div class="rule-ornament">— ✦ ✦ ✦ —</div>
+</div>
+
+<footer>
+  <strong>SIGNAL — Daily Market Intelligence</strong>
+  For informational purposes only. Not financial advice. Always consult a licensed advisor before investing.<br>
+  Past performance is not indicative of future results. Prices are indicative only.<br><br>
+  ASSETS COVERED: RHM.DE · AMD · MSFT · NVDA · EUNL.DE · 4MMR.DE · ITA<br>
+  <span id="footer-date"></span>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     DYNAMIC DATA INJECTION SCRIPT
+     daily-data.js is generated fresh each morning
+     by the GitHub Action — it injects today's JSON
+     into the static shell above.
+════════════════════════════════════════════════ -->
+<script src="daily-data.js"></script>
+<script>
+// Render engine — reads window.SIGNAL_DATA and populates the page
+(function() {
+  const d = window.SIGNAL_DATA;
+  if (!d) {
+    document.getElementById('alert-section').innerHTML =
+      '<div class="alert-banner critical"><div class="alert-icon">⚠️</div><div class="alert-text"><strong>DATA NOT LOADED</strong>daily-data.js is missing or failed to load.</div></div>';
+    return;
+  }
+
+  // DATE
+  document.getElementById('today-date').textContent = d.date;
+  document.getElementById('overview-tag').textContent = d.date;
+  document.getElementById('footer-date').textContent = 'Generated: ' + d.date + ' · Next update: tomorrow 07:00 CET';
+
+  // ALERT
+  if (d.alert) {
+    document.getElementById('alert-section').innerHTML =
+      `<div class="alert-banner ${d.alert.type}">
+        <div class="alert-icon">${d.alert.icon}</div>
+        <div class="alert-text"><strong>${d.alert.title}</strong>${d.alert.body}</div>
+      </div>`;
+  }
+
+  // TICKER
+  const tickerHTML = d.ticker.map(t =>
+    `<span class="ticker-item">${t.label} <span class="${t.dir}">${t.arrow} ${t.value}</span></span>`
+  ).join('');
+  document.getElementById('ticker-content').innerHTML = tickerHTML + '&nbsp;&nbsp;&nbsp;' + tickerHTML;
+
+  // MARKET CARDS
+  document.getElementById('market-grid').innerHTML = d.market.map(m =>
+    `<div class="market-card">
+      <div class="market-card-label">${m.label}</div>
+      <div class="market-card-value ${m.dir}">${m.value}</div>
+      <div class="market-card-change ${m.dir}">${m.change}</div>
+    </div>`
+  ).join('');
+  document.getElementById('market-summary').innerHTML = d.marketSummary;
+
+  // STOCKS
+  document.getElementById('stock-grid').innerHTML = d.stocks.map(s =>
+    `<div class="stock-card">
+      <div class="stock-card-header">
+        <div>
+          <div class="stock-ticker">${s.ticker}</div>
+          <div class="stock-name">${s.name}</div>
+        </div>
+        <div class="stock-price">
+          <div class="stock-price-value">${s.price}</div>
+          <div class="stock-price-change ${s.dir}">${s.change}</div>
+        </div>
+      </div>
+      <div class="stock-divider"></div>
+      <div class="stock-news">${s.news}</div>
+      <div class="stock-static">
+        <div class="label">2026 Outlook — Static</div>
+        ${s.outlook}
+      </div>
+      <span class="badge ${s.badgeClass}">${s.badge}</span>
+    </div>`
+  ).join('');
+
+  // ETFs
+  document.getElementById('etf-section').innerHTML = d.etfs.map(e =>
+    `<div class="etf-row">
+      <div>
+        <div class="etf-ticker">${e.ticker}</div>
+        <div class="etf-fullname">${e.name}</div>
+        <div class="etf-stat">${e.stats}</div>
+        <span class="badge ${e.badgeClass}" style="margin-top:10px">${e.badge}</span>
+      </div>
+      <div class="etf-desc">${e.desc}</div>
+      <div class="etf-verdict"><div class="verdict-label">Verdict</div>${e.verdict}</div>
+    </div>`
+  ).join('');
+
+  // MACRO TABLE
+  document.getElementById('macro-table').innerHTML =
+    `<tr><th style="width:20%">Theme</th><th style="width:42%">What's Happening</th><th style="width:38%">Market Impact</th></tr>` +
+    d.macro.map(m =>
+      `<tr><td class="topic">${m.theme}</td><td class="detail">${m.what}</td><td class="detail">${m.impact}</td></tr>`
+    ).join('');
+
+  // CALENDAR
+  document.getElementById('calendar-table').innerHTML =
+    `<tr><th style="width:14%">Date</th><th style="width:36%">Event</th><th style="width:50%">Why It Matters</th></tr>` +
+    d.calendar.map(c =>
+      `<tr><td class="topic">${c.date}</td><td class="detail">${c.event}</td><td class="detail">${c.why}</td></tr>`
+    ).join('');
+
+  // QUOTE
+  if (d.quote) {
+    document.getElementById('quote-block').innerHTML =
+      `<div class="quote-block">
+        <div class="quote-text">${d.quote.text}</div>
+        <div class="quote-source">— ${d.quote.source}</div>
+      </div>`;
+  }
+})();
+</script>
+</body>
+</html>
