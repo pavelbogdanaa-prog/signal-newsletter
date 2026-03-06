@@ -2,78 +2,33 @@ name: 🗞️ Generate Daily SIGNAL Newsletter
 
 on:
   schedule:
-    # Runs every weekday at 06:00 UTC = 07:00 CET (08:00 CEST in summer)
-    - cron: '0 6 * * 1-5'
-  workflow_dispatch: # Also allows manual trigger from GitHub UI
+    - cron: '0 7 * * 1-5'  # 09:00 Romanian time (EET/UTC+2)
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   generate-newsletter:
     runs-on: ubuntu-latest
-
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🤖 Generate daily-data.js via Claude API
+      - name: 🤖 Generate fresh data via Claude API
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           TODAY=$(date -u +"%A · %B %-d, %Y")
 
-          PROMPT="Today is ${TODAY}. Generate a fresh daily-data.js file for the SIGNAL stock market newsletter.
+          PROMPT="Today is ${TODAY}. Generate a JSON object (and ONLY the JSON object, no markdown, no backticks, no explanation) for the SIGNAL stock market newsletter.
 
-          ASSETS TO COVER: RHM.DE (Rheinmetall), NVDA (NVIDIA), AMD, MSFT (Microsoft), EUNL.DE (iShares MSCI World), 4MMR.DE (Global X Defence Tech ETF), ITA (iShares US Aerospace & Defense ETF).
+          Research today's latest news for: RHM.DE (Rheinmetall), NVDA (NVIDIA), AMD, MSFT (Microsoft), EUNL.DE (iShares MSCI World ETF), 4MMR.DE (Global X Defence Tech ETF), ITA (iShares US Aerospace Defense ETF).
 
-          Search for and include today's:
-          - Latest market prices and % changes for all assets
-          - Top 1-2 news stories per stock (most important catalyst today)
-          - Main macro themes and their market impact
-          - This week's key economic calendar events
-          - One relevant market quote from today
+          Return ONLY this exact JSON structure with today's real data filled in:
+          {\"date\":\"${TODAY}\",\"alert\":{\"type\":\"critical\",\"icon\":\"⚡\",\"title\":\"ALERT TITLE\",\"body\":\"alert body\"},\"ticker\":[{\"label\":\"S&P 500\",\"value\":\"0,000\",\"dir\":\"up\",\"arrow\":\"▲ 0.0%\"},{\"label\":\"NASDAQ\",\"value\":\"00,000\",\"dir\":\"down\",\"arrow\":\"▼ 0.0%\"},{\"label\":\"DOW\",\"value\":\"00,000\",\"dir\":\"down\",\"arrow\":\"▼ 0.0%\"},{\"label\":\"RHM.DE\",\"value\":\"€0,000\",\"dir\":\"up\",\"arrow\":\"▲ 0.0%\"},{\"label\":\"AMD\",\"value\":\"$000\",\"dir\":\"down\",\"arrow\":\"▼ 0.0%\"},{\"label\":\"MSFT\",\"value\":\"$000\",\"dir\":\"down\",\"arrow\":\"▼ 0.0%\"},{\"label\":\"NVDA\",\"value\":\"$000\",\"dir\":\"down\",\"arrow\":\"▼ 0.0%\"},{\"label\":\"EUNL.DE\",\"value\":\"€000\",\"dir\":\"down\",\"arrow\":\"▼ 0.0%\"},{\"label\":\"4MMR.DE\",\"value\":\"€00\",\"dir\":\"up\",\"arrow\":\"▲ 0.0%\"},{\"label\":\"BRENT OIL\",\"value\":\"$00\",\"dir\":\"up\",\"arrow\":\"▲ 0.0%\"},{\"label\":\"GOLD\",\"value\":\"$0,000\",\"dir\":\"up\",\"arrow\":\"▲ 0.0%\"},{\"label\":\"10Y YIELD\",\"value\":\"0.00%\",\"dir\":\"up\",\"arrow\":\"▲ +0bps\"}],\"market\":[{\"label\":\"S&P 500\",\"value\":\"0,000\",\"change\":\"▲ 0.0%\",\"dir\":\"up\"},{\"label\":\"Nasdaq 100\",\"value\":\"00,000\",\"change\":\"▼ 0.0%\",\"dir\":\"down\"},{\"label\":\"Dow Jones\",\"value\":\"00,000\",\"change\":\"▼ 0.0%\",\"dir\":\"down\"},{\"label\":\"Brent Crude\",\"value\":\"$00\",\"change\":\"▲ 0.0%\",\"dir\":\"up\"},{\"label\":\"Gold\",\"value\":\"$0,000\",\"change\":\"▲ 0.0%\",\"dir\":\"up\"},{\"label\":\"10Y Treasury\",\"value\":\"0.00%\",\"change\":\"▲ +0bps\",\"dir\":\"up\"}],\"marketSummary\":\"2-3 sentence summary with HTML allowed\",\"stocks\":[{\"ticker\":\"RHM.DE\",\"name\":\"Rheinmetall AG · XETRA\",\"price\":\"€0,000\",\"change\":\"▲ 0.0%\",\"dir\":\"up\",\"news\":\"<strong>🔑 Today:</strong> today news here\",\"outlook\":\"outlook here\",\"badge\":\"⬆ Strong Buy\",\"badgeClass\":\"badge-buy\"},{\"ticker\":\"NVDA\",\"name\":\"NVIDIA Corporation · NASDAQ\",\"price\":\"$000\",\"change\":\"▼ 0.0%\",\"dir\":\"down\",\"news\":\"<strong>🔑 Today:</strong> today news here\",\"outlook\":\"outlook here\",\"badge\":\"⬆ Strong Buy\",\"badgeClass\":\"badge-buy\"},{\"ticker\":\"AMD\",\"name\":\"Advanced Micro Devices · NASDAQ\",\"price\":\"$000\",\"change\":\"▼ 0.0%\",\"dir\":\"down\",\"news\":\"<strong>🔑 Today:</strong> today news here\",\"outlook\":\"outlook here\",\"badge\":\"👁 Buy on Dips\",\"badgeClass\":\"badge-watch\"},{\"ticker\":\"MSFT\",\"name\":\"Microsoft Corporation · NASDAQ\",\"price\":\"$000\",\"change\":\"▼ 0.0%\",\"dir\":\"down\",\"news\":\"<strong>🔑 Today:</strong> today news here\",\"outlook\":\"outlook here\",\"badge\":\"⬆ Buy the Dip\",\"badgeClass\":\"badge-buy\"}],\"etfs\":[{\"ticker\":\"EUNL.DE\",\"name\":\"iShares Core MSCI World UCITS ETF\",\"stats\":\"Price: €000\nChange: ▼ 0.0%\nCurrency: EUR (Acc.)\nTER: ~0.20% p.a.\nExchange: XETRA\",\"badge\":\"⚖ Core DCA Hold\",\"badgeClass\":\"badge-hold\",\"desc\":\"today context here\",\"verdict\":\"verdict here\"},{\"ticker\":\"4MMR.DE\",\"name\":\"Global X Defence Tech UCITS ETF\",\"stats\":\"Price: €00\nChange: ▲ 0.0%\n52W: €00–€00\nAUM: €000m\nTER: 0.50% p.a.\nExchange: XETRA\",\"badge\":\"⬆ Strong Buy\",\"badgeClass\":\"badge-buy\",\"desc\":\"today context here\",\"verdict\":\"verdict here\"},{\"ticker\":\"ITA\",\"name\":\"iShares U.S. Aerospace & Defense ETF\",\"stats\":\"Price: $000\nChange: ▲ 0.0%\nAUM: $13bn\n10Y Ann. Return: 17.4%\nTop: RTX · Boeing · GE\",\"badge\":\"⬆ Buy\",\"badgeClass\":\"badge-buy\",\"desc\":\"today context here\",\"verdict\":\"verdict here\"}],\"macro\":[{\"theme\":\"theme 1\",\"what\":\"explanation\",\"impact\":\"impact\"},{\"theme\":\"theme 2\",\"what\":\"explanation\",\"impact\":\"impact\"},{\"theme\":\"theme 3\",\"what\":\"explanation\",\"impact\":\"impact\"},{\"theme\":\"theme 4\",\"what\":\"explanation\",\"impact\":\"impact\"},{\"theme\":\"theme 5\",\"what\":\"explanation\",\"impact\":\"impact\"}],\"calendar\":[{\"date\":\"date 1\",\"event\":\"event\",\"why\":\"why\"},{\"date\":\"date 2\",\"event\":\"event\",\"why\":\"why\"},{\"date\":\"date 3\",\"event\":\"event\",\"why\":\"why\"},{\"date\":\"date 4\",\"event\":\"event\",\"why\":\"why\"},{\"date\":\"date 5\",\"event\":\"event\",\"why\":\"why\"}],\"quote\":{\"text\":\"relevant market quote\",\"source\":\"Source · Date\"}}"
 
-          CRITICAL RULES:
-          1. Output ONLY valid JavaScript — no markdown, no backticks, no explanation
-          2. Start with exactly: window.SIGNAL_DATA = {
-          3. Follow this EXACT JSON structure (copy structure, replace values with today's data):
-
-          window.SIGNAL_DATA = {
-            date: \"${TODAY}\",
-            alert: { type: \"critical|warning|positive\", icon: \"emoji\", title: \"TITLE\", body: \"body text\" },
-            ticker: [ { label: \"S&P 500\", value: \"0,000\", dir: \"up|down|flat\", arrow: \"▲|▼|→ X.X%\" }, ... ],
-            market: [ { label: \"S&P 500\", value: \"0,000\", change: \"▲ X.X%\", dir: \"up|down|flat\" }, ... ],
-            marketSummary: \"2-3 sentence summary of today's market mood. HTML allowed.\",
-            stocks: [
-              {
-                ticker: \"RHM.DE\",
-                name: \"Rheinmetall AG · XETRA\",
-                price: \"€X,XXX\",
-                change: \"▲/▼ X.X%\",
-                dir: \"up|down|flat\",
-                news: \"<strong>🔑 Today:</strong> 2-3 sentences of today's top news for this stock. HTML allowed.\",
-                outlook: \"1-2 sentences static 2026 outlook. HTML allowed.\",
-                badge: \"emoji + label\",
-                badgeClass: \"badge-buy|badge-hold|badge-watch\"
-              }
-            ],
-            etfs: [
-              {
-                ticker: \"EUNL.DE\",
-                name: \"full name\",
-                stats: \"Price: X\\nChange: X\\nTER: X\\nExchange: X\",
-                badge: \"label\",
-                badgeClass: \"badge-buy|badge-hold|badge-watch\",
-                desc: \"2-3 sentence description with today's context. HTML allowed.\",
-                verdict: \"1-2 sentence verdict. HTML allowed.\"
-              }
-            ],
-            macro: [ { theme: \"emoji + name\", what: \"explanation\", impact: \"market impact\" } ],
-            calendar: [ { date: \"Day Mon DD\", event: \"event name\", why: \"why it matters\" } ],
-            quote: { text: \"quote text\", source: \"Name, Title · Date\" }
-          };
-
-          Include 6 market cards, 4 stocks (RHM, NVDA, AMD, MSFT), 3 ETFs (EUNL, 4MMR, ITA), 4-5 macro themes, 5-6 calendar events. Output ONLY the JavaScript, nothing else."
-
-          # Call Claude API - only generating the small dynamic JSON (~1000 tokens output)
+          # Call Claude API with web search
           RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
             -H "Content-Type: application/json" \
             -H "x-api-key: $ANTHROPIC_API_KEY" \
@@ -85,28 +40,61 @@ jobs:
               \"messages\": [{\"role\": \"user\", \"content\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]
             }")
 
-          # Extract the text content from the response
-          echo "$RESPONSE" | python3 -c "
-          import json, sys
+          # Extract JSON from response
+          NEW_JSON=$(echo "$RESPONSE" | python3 -c "
+          import json, sys, re
           data = json.load(sys.stdin)
-          content = data.get('content', [])
-          for block in content:
+          text = ''
+          for block in data.get('content', []):
               if block.get('type') == 'text':
-                  print(block['text'])
-                  break
-          " > daily-data.js
+                  text += block['text']
+          # Find JSON object in response
+          match = re.search(r'\{.*\}', text, re.DOTALL)
+          if match:
+              print(match.group(0))
+          else:
+              print('ERROR: No JSON found')
+              sys.exit(1)
+          ")
 
-          echo "✅ daily-data.js generated successfully"
-          echo "--- Preview (first 5 lines) ---"
-          head -5 daily-data.js
+          echo "✅ JSON extracted, length: ${#NEW_JSON}"
 
-      - name: ✅ Validate JavaScript syntax
-        run: node --check daily-data.js && echo "✅ JS syntax valid" || echo "⚠️ JS syntax error — keeping previous version"
+          # Validate it's real JSON
+          echo "$NEW_JSON" | python3 -m json.tool > /dev/null 2>&1
+          if [ $? -ne 0 ]; then
+            echo "❌ Invalid JSON — keeping previous index.html"
+            exit 0
+          fi
 
-      - name: 📤 Commit and push updated daily-data.js
+          # Inject new JSON into index.html between the marker comments
+          python3 -c "
+          import re, sys
+
+          with open('index.html', 'r', encoding='utf-8') as f:
+              content = f.read()
+
+          new_json = sys.argv[1]
+          new_script = '<script>\nconst SIGNAL_DATA = ' + new_json + ';\n</script>'
+
+          # Replace between marker comments
+          pattern = r'<!-- ██.*?END SIGNAL_DATA.*?██ -->'
+          replacement = '<!-- ██████████████████████████████████████████████\n     SIGNAL_DATA — REPLACED DAILY BY GITHUB ACTION\n     ██████████████████████████████████████████████ -->\n' + new_script + '\n<!-- ██████████████████████████████████████████████\n     END SIGNAL_DATA\n     ██████████████████████████████████████████████ -->'
+
+          new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+
+          if new_content == content:
+              print('WARNING: Pattern not found, no replacement made')
+          else:
+              print('SUCCESS: Data injected into index.html')
+
+          with open('index.html', 'w', encoding='utf-8') as f:
+              f.write(new_content)
+          " "$NEW_JSON"
+
+      - name: 📤 Commit and push updated index.html
         run: |
           git config --local user.email "signal-bot@github-actions"
           git config --local user.name "SIGNAL Newsletter Bot"
-          git add daily-data.js
+          git add index.html
           git diff --staged --quiet || git commit -m "📈 Daily update: $(date -u +'%Y-%m-%d')"
           git push
