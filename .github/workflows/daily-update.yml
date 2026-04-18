@@ -122,11 +122,44 @@ jobs:
       - name: ✅ Validate JavaScript syntax
         run: node --check daily-data.js && echo "✅ JS syntax valid" || echo "⚠️ JS syntax error — keeping previous version"
 
-      - name: 📤 Commit and push updated daily-data.js
+      - name: 🔧 Inject fresh data into index.html
+        run: |
+          python3 <<'PYEOF'
+          import re, sys
+
+          # Read new data (strip the `window.SIGNAL_DATA = ` prefix; we need raw object for `const`)
+          data_js = open('daily-data.js').read().strip()
+          # Convert `window.SIGNAL_DATA = {...};` -> `const SIGNAL_DATA = {...};`
+          data_js = re.sub(r'^window\.SIGNAL_DATA\s*=', 'const SIGNAL_DATA =', data_js)
+
+          html = open('index.html').read()
+
+          # Replace everything between the SIGNAL_DATA marker comments
+          pattern = re.compile(
+              r'(SIGNAL_DATA — REPLACED DAILY BY GITHUB ACTION\s*██████████████████████████████████████████████ -->\s*<script>)'
+              r'.*?'
+              r'(</script>\s*<!-- ██████████████████████████████████████████████\s*END SIGNAL_DATA)',
+              re.DOTALL
+          )
+
+          new_html, n = pattern.subn(
+              lambda m: f"{m.group(1)}\n{data_js}\n{m.group(2)}",
+              html
+          )
+
+          if n != 1:
+              print(f'❌ Expected 1 SIGNAL_DATA block, found {n}', file=sys.stderr)
+              sys.exit(1)
+
+          open('index.html', 'w').write(new_html)
+          print('✅ index.html updated with fresh data')
+          PYEOF
+
+      - name: 📤 Commit and push updated files
         run: |
           git config --local user.email "signal-bot@github-actions"
           git config --local user.name "SIGNAL Newsletter Bot"
-          git add daily-data.js
+          git add daily-data.js index.html
           git diff --staged --quiet || git commit -m "📈 Daily update: $(date -u +'%Y-%m-%d')"
           git pull --rebase origin main
           git push
