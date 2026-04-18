@@ -79,7 +79,7 @@ jobs:
             -d "{
               \"contents\": [{\"role\": \"user\", \"parts\": [{\"text\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]}],
               \"tools\": [{\"google_search\": {}}],
-              \"generationConfig\": {\"maxOutputTokens\": 4000, \"temperature\": 0.2}
+              \"generationConfig\": {\"maxOutputTokens\": 8000, \"temperature\": 0.2, \"thinkingConfig\": {\"thinkingBudget\": 0}}
             }")
 
           # Log raw response for debugging
