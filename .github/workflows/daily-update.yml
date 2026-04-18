@@ -164,25 +164,27 @@ jobs:
           git pull --rebase origin main
           git push
 
-      - name: 🎨 Pre-render HTML for email (jsdom)
+      - name: 📄 Generate PDF from index.html (Puppeteer)
         run: |
-          npm install --silent jsdom
+          npm install --silent puppeteer
           node <<'JSEOF'
-          const { JSDOM } = require('jsdom');
-          const fs = require('fs');
+          const puppeteer = require('puppeteer');
+          const path = require('path');
 
-          const html = fs.readFileSync('index.html', 'utf8');
-          const dom = new JSDOM(html, { runScripts: 'dangerously', resources: 'usable' });
-
-          // Scripts at end of body run synchronously — DOM is populated now
-          const rendered = dom.serialize();
-
-          // Strip <script> tags (email clients block them anyway, and they're no longer needed)
-          const final = rendered.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
-
-          fs.writeFileSync('index-rendered.html', final);
-          console.log('✅ Rendered HTML written to index-rendered.html');
-          console.log('Size:', final.length, 'chars');
+          (async () => {
+            const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+            const page = await browser.newPage();
+            const fileUrl = 'file://' + path.resolve('index.html');
+            await page.goto(fileUrl, { waitUntil: 'networkidle0' });
+            await page.pdf({
+              path: 'signal-newsletter.pdf',
+              format: 'A4',
+              printBackground: true,
+              margin: { top: '15mm', bottom: '15mm', left: '10mm', right: '10mm' }
+            });
+            await browser.close();
+            console.log('✅ PDF generated: signal-newsletter.pdf');
+          })();
           JSEOF
 
       - name: 📧 Send newsletter email via Gmail SMTP
@@ -194,26 +196,52 @@ jobs:
           import smtplib, os, sys
           from email.mime.text import MIMEText
           from email.mime.multipart import MIMEMultipart
+          from email.mime.application import MIMEApplication
           from datetime import datetime, timezone
 
-          html = open('index-rendered.html').read()
           today = datetime.now(timezone.utc).strftime('%B %-d, %Y')
-
           sender = os.environ['GMAIL_USER']
           password = os.environ['GMAIL_APP_PASSWORD']
           recipients = ['pavel.gabriell@gmail.com', 'pavel.bogdanaa@gmail.com']
 
-          msg = MIMEMultipart('alternative')
+          page_url = 'https://pavelbogdanaa-prog.github.io/signal-newsletter/'
+
+          text_body = f"""Good morning,
+
+          Your SIGNAL daily market briefing for {today} is attached as PDF.
+
+          View in browser: {page_url}
+
+          — SIGNAL Newsletter
+          """
+
+          html_body = f"""<html><body style="font-family:Arial,sans-serif;font-size:14px;line-height:1.6;color:#222;">
+            <p>Good morning,</p>
+            <p>Your <strong>SIGNAL daily market briefing</strong> for <strong>{today}</strong> is attached as PDF.</p>
+            <p>View in browser: <a href="{page_url}">{page_url}</a></p>
+            <p style="color:#888;font-size:12px;">— SIGNAL Newsletter</p>
+          </body></html>"""
+
+          msg = MIMEMultipart('mixed')
           msg['Subject'] = f'📈 SIGNAL · {today}'
           msg['From'] = f'SIGNAL Newsletter <{sender}>'
           msg['To'] = ', '.join(recipients)
-          msg.attach(MIMEText(html, 'html'))
+
+          alt = MIMEMultipart('alternative')
+          alt.attach(MIMEText(text_body, 'plain'))
+          alt.attach(MIMEText(html_body, 'html'))
+          msg.attach(alt)
+
+          with open('signal-newsletter.pdf', 'rb') as f:
+              pdf = MIMEApplication(f.read(), _subtype='pdf')
+              pdf.add_header('Content-Disposition', 'attachment', filename=f'SIGNAL-{today}.pdf')
+              msg.attach(pdf)
 
           try:
             with smtplib.SMTP_SSL('smtp.gmail.com', 465) as s:
               s.login(sender, password)
               s.sendmail(sender, recipients, msg.as_string())
-            print(f'✅ Email sent to {len(recipients)} recipients')
+            print(f'✅ Email sent to {len(recipients)} recipients with PDF attachment')
           except Exception as e:
             print(f'❌ Email failed: {e}')
             sys.exit(1)
