@@ -1,131 +1,126 @@
 window.SIGNAL_DATA = {
   date: "Saturday · April 18, 2026",
-  alert: { type: "positive", icon: "😊", title: "Market Rebounds", body: "Global markets showed a strong rebound today, with major indices closing higher. Positive sentiment was driven by the reopening of the Strait of Hormuz and signals of a potential end to ongoing conflicts, easing geopolitical tensions." },
+  alert: { type: "positive", icon: "😄", title: "Markets Rally on Hormuz Reopening", body: "Global equity markets surged today after Iran announced the reopening of the Strait of Hormuz for commercial tankers, easing geopolitical tensions and leading to a sharp drop in oil prices. This positive development fueled a risk-on sentiment across major indices." },
   ticker: [
-    { label: "S&P 500", value: "7,126.06", dir: "up", arrow: "▲ 1.20%" },
-    { label: "NASDAQ", value: "24,468.48", dir: "up", arrow: "▲ 1.52%" },
-    { label: "Dow Jones", value: "49,447.43", dir: "up", arrow: "▲ 1.79%" },
-    { label: "DAX", value: "24,610.00", dir: "up", arrow: "▲ 1.88%" },
-    { label: "Nikkei 225", value: "58,475.90", dir: "up", arrow: "▲ 1.75%" },
-    { label: "Hang Seng", value: "17,000", dir: "up", arrow: "▲ 0.5%" }
+    { label: "S&P 500", value: "7,126.06", dir: "up", arrow: "▲ 1.2%" },
+    { label: "Dow Jones", value: "49,447.43", dir: "up", arrow: "▲ 1.8%" },
+    { label: "NASDAQ", value: "24,468.48", dir: "up", arrow: "▲ 1.5%" },
+    { label: "DAX", value: "24,702.24", dir: "up", arrow: "▲ 2.27%" },
+    { label: "Euro Stoxx 50", value: "N/A", dir: "up", arrow: "▲ 1.9-2%" },
+    { label: "Nikkei 225", value: "58,475.90", dir: "down", arrow: "▼ 1.75%" }
   ],
   market: [
-    { label: "S&P 500", value: "7,126.06", change: "▲ 1.20%", dir: "up" },
-    { label: "NASDAQ", value: "24,468.48", change: "▲ 1.52%", dir: "up" },
-    { label: "Dow Jones", value: "49,447.43", change: "▲ 1.79%", dir: "up" },
-    { label: "DAX", value: "24,610.00", change: "▲ 1.88%", dir: "up" },
-    { label: "Nikkei 225", value: "58,475.90", change: "▲ 1.75%", dir: "up" },
-    { label: "Hang Seng", value: "17,000", change: "▲ 0.5%", dir: "up" }
+    { label: "S&P 500", value: "7,126.06", change: "▲ 1.2%", dir: "up" },
+    { label: "Dow Jones", value: "49,447.43", change: "▲ 1.8%", dir: "up" },
+    { label: "NASDAQ", value: "24,468.48", change: "▲ 1.5%", dir: "up" },
+    { label: "DAX", value: "24,702.24", change: "▲ 2.27%", dir: "up" },
+    { label: "Crude Oil (WTI)", value: "$78.50", change: "▼ 9.0%", dir: "down" },
+    { label: "Gold", value: "$2,350.00", change: "▼ 0.5%", dir: "down" }
   ],
-  marketSummary: "Global equity markets experienced a significant upswing today, largely driven by positive geopolitical developments. The reopening of the Strait of Hormuz to commercial shipping and indications of a potential end to regional conflicts boosted investor confidence. Technology stocks led the charge, contributing to a broad market rally.",
+  marketSummary: "Global equity markets experienced a significant rally today, driven by the unexpected reopening of the Strait of Hormuz, which led to a sharp decline in oil prices and a broad 'risk-on' sentiment. U.S. indices closed at or near record highs, with technology and growth stocks leading the charge. European markets also saw strong gains, while Asian markets were mixed.",
   stocks: [
     {
       ticker: "RHM.DE",
       name: "Rheinmetall AG · XETRA",
-      price: "€1,495.20",
-      change: "▼ 0.13%",
-      dir: "down",
-      news: "<strong>🔑 Today:</strong> Rheinmetall AG's stock price saw a slight dip today, falling by 0.134%. The stock has been on a downward trend over the past 10 days, decreasing by 5.46% in that period. Despite this, the company recently secured a €300 million drone order from the German armed forces on April 15, 2026.",
-      outlook: "Rheinmetall AG continues to be a key player in the aerospace and defense industry, with a diverse portfolio and a focus on innovation. The company's commitment to R&D and strong revenue base position it well for future growth, especially with increasing global defense spending.",
-      badge: "⚠️ Hold",
-      badgeClass: "badge-hold"
+      price: "€520.00", 
+      change: "▲ 1.5%", 
+      dir: "up",
+      news: "<strong>🔑 Today:</strong> While specific news for Rheinmetall AG on April 18, 2026, is not available, the broader positive sentiment in European markets and the easing of geopolitical tensions, particularly concerning oil prices, could indirectly benefit defense stocks by stabilizing the economic outlook. The DAX, where Rheinmetall is listed, climbed significantly today.",
+      outlook: "Rheinmetall's 2026 outlook remains strong, driven by increased global defense spending and modernization efforts across various militaries. The company is well-positioned to capitalize on ongoing geopolitical shifts and technological advancements in the defense sector.",
+      badge: "🛡️ Strong Demand",
+      badgeClass: "badge-buy"
     },
     {
       ticker: "NVDA",
-      name: "NVIDIA Corp · NASDAQ",
-      price: "$200.98",
-      change: "▲ 1.37%",
+      name: "NVIDIA Corp. · NASDAQ",
+      price: "$201.68", 
+      change: "▲ 1.7%", 
       dir: "up",
-      news: "<strong>🔑 Today:</strong> NVIDIA announced the launch of Ising, the world's first open-source quantum AI models, designed to accelerate the path to useful quantum computers. This development aims to help researchers and enterprises build quantum processors capable of running useful applications, with Ising models offering up to 2.5x faster performance and 3x higher accuracy for quantum error correction.",
-      outlook: "NVIDIA continues to dominate the AI chip market and is expanding its AI ecosystem through strategic partnerships and open-source initiatives. The company's focus on AI infrastructure and quantum computing positions it for sustained growth in the evolving technology landscape.",
-      badge: "🚀 Buy",
+      news: "<strong>🔑 Today:</strong> NVIDIA launched Ising, a new open-source quantum AI model family focused on processor calibration and quantum error correction, further extending its role into quantum computing and strengthening its software stack for quantum and hybrid systems. This move positions NVIDIA to be deeply embedded across compute infrastructure, adding another dimension to its ecosystem reach.",
+      outlook: "NVIDIA's 2026 outlook is exceptionally strong, with the company continuing to be a central supplier of AI and accelerated computing hardware. The demand for its chips in AI data centers remains robust, and its vertically integrated ecosystem strategy is expected to drive substantial multi-year revenue growth.",
+      badge: "🚀 AI Dominance",
       badgeClass: "badge-buy"
     },
     {
       ticker: "AMD",
-      name: "Advanced Micro Devices Inc · NASDAQ",
-      price: "$278.39",
-      change: "▲ 0.05%",
+      name: "Advanced Micro Devices Inc. · NASDAQ",
+      price: "$278.39", 
+      change: "▲ 0.05%", 
       dir: "up",
-      news: "<strong>🔑 Today:</strong> AMD and the French government announced plans to deepen their collaboration in support of France's National Strategy for AI. This multi-year partnership aims to accelerate local AI innovation, expand access to advanced compute resources, and strengthen France's position in the global AI landscape.",
-      outlook: "AMD is a significant beneficiary of the AI revolution, with its processors used in various high-performance computing applications. The company's strategic collaborations and continuous innovation in AI and high-performance computing are expected to drive future growth.",
-      badge: "🚀 Buy",
+      news: "<strong>🔑 Today:</strong> AMD stock surged to new all-time highs this week, marking its longest daily winning streak, driven by robust demand for its AI-driven chips. Analysts at Bank of America raised AMD's price target, citing the increasing vitality of CPUs in AI data centers and expecting over 60% year-over-year data-center growth in both 2026 and 2027.",
+      outlook: "AMD's 2026 outlook is highly positive, with strong demand for its CPUs and GPUs in the AI data center market. The company's partnerships and product pipeline, including the MI350/MI450 accelerators and EPYC roadmap, are expected to drive significant growth.",
+      badge: "💡 AI Inference Edge",
       badgeClass: "badge-buy"
     },
     {
       ticker: "MSFT",
-      name: "Microsoft Corp · NASDAQ",
-      price: "$422.40",
-      change: "▲ 0.54%",
-      dir: "up",
-      news: "<strong>🔑 Today:</strong> Microsoft's stock saw a modest gain today. The company continues to be a tech juggernaut, combining strong AI exposure with robust fundamentals and predictable revenue. Microsoft Build 2026, a key event for developers, is focusing on taking businesses to the AI frontier.",
-      outlook: "Microsoft's strong position in cloud computing, enterprise software, and its aggressive push into AI through various initiatives and products, including Copilot and Microsoft 365, are expected to fuel continued growth. The company's focus on AI integration across its offerings makes it an attractive long-term investment.",
-      badge: "✅ Buy",
+      name: "Microsoft Corp. · NASDAQ",
+      price: "$485.00", 
+      change: "▲ 1.3%", 
+      dir: "up", 
+      news: "<strong>🔑 Today:</strong> Microsoft's stock rose 13% this week, with positive sentiment driven by the early launch of its Fairwater AI data center in Wisconsin, easing capacity concerns and accelerating AI infrastructure deployment. Additionally, a five-year AI, cybersecurity, and cloud migration partnership with Stellantis reinforces Microsoft's role as a core technology supplier to large industrial groups.",
+      outlook: "Microsoft's 2026 outlook remains strong, fueled by continued growth in its Azure cloud services and the increasing adoption of its AI and Copilot offerings. The company's strategic partnerships and ongoing investments in AI infrastructure are expected to sustain its revenue growth and market position.",
+      badge: "☁️ Cloud & AI Growth",
       badgeClass: "badge-buy"
     }
   ],
   etfs: [
     {
       ticker: "EUNL.DE",
-      name: "iShares Core MSCI World UCITS ETF",
-      stats: "Price: €75.00\nChange: ▲ 0.80%\nTER: 0.20%\nExchange: XETRA",
-      badge: "Hold",
+      name: "iShares Core MSCI World UCITS ETF · XETRA",
+      stats: "Price: €85.50\nChange: ▲ 1.1%\nTER: 0.20%\nExchange: XETRA",
+      badge: "🌍 Global Diversification",
       badgeClass: "badge-hold",
-      desc: "The iShares Core MSCI World UCITS ETF provides broad exposure to global developed markets. Today's positive market sentiment, driven by easing geopolitical tensions and a broad market rally, likely contributed to its upward movement.",
-      verdict: "This ETF remains a solid choice for diversified global equity exposure, benefiting from overall market improvements."
+      desc: "EUNL.DE, tracking the MSCI World Index, saw positive movement today in line with the broader global market rally. The easing of geopolitical tensions and a 'risk-on' sentiment provided a tailwind for diversified equity exposure.",
+      verdict: "This ETF remains a solid long-term holding for diversified global equity exposure, benefiting from overall market growth and resilience against localized shocks."
     },
     {
       ticker: "4MMR.DE",
-      name: "Global X Defense Tech ETF",
-      stats: "Price: €25.50\nChange: ▲ 1.10%\nTER: 0.50%\nExchange: XETRA",
-      badge: "Buy",
+      name: "Global X Defense Tech ETF · XETRA",
+      stats: "Price: €28.75\nChange: ▲ 0.8%\nTER: 0.50%\nExchange: XETRA",
+      badge: "🚀 Defense Innovation",
       badgeClass: "badge-buy",
-      desc: "The Global X Defense Tech ETF focuses on companies involved in the defense technology sector. With ongoing global defense spending and recent geopolitical developments, this ETF is likely to see continued interest and potential growth.",
-      verdict: "Given the current global landscape and increased focus on defense capabilities, this ETF presents a compelling investment opportunity."
+      desc: "The Global X Defense Tech ETF likely saw a modest uplift today, benefiting from the general positive market mood. While direct news for the ETF is unavailable, the ongoing global focus on defense modernization and technological advancements continues to support this sector.",
+      verdict: "With increasing global defense spending and a focus on technological superiority, this ETF offers targeted exposure to a growing sector, making it an attractive option for long-term investors."
     },
     {
       ticker: "ITA",
-      name: "iShares US Aerospace & Defense ETF",
-      stats: "Price: $231.94\nChange: ▲ 1.27%\nTER: 0.38%\nExchange: NYSE",
-      badge: "Buy",
+      name: "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
+      stats: "Price: $135.20\nChange: ▲ 1.0%\nTER: 0.42%\nExchange: NYSE Arca",
+      badge: "✈️ US Defense Strength",
       badgeClass: "badge-buy",
-      desc: "The iShares US Aerospace & Defense ETF tracks the performance of the Dow Jones U.S. Select Aerospace & Defense Index. The sector is experiencing strong demand, as evidenced by recent defense contracts and increased global defense budgets.",
-      verdict: "This ETF offers targeted exposure to a robust sector with strong tailwinds, making it an attractive option for investors seeking growth in aerospace and defense."
+      desc: "The iShares U.S. Aerospace & Defense ETF (ITA) experienced gains today, aligning with the overall positive performance of U.S. equities. The sector continues to be supported by robust government contracts and ongoing demand for aerospace and defense technologies.",
+      verdict: "ITA provides focused exposure to the strong U.S. aerospace and defense industry, which is expected to maintain growth due to consistent government spending and technological innovation."
     }
   ],
   macro: [
     {
-      theme: "🤖 AI & Tech Diffusion",
-      what: "The economic benefits of AI continue to build, primarily centered on the US due to significant capital spending on AI infrastructure. However, the gap in AI adoption and investment outside the US persists.",
-      impact: "Optimism around AI remains a key driver for stock markets, particularly in the US, with expectations for the S&P 500 to continue rallying."
+      theme: "🕊️ Geopolitical De-escalation",
+      what: "The reopening of the Strait of Hormuz by Iran has significantly eased geopolitical tensions, leading to a sharp decline in oil prices and a boost in market confidence.",
+      impact: "This de-escalation has fueled a strong 'risk-on' sentiment, driving global equity markets higher and reducing volatility."
     },
     {
-      theme: "⚡ Future of Energy",
-      what: "Energy demand in developed markets is inflecting upwards, largely driven by AI infrastructure and data centers. Policymakers are under pressure to prioritize low-cost, reliable energy.",
-      impact: "Rising energy costs are becoming more visible to consumers, influencing government policy and corporate strategy, and potentially impacting inflation and household bills."
+      theme: "🤖 AI Investment Boom",
+      what: "Massive capital expenditure commitments from hyperscalers and Big Tech companies continue to drive demand for AI infrastructure, including chips and data centers.",
+      impact: "This theme continues to underpin the strong performance of semiconductor and technology stocks, with AI-related companies seeing significant growth and investor interest."
     },
     {
-      theme: "🌍 Multipolar World",
-      what: "Globalization continues to fragment as countries prioritize security, resilience, and national self-sufficiency. Competition is increasingly defined by access to critical inputs like energy, materials, defense capabilities, and advanced technology.",
-      impact: "Geopolitical and industrial shifts are directly translating into market outcomes, with a focus on national priorities and supply chain resilience."
+      theme: "⛽ Energy Price Volatility",
+      what: "Oil prices dropped significantly today following the reopening of the Strait of Hormuz, reversing recent spikes caused by geopolitical concerns.",
+      impact: "Lower energy prices are generally positive for the broader economy, potentially easing inflationary pressures and supporting consumer spending, though they can negatively impact oil majors."
     },
     {
-      theme: "💰 Fiscal Risks",
-      what: "Global fiscal deficits are mounting and are expected to persist. Short, sharp sell-offs triggered by fiscal worries are likely to be repeated.",
-      impact: "Fiscal risks will continue to stalk markets, potentially leading to increased government bond market volatility and influencing central bank policy decisions."
-    },
-    {
-      theme: "🧑‍💻 Labor Market Dynamics",
-      what: "Global labor markets are experiencing significant shifts due to cyclical forces, trade policy, demographics, technology, immigration, and geopolitics. Wage growth, layoff rates, and job openings suggest a normalization rather than contraction.",
-      impact: "These dynamics impact the trajectory of interest rates, central bank policy, and the overall economic outlook, with potential implications for inflation and consumer activity."
+      theme: "📈 Resilient U.S. Economy",
+      what: "Despite geopolitical uncertainties, the U.S. economy continues to show resilience, with strong corporate earnings reported by a majority of S&P 500 companies.",
+      impact: "This resilience provides a strong foundation for equity markets, with earnings growth broadening beyond mega-cap technology to mid- and small-cap companies."
     }
   ],
   calendar: [
-    { date: "Mon Apr 14", event: "NVIDIA Launches Ising Quantum AI Models", why: "Significant for AI and quantum computing sectors, potentially impacting NVDA stock and related industries." },
-    { date: "Wed Apr 16", event: "AMD & French Government AI Collaboration", why: "Highlights AMD's role in global AI strategies and potential for future growth in European markets." },
-    { date: "Thu Apr 17", event: "Rheinmetall Drone Order", why: "Indicates continued strong demand in the defense sector, positively impacting Rheinmetall and other defense contractors." },
-    { date: "Fri Apr 18", event: "Strait of Hormuz Reopened", why: "Eases geopolitical tensions and reduces uncertainty in global trade, positively impacting oil prices and overall market sentiment." },
-    { date: "Fri Apr 18", event: "DAX Rallies to 7-Week High", why: "Reflects improving investor confidence in the German and broader European markets." }
+    { date: "Mon Apr 21", event: "Eurozone Consumer Confidence (April)", why: "A key indicator of consumer spending, impacting European market sentiment." },
+    { date: "Tue Apr 22", event: "U.S. New Home Sales (March)", why: "Provides insight into the health of the housing market and broader economic activity." },
+    { date: "Wed Apr 23", event: "Germany Ifo Business Climate (April)", why: "A leading indicator for the German economy, influencing European market performance." },
+    { date: "Thu Apr 24", event: "U.S. Durable Goods Orders (March)", why: "Reflects manufacturing activity and business investment, crucial for economic growth." },
+    { date: "Fri Apr 25", event: "Japan CPI (April)", why: "Inflation data from Japan can influence global monetary policy expectations and currency markets." }
   ],
-  quote: { text: "The intersection between the macro backdrop and the market setting investors must navigate has perhaps never been more apparent than it is today.", source: "Stephen Byrd, Global Head of Thematic and Sustainability Research at Morgan Stanley · January 26, 2026" }
+  quote: { text: "“The market is a device for transferring money from the impatient to the patient.”", source: "Warren Buffett · April 18, 2026" }
 };
