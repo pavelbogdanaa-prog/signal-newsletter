@@ -14,9 +14,9 @@ jobs:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🤖 Generate daily-data.js via Claude API
+      - name: 🤖 Generate daily-data.js via Gemini API
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           TODAY=$(date -u +"%A · %B %-d, %Y")
 
@@ -73,17 +73,13 @@ jobs:
 
           Include 6 market cards, 4 stocks (RHM, NVDA, AMD, MSFT), 3 ETFs (EUNL, 4MMR, ITA), 4-5 macro themes, 5-6 calendar events. Output ONLY the JavaScript, nothing else."
 
-          # Call Claude API - only generating the small dynamic JSON (~1000 tokens output)
-          RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
+          # Call Gemini API with Google Search grounding (free tier)
+          RESPONSE=$(curl -s "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$GEMINI_API_KEY" \
             -H "Content-Type: application/json" \
-            -H "x-api-key: $ANTHROPIC_API_KEY" \
-            -H "anthropic-version: 2023-06-01" \
-            -H "anthropic-beta: web-search-2025-03-05" \
             -d "{
-              \"model\": \"claude-sonnet-4-20250514\",
-              \"max_tokens\": 4000,
-              \"tools\": [{\"type\": \"web_search_20250305\", \"name\": \"web_search\", \"max_uses\": 10}],
-              \"messages\": [{\"role\": \"user\", \"content\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]
+              \"contents\": [{\"role\": \"user\", \"parts\": [{\"text\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]}],
+              \"tools\": [{\"google_search\": {}}],
+              \"generationConfig\": {\"maxOutputTokens\": 4000, \"temperature\": 0.2}
             }")
 
           # Log raw response for debugging
@@ -100,20 +96,17 @@ jobs:
               print(f'API ERROR: {data[\"error\"]}', file=sys.stderr)
               sys.exit(1)
 
-          content = data.get('content', [])
-          for block in content:
-              if block.get('type') == 'text':
-                  text = block['text'].strip()
-                  # Strip markdown code fences if present
-                  if text.startswith('\`\`\`'):
-                      lines = text.split('\n')
-                      text = '\n'.join(lines[1:-1])
-                  print(text)
-                  sys.exit(0)
-
-          print('ERROR: No text block in response', file=sys.stderr)
-          print(f'Content blocks: {[b.get(\"type\") for b in content]}', file=sys.stderr)
-          sys.exit(1)
+          try:
+              text = data['candidates'][0]['content']['parts'][0]['text'].strip()
+              # Strip markdown code fences if present
+              if text.startswith('\`\`\`'):
+                  lines = text.split('\n')
+                  text = '\n'.join(lines[1:-1])
+              print(text)
+          except (KeyError, IndexError) as e:
+              print(f'ERROR parsing response: {e}', file=sys.stderr)
+              print(f'Response keys: {list(data.keys())}', file=sys.stderr)
+              sys.exit(1)
           " > daily-data.js
 
           # Fail if output is empty
