@@ -134,14 +134,12 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
-          HTML_CONTENT=$(cat index.html)
-          TODAY=$(date -u +"%B %-d, %Y")
-
-          python3 -c "
-          import json, urllib.request, os, sys
+          python3 <<'PYEOF'
+          import json, urllib.request, urllib.error, os, sys
+          from datetime import datetime, timezone
 
           html = open('index.html').read()
-          today = '$(date -u +\"%B %-d, %Y\")'
+          today = datetime.now(timezone.utc).strftime('%B %-d, %Y')
 
           payload = {
             'from': 'SIGNAL Newsletter <onboarding@resend.dev>',
@@ -154,8 +152,9 @@ jobs:
             'https://api.resend.com/emails',
             data=json.dumps(payload).encode(),
             headers={
-              'Authorization': f'Bearer {os.environ[\"RESEND_API_KEY\"]}',
-              'Content-Type': 'application/json'
+              'Authorization': f'Bearer {os.environ["RESEND_API_KEY"]}',
+              'Content-Type': 'application/json',
+              'User-Agent': 'signal-newsletter/1.0'
             }
           )
 
@@ -165,4 +164,4 @@ jobs:
           except urllib.error.HTTPError as e:
             print('❌ Email failed:', e.read().decode())
             sys.exit(1)
-          "
+          PYEOF
