@@ -99,6 +99,24 @@
   .portfolio-lock p{margin-bottom:16px;color:var(--muted);font-size:14px;}
   .portfolio-lock button{background:var(--ink);color:var(--paper);border:none;padding:12px 28px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .15s;}
   .portfolio-lock button:hover{background:var(--gold);color:var(--ink);}
+  .pf-subheading{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;text-transform:uppercase;margin:32px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:10px;}
+  .pf-advice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:8px;}
+  .pf-advice-card{border:1.5px solid var(--rule);background:white;padding:18px;border-left:4px solid var(--gold);}
+  .pf-advice-ticker{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--blue);margin-bottom:4px;}
+  .pf-advice-weight{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:8px;letter-spacing:1.5px;}
+  .pf-advice-action{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;font-weight:700;margin-bottom:10px;text-transform:uppercase;padding:4px 10px;display:inline-block;border-radius:2px;}
+  .pf-advice-note{font-size:13px;color:#333;line-height:1.55;}
+  .pf-suggestion-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;background:var(--rule);border:2px solid var(--ink);margin-bottom:8px;}
+  .pf-suggestion-card{background:var(--paper);padding:18px 16px;}
+  .pf-suggestion-type{font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:4px;}
+  .pf-suggestion-ticker{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1.5px;margin-bottom:8px;font-weight:600;}
+  .pf-suggestion-note{font-size:12.5px;color:var(--muted);line-height:1.55;}
+  .pf-suggestion-target{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--blue);letter-spacing:1px;margin-top:8px;font-weight:600;}
+  .pf-tips{background:var(--cream);padding:20px 28px;margin-bottom:8px;border-left:4px solid var(--blue);list-style:none;}
+  .pf-tips li{padding:8px 0;font-size:13.5px;line-height:1.6;border-bottom:1px dashed var(--rule);}
+  .pf-tips li:last-child{border-bottom:none;}
+  .pf-tips li strong{color:var(--ink);margin-right:6px;}
+  .pf-alert{background:#fff3cd;border-left:4px solid #b7770d;padding:14px 18px;margin-bottom:16px;font-size:13px;line-height:1.55;color:#5a4300;}
 </style>
 </head>
 <body>
@@ -322,6 +340,102 @@ const SIGNAL_DATA = {
           <div><div class="pf-total-label">Positions</div><div class="pf-total-value" id="pf-total-count">—</div></div>
         </div>
         <table class="portfolio-table" id="portfolio-table"></table>
+
+        <div class="pf-alert" id="pf-concentration-alert"></div>
+
+        <div class="pf-subheading">💡 Next Moves — Current Holdings</div>
+        <div class="pf-advice-grid">
+          <div class="pf-advice-card">
+            <div class="pf-advice-ticker">EUNL.DE</div>
+            <div class="pf-advice-weight">Core MSCI World · ~74% of portfolio</div>
+            <div class="pf-advice-action action-hold">Hold / Slow DCA</div>
+            <div class="pf-advice-note">Strongly overweight after the +17% gain. Keep it as your anchor but don't lump-sum more — let the rest of the portfolio catch up. Continue small monthly DCA (€100–200) to keep the habit. Rebalance if it drifts above 65% of total.</div>
+          </div>
+          <div class="pf-advice-card">
+            <div class="pf-advice-ticker">4MMR.DE</div>
+            <div class="pf-advice-weight">Defence Tech · ~6% of portfolio</div>
+            <div class="pf-advice-action action-buy">Accumulate on Dips</div>
+            <div class="pf-advice-note">Down 1.8% = good entry. NATO 5% GDP commitment + EU €800bn defense package = multi-year tailwind. Target 10–15% portfolio weight. Add €200–400 tranches when it dips 3%+.</div>
+          </div>
+          <div class="pf-advice-card">
+            <div class="pf-advice-ticker">NVD.DE</div>
+            <div class="pf-advice-weight">Nvidia · ~10% of portfolio</div>
+            <div class="pf-advice-action action-watch">Hold / Buy Deeper Dips</div>
+            <div class="pf-advice-note">Down 5%. Fundamentals intact (Blackwell + Rubin pipeline). Don't average down aggressively — let it settle. Add only if it drops another 8–10% below cost. Watch GTC keynote March 16 as catalyst.</div>
+          </div>
+          <div class="pf-advice-card">
+            <div class="pf-advice-ticker">RHM.DE</div>
+            <div class="pf-advice-weight">Rheinmetall · ~10% of portfolio</div>
+            <div class="pf-advice-action action-hold">Hold Through Earnings</div>
+            <div class="pf-advice-note">Barely positive but sitting on a March 11 FY2025 earnings catalyst. Don't add before earnings (binary ±10% move). If it runs up pre-earnings, consider trimming 20% to lock gains; if it dips, add on dip.</div>
+          </div>
+        </div>
+
+        <div class="pf-subheading">🎯 Diversification Ideas — What to Add Next</div>
+        <div class="pf-suggestion-grid">
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">🥇 Gold Hedge</div>
+            <div class="pf-suggestion-ticker">IGLN · 4GLD.DE · EWG2.DE</div>
+            <div class="pf-suggestion-note">Inflation + geopolitical hedge. Uncorrelated to equities. Shines during risk-off periods. Physical-backed ETC.</div>
+            <div class="pf-suggestion-target">TARGET: 5–10% of portfolio</div>
+          </div>
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">🏦 Aggregate Bonds</div>
+            <div class="pf-suggestion-ticker">AGGH.DE · EUNA.DE</div>
+            <div class="pf-suggestion-note">Portfolio stabiliser. Reduces drawdown in equity crashes. EUR-hedged global bonds. Income + ballast.</div>
+            <div class="pf-suggestion-target">TARGET: 10–20% if you want lower volatility</div>
+          </div>
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">🌏 Emerging Markets</div>
+            <div class="pf-suggestion-ticker">EIMI.DE · EMIM.DE</div>
+            <div class="pf-suggestion-note">EUNL holds ZERO emerging markets. China, India, Taiwan, Brazil exposure. Higher risk, higher long-term return potential.</div>
+            <div class="pf-suggestion-target">TARGET: 5–10% of portfolio</div>
+          </div>
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">💰 Dividend Income</div>
+            <div class="pf-suggestion-ticker">VHYL.DE · ISPA.DE</div>
+            <div class="pf-suggestion-note">Quarterly dividend payouts. High-yield developed-market stocks. Compounds well via reinvestment.</div>
+            <div class="pf-suggestion-target">TARGET: 5–10% if you want cash flow</div>
+          </div>
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">🚀 World Small Caps</div>
+            <div class="pf-suggestion-ticker">IUSN.DE · WSML.DE</div>
+            <div class="pf-suggestion-note">EUNL is all large caps. Small caps historically outperform over 10y+ horizons. Higher volatility, strong diversifier.</div>
+            <div class="pf-suggestion-target">TARGET: 5% of portfolio</div>
+          </div>
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">🏠 Global REITs</div>
+            <div class="pf-suggestion-ticker">IWDP.DE · EPRA.DE</div>
+            <div class="pf-suggestion-note">Real estate exposure without owning property. Dividend-heavy, inflation-linked income stream. Low correlation with tech.</div>
+            <div class="pf-suggestion-target">TARGET: 5% of portfolio</div>
+          </div>
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">⚡ US Tech Focus</div>
+            <div class="pf-suggestion-ticker">VUSA.DE · EQQQ.DE</div>
+            <div class="pf-suggestion-note">VUSA = S&P 500 (broader US). EQQQ = Nasdaq 100 (concentrated tech). Only add if you want more US/tech vs MSCI World.</div>
+            <div class="pf-suggestion-target">Optional — only if you want to tilt</div>
+          </div>
+          <div class="pf-suggestion-card">
+            <div class="pf-suggestion-type">🛡️ US Defense</div>
+            <div class="pf-suggestion-ticker">ITA (via 2B76.DE or similar)</div>
+            <div class="pf-suggestion-note">Pair with 4MMR.DE for full transatlantic defense coverage. RTX, Lockheed, Boeing, GE Aerospace. 10-yr return: 17.4% p.a.</div>
+            <div class="pf-suggestion-target">TARGET: 3–5% alongside 4MMR</div>
+          </div>
+        </div>
+
+        <div class="pf-subheading">📋 Tips &amp; Tricks</div>
+        <ul class="pf-tips">
+          <li><strong>Rebalance quarterly.</strong> If any position drifts more than ±5% from its target weight, trim the winner and top up the laggards. Forces you to buy low and sell high.</li>
+          <li><strong>DCA beats timing.</strong> Set a fixed monthly amount (e.g. €500) and split it across your underweight positions. Removes emotion from the equation.</li>
+          <li><strong>Never add to a loser without a thesis.</strong> "It's cheaper now" is not a reason. "Fundamentals intact and the dip is macro-driven" is.</li>
+          <li><strong>Keep a cash buffer.</strong> 3–6 months of expenses before investing more. It prevents forced selling during crashes and lets you buy dips.</li>
+          <li><strong>Tax-loss harvesting.</strong> In years with gains, sell losing positions to offset taxes. Rebuy a similar but not identical ETF to stay invested.</li>
+          <li><strong>Review quarterly, not daily.</strong> Daily checks cause panic moves. Schedule a 30-min review every 3 months. Monthly at most.</li>
+          <li><strong>Don't chase yesterday's winner.</strong> EUNL's +17% is beautiful, but don't double down. The best performer in any 3-year window is rarely the best in the next.</li>
+          <li><strong>Separate "play money" from core.</strong> If you want to pick stocks, cap it at 10–15% of total. Keep 85%+ in boring, diversified ETFs.</li>
+          <li><strong>Track cost basis.</strong> Know your entry price per position. Helps decide when to trim or add. Portfolio trackers like Parqet, Portfolio Performance (free) automate this.</li>
+          <li><strong>Currency matters.</strong> NVD.DE is USD exposure in EUR wrapper. A weak dollar hurts you even if NVDA goes up. Mix EUR-hedged and unhedged positions.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -392,6 +506,18 @@ const SIGNAL_DATA = {
     pctEl.textContent=(totalPct>=0?'+':'')+totalPct.toFixed(2)+'%';
     pctEl.style.color=totalPct>=0?'#4ade80':'#f87171';
     document.getElementById('pf-total-count').textContent=PORTFOLIO.length;
+
+    // Dynamic concentration warning
+    const sorted=[...PORTFOLIO].sort((a,b)=>b.value-a.value);
+    const topWeight=(sorted[0].value/totalValue)*100;
+    const alertEl=document.getElementById('pf-concentration-alert');
+    if(topWeight>60){
+      alertEl.innerHTML='<strong>⚠️ Concentration risk:</strong> '+sorted[0].asset+' is '+topWeight.toFixed(0)+'% of your portfolio. Healthy range for a single position is under 40–50%. Prioritise adding to the smaller positions and new diversifiers (see below) rather than topping up this one.';
+    } else if(topWeight>45){
+      alertEl.innerHTML='<strong>ℹ️ Note:</strong> '+sorted[0].asset+' is '+topWeight.toFixed(0)+'% of your portfolio. Still within a defensible range for a diversified ETF, but keep an eye on it.';
+    } else {
+      alertEl.style.display='none';
+    }
   }
 
   document.getElementById('unlock-btn').addEventListener('click',(e)=>{
