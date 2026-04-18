@@ -78,23 +78,49 @@ jobs:
             -H "Content-Type: application/json" \
             -H "x-api-key: $ANTHROPIC_API_KEY" \
             -H "anthropic-version: 2023-06-01" \
+            -H "anthropic-beta: web-search-2025-03-05" \
             -d "{
               \"model\": \"claude-sonnet-4-20250514\",
-              \"max_tokens\": 2000,
-              \"tools\": [{\"type\": \"web_search_20250305\", \"name\": \"web_search\"}],
+              \"max_tokens\": 4000,
+              \"tools\": [{\"type\": \"web_search_20250305\", \"name\": \"web_search\", \"max_uses\": 10}],
               \"messages\": [{\"role\": \"user\", \"content\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]
             }")
+
+          # Log raw response for debugging
+          echo "--- API Response (truncated) ---"
+          echo "$RESPONSE" | head -c 500
 
           # Extract the text content from the response
           echo "$RESPONSE" | python3 -c "
           import json, sys
           data = json.load(sys.stdin)
+
+          # Check for API errors
+          if 'error' in data:
+              print(f'API ERROR: {data[\"error\"]}', file=sys.stderr)
+              sys.exit(1)
+
           content = data.get('content', [])
           for block in content:
               if block.get('type') == 'text':
-                  print(block['text'])
-                  break
+                  text = block['text'].strip()
+                  # Strip markdown code fences if present
+                  if text.startswith('\`\`\`'):
+                      lines = text.split('\n')
+                      text = '\n'.join(lines[1:-1])
+                  print(text)
+                  sys.exit(0)
+
+          print('ERROR: No text block in response', file=sys.stderr)
+          print(f'Content blocks: {[b.get(\"type\") for b in content]}', file=sys.stderr)
+          sys.exit(1)
           " > daily-data.js
+
+          # Fail if output is empty
+          if [ ! -s daily-data.js ]; then
+            echo "❌ daily-data.js is empty — aborting"
+            exit 1
+          fi
 
           echo "✅ daily-data.js generated successfully"
           echo "--- Preview (first 5 lines) ---"
