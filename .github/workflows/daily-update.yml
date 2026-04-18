@@ -164,6 +164,27 @@ jobs:
           git pull --rebase origin main
           git push
 
+      - name: 🎨 Pre-render HTML for email (jsdom)
+        run: |
+          npm install --silent jsdom
+          node <<'JSEOF'
+          const { JSDOM } = require('jsdom');
+          const fs = require('fs');
+
+          const html = fs.readFileSync('index.html', 'utf8');
+          const dom = new JSDOM(html, { runScripts: 'dangerously', resources: 'usable' });
+
+          // Scripts at end of body run synchronously — DOM is populated now
+          const rendered = dom.serialize();
+
+          // Strip <script> tags (email clients block them anyway, and they're no longer needed)
+          const final = rendered.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+
+          fs.writeFileSync('index-rendered.html', final);
+          console.log('✅ Rendered HTML written to index-rendered.html');
+          console.log('Size:', final.length, 'chars');
+          JSEOF
+
       - name: 📧 Send newsletter email via Gmail SMTP
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
@@ -175,7 +196,7 @@ jobs:
           from email.mime.multipart import MIMEMultipart
           from datetime import datetime, timezone
 
-          html = open('index.html').read()
+          html = open('index-rendered.html').read()
           today = datetime.now(timezone.utc).strftime('%B %-d, %Y')
 
           sender = os.environ['GMAIL_USER']
