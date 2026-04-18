@@ -78,6 +78,27 @@
   footer{background:var(--ink);color:rgba(245,240,232,0.4);text-align:center;padding:32px 24px;margin-top:56px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;line-height:2;}
   footer strong{color:var(--gold);display:block;font-size:13px;margin-bottom:8px;}
   @media(max-width:700px){.etf-row{grid-template-columns:1fr;}.masthead h1{font-size:64px;}}
+  .section-wrap{margin-bottom:8px;}
+  .section-wrap .section-header{cursor:pointer;user-select:none;position:relative;padding-right:48px;transition:opacity .15s;}
+  .section-wrap .section-header:hover{opacity:.75;}
+  .section-wrap .section-header::after{content:'−';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);line-height:1;}
+  .section-wrap.collapsed .section-header{border-bottom-color:var(--rule);margin-bottom:0;}
+  .section-wrap.collapsed .section-header::after{content:'+';}
+  .section-wrap.collapsed .section-content{display:none;}
+  .portfolio-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-family:'JetBrains Mono',monospace;font-size:13px;}
+  .portfolio-table th{background:var(--ink);color:var(--paper);padding:12px 14px;text-align:left;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;}
+  .portfolio-table td{padding:14px;border-bottom:1px solid var(--rule);background:white;}
+  .portfolio-table .pf-asset{font-weight:600;font-family:'DM Sans',sans-serif;font-size:14px;}
+  .portfolio-table .pf-sub{font-size:11px;color:var(--muted);margin-top:2px;}
+  .portfolio-table .pf-profit-pos{color:var(--green);font-weight:600;}
+  .portfolio-table .pf-profit-neg{color:var(--red);font-weight:600;}
+  .portfolio-totals{background:var(--ink);color:var(--paper);padding:20px 24px;margin-bottom:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;}
+  .pf-total-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .pf-total-value{font-family:'Bebas Neue',sans-serif;font-size:28px;line-height:1;}
+  .portfolio-lock{background:var(--cream);border:2px dashed var(--gold);padding:40px 24px;text-align:center;margin-bottom:24px;}
+  .portfolio-lock p{margin-bottom:16px;color:var(--muted);font-size:14px;}
+  .portfolio-lock button{background:var(--ink);color:var(--paper);border:none;padding:12px 28px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .15s;}
+  .portfolio-lock button:hover{background:var(--gold);color:var(--ink);}
 </style>
 </head>
 <body>
@@ -232,17 +253,40 @@ const SIGNAL_DATA = {
 
 <div class="container">
   <div id="alert-section"></div>
-  <div class="section-header"><div class="section-number">01</div><div class="section-title">Today's Market Overview</div><div class="section-tag" id="overview-tag"></div></div>
-  <div class="market-grid" id="market-grid"></div>
-  <p id="market-summary" style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:32px;"></p>
-  <div class="section-header"><div class="section-number">02</div><div class="section-title">Stock Deep Dives</div><div class="section-tag">RHM · AMD · MSFT · NVDA</div></div>
-  <div class="stock-grid" id="stock-grid"></div>
-  <div class="section-header"><div class="section-number">03</div><div class="section-title">ETF Intelligence</div><div class="section-tag">EUNL · 4MMR · ITA</div></div>
-  <div id="etf-section"></div>
-  <div class="section-header"><div class="section-number">04</div><div class="section-title">Macro Themes to Watch</div><div class="section-tag">Key Drivers Today</div></div>
-  <table class="macro-table" id="macro-table"></table>
-  <div class="section-header"><div class="section-number">05</div><div class="section-title">2026 Investment Playbook</div><div class="section-tag">Updated Weekly</div></div>
-  <div class="plan-grid">
+
+  <section class="section-wrap">
+    <div class="section-header"><div class="section-number">01</div><div class="section-title">Today's Market Overview</div><div class="section-tag" id="overview-tag"></div></div>
+    <div class="section-content">
+      <div class="market-grid" id="market-grid"></div>
+      <p id="market-summary" style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:32px;"></p>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-header"><div class="section-number">02</div><div class="section-title">Stock Deep Dives</div><div class="section-tag">RHM · AMD · MSFT · NVDA</div></div>
+    <div class="section-content">
+      <div class="stock-grid" id="stock-grid"></div>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-header"><div class="section-number">03</div><div class="section-title">ETF Intelligence</div><div class="section-tag">EUNL · 4MMR · ITA</div></div>
+    <div class="section-content">
+      <div id="etf-section"></div>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-header"><div class="section-number">04</div><div class="section-title">Macro Themes to Watch</div><div class="section-tag">Key Drivers Today</div></div>
+    <div class="section-content">
+      <table class="macro-table" id="macro-table"></table>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-header"><div class="section-number">05</div><div class="section-title">2026 Investment Playbook</div><div class="section-tag">Updated Weekly</div></div>
+    <div class="section-content">
+    <div class="plan-grid">
     <div class="plan-item"><div class="plan-ticker">RHM.DE</div><div class="plan-action action-buy">Strong Buy</div><div class="plan-note">Avg target €2,127. March 11 earnings catalyst. €67bn German order pipeline. NATO structural tailwind through 2030.</div></div>
     <div class="plan-item"><div class="plan-ticker">NVDA</div><div class="plan-action action-buy">Strong Buy</div><div class="plan-note">$500bn revenue pipeline. 73% YoY growth. $120bn net income. Buy dips below $190. Consensus target $263.</div></div>
     <div class="plan-item"><div class="plan-ticker">AMD</div><div class="plan-action action-watch">Buy on Dips</div><div class="plan-note">12GW GPU commitments. Revenue converts H2 2026. Accumulate below $200. Target $261.</div></div>
@@ -251,10 +295,37 @@ const SIGNAL_DATA = {
     <div class="plan-item"><div class="plan-ticker">4MMR.DE</div><div class="plan-action action-buy">Accumulate</div><div class="plan-note">+57% in 12 months. NATO 5% GDP spending + EU €800bn defense = structural tailwind.</div></div>
     <div class="plan-item"><div class="plan-ticker">ITA</div><div class="plan-action action-buy">Tactical Buy</div><div class="plan-note">$900bn Congress budget. Pair with 4MMR.DE for global coverage. 10Y return: 17.4% p.a.</div></div>
     <div class="plan-item"><div class="plan-ticker">GOLD</div><div class="plan-action action-watch">Hedge 5–10%</div><div class="plan-note">Safe haven demand elevated. Inflation + geopolitical risk. 5–10% portfolio allocation.</div></div>
-  </div>
-  <div class="section-header"><div class="section-number">06</div><div class="section-title">This Week's Catalyst Calendar</div><div class="section-tag">Key Events</div></div>
-  <table class="macro-table" id="calendar-table" style="margin-bottom:40px;"></table>
-  <div id="quote-section"></div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-header"><div class="section-number">06</div><div class="section-title">This Week's Catalyst Calendar</div><div class="section-tag">Key Events</div></div>
+    <div class="section-content">
+      <table class="macro-table" id="calendar-table" style="margin-bottom:40px;"></table>
+      <div id="quote-section"></div>
+    </div>
+  </section>
+
+  <section class="section-wrap collapsed" id="portfolio-section">
+    <div class="section-header"><div class="section-number">07</div><div class="section-title">Portfolio</div><div class="section-tag" id="portfolio-tag">🔒 Locked</div></div>
+    <div class="section-content">
+      <div class="portfolio-lock" id="portfolio-lock">
+        <p>This section is password-protected.</p>
+        <button id="unlock-btn">Unlock Portfolio</button>
+      </div>
+      <div id="portfolio-content" style="display:none;">
+        <div class="portfolio-totals">
+          <div><div class="pf-total-label">Total Value</div><div class="pf-total-value" id="pf-total-value">—</div></div>
+          <div><div class="pf-total-label">Total P/L</div><div class="pf-total-value" id="pf-total-pl">—</div></div>
+          <div><div class="pf-total-label">Total P/L %</div><div class="pf-total-value" id="pf-total-pct">—</div></div>
+          <div><div class="pf-total-label">Positions</div><div class="pf-total-value" id="pf-total-count">—</div></div>
+        </div>
+        <table class="portfolio-table" id="portfolio-table"></table>
+      </div>
+    </div>
+  </section>
+
   <div class="rule-ornament">— ✦ ✦ ✦ —</div>
 </div>
 
@@ -282,6 +353,59 @@ const SIGNAL_DATA = {
   document.getElementById('macro-table').innerHTML='<tr><th style="width:20%">Theme</th><th style="width:42%">What\'s Happening</th><th style="width:38%">Market Impact</th></tr>'+d.macro.map(m=>'<tr><td class="topic">'+m.theme+'</td><td class="detail">'+m.what+'</td><td class="detail">'+m.impact+'</td></tr>').join('');
   document.getElementById('calendar-table').innerHTML='<tr><th style="width:14%">Date</th><th style="width:36%">Event</th><th style="width:50%">Why It Matters</th></tr>'+d.calendar.map(c=>'<tr><td class="topic">'+c.date+'</td><td class="detail">'+c.event+'</td><td class="detail">'+c.why+'</td></tr>').join('');
   document.getElementById('quote-section').innerHTML='<div class="quote-block"><div class="quote-text">'+d.quote.text+'</div><div class="quote-source">— '+d.quote.source+'</div></div>';
+
+  // Collapsible sections
+  document.querySelectorAll('.section-wrap .section-header').forEach(h=>{
+    h.addEventListener('click',()=>h.parentElement.classList.toggle('collapsed'));
+  });
+
+  // Portfolio data (static)
+  const PORTFOLIO = [
+    {asset:'Core MSCI World',type:'ETF',ticker:'EUNL.DE',sub:'iShares · UCITS · ACC · EUR',volume:67,avg:98.612,value:7728.79,pl:1121.81,pct:16.98},
+    {asset:'Defence Tech',type:'ETF',ticker:'4MMR.DE',sub:'Global X · UCITS · ACC · EUR',volume:23,avg:28.669,value:647.45,pl:-11.94,pct:-1.81},
+    {asset:'Nvidia',type:'Stock',ticker:'NVD.DE',sub:'NVIDIA Corp',volume:6,avg:178.00,value:1010.04,pl:-57.96,pct:-5.43},
+    {asset:'Rheinmetall',type:'Stock',ticker:'RHM.DE',sub:'Rheinmetall AG',volume:0.6699,avg:1497.40,value:1009.54,pl:6.43,pct:0.64}
+  ];
+
+  function fmtEUR(n){return n.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' EUR';}
+  function renderPortfolio(){
+    const tbl=document.getElementById('portfolio-table');
+    tbl.innerHTML='<tr><th>Asset</th><th>Volume</th><th>Avg Price</th><th>Market Value</th><th>Net Profit</th></tr>'+
+      PORTFOLIO.map(p=>{
+        const cls=p.pl>=0?'pf-profit-pos':'pf-profit-neg';
+        const sign=p.pl>=0?'+':'';
+        return '<tr><td><div class="pf-asset">'+p.asset+' <span style="font-size:10px;color:var(--muted);border:1px solid var(--rule);padding:2px 6px;border-radius:3px;margin-left:4px;">'+p.type+'</span></div><div class="pf-sub">'+p.ticker+' · '+p.sub+'</div></td>'+
+          '<td>'+p.volume+'</td>'+
+          '<td>@ '+p.avg.toLocaleString('de-DE',{minimumFractionDigits:2})+'</td>'+
+          '<td>'+fmtEUR(p.value)+'</td>'+
+          '<td class="'+cls+'">'+sign+fmtEUR(p.pl)+'<div style="font-size:11px;">'+sign+p.pct.toFixed(2)+'%</div></td></tr>';
+      }).join('');
+    const totalValue=PORTFOLIO.reduce((s,p)=>s+p.value,0);
+    const totalPL=PORTFOLIO.reduce((s,p)=>s+p.pl,0);
+    const totalCost=totalValue-totalPL;
+    const totalPct=(totalPL/totalCost)*100;
+    document.getElementById('pf-total-value').textContent=fmtEUR(totalValue);
+    const plEl=document.getElementById('pf-total-pl');
+    plEl.textContent=(totalPL>=0?'+':'')+fmtEUR(totalPL);
+    plEl.style.color=totalPL>=0?'#4ade80':'#f87171';
+    const pctEl=document.getElementById('pf-total-pct');
+    pctEl.textContent=(totalPct>=0?'+':'')+totalPct.toFixed(2)+'%';
+    pctEl.style.color=totalPct>=0?'#4ade80':'#f87171';
+    document.getElementById('pf-total-count').textContent=PORTFOLIO.length;
+  }
+
+  document.getElementById('unlock-btn').addEventListener('click',(e)=>{
+    e.stopPropagation();
+    const pw=prompt('Enter password to view portfolio:');
+    if(pw==='123123'){
+      document.getElementById('portfolio-lock').style.display='none';
+      document.getElementById('portfolio-content').style.display='block';
+      document.getElementById('portfolio-tag').textContent='🔓 Unlocked';
+      renderPortfolio();
+    } else if(pw!==null){
+      alert('Incorrect password.');
+    }
+  });
 })();
 </script>
 </body>
