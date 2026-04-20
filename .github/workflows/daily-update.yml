@@ -73,14 +73,36 @@ jobs:
 
           Include 6 market cards, 4 stocks (RHM, NVDA, AMD, MSFT), 3 ETFs (EUNL, 4MMR, ITA), 4-5 macro themes, 5-6 calendar events. Output ONLY the JavaScript, nothing else."
 
-          # Call Gemini API with Google Search grounding (free tier)
-          RESPONSE=$(curl -s "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$GEMINI_API_KEY" \
-            -H "Content-Type: application/json" \
-            -d "{
-              \"contents\": [{\"role\": \"user\", \"parts\": [{\"text\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]}],
-              \"tools\": [{\"google_search\": {}}],
-              \"generationConfig\": {\"maxOutputTokens\": 8000, \"temperature\": 0.2, \"thinkingConfig\": {\"thinkingBudget\": 0}}
-            }")
+          # Call Gemini API with Google Search grounding (retry on 503/overload)
+          PROMPT_JSON=$(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')
+          PAYLOAD="{
+            \"contents\": [{\"role\": \"user\", \"parts\": [{\"text\": $PROMPT_JSON}]}],
+            \"tools\": [{\"google_search\": {}}],
+            \"generationConfig\": {\"maxOutputTokens\": 8000, \"temperature\": 0.2, \"thinkingConfig\": {\"thinkingBudget\": 0}}
+          }"
+
+          MODELS=("gemini-2.5-flash" "gemini-2.5-flash" "gemini-2.5-flash-lite" "gemini-2.0-flash")
+          DELAYS=(0 20 45 60)
+          RESPONSE=""
+          for i in "${!MODELS[@]}"; do
+            MODEL="${MODELS[$i]}"
+            DELAY="${DELAYS[$i]}"
+            if [ "$DELAY" -gt 0 ]; then
+              echo "⏳ Attempt $((i+1)) with $MODEL after ${DELAY}s backoff..."
+              sleep "$DELAY"
+            else
+              echo "▶️  Attempt 1 with $MODEL"
+            fi
+            RESPONSE=$(curl -s "https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=$GEMINI_API_KEY" \
+              -H "Content-Type: application/json" \
+              -d "$PAYLOAD")
+            # Retry only on transient errors (5xx / UNAVAILABLE)
+            if echo "$RESPONSE" | python3 -c "import json,sys; d=json.load(sys.stdin); e=d.get('error',{}); sys.exit(0 if e.get('code',0) in (429,500,502,503,504) else 1)" 2>/dev/null; then
+              echo "⚠️  Transient error — retrying..."
+              continue
+            fi
+            break
+          done
 
           # Log raw response for debugging
           echo "--- API Response (truncated) ---"
