@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 🤖 Generate daily-data.js via Gemini API
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -161,9 +162,11 @@ jobs:
           fi
 
       - name: ✅ Validate JavaScript syntax
+        continue-on-error: true
         run: node --check daily-data.js && echo "✅ JS syntax valid" || echo "⚠️ JS syntax error — keeping previous version"
 
       - name: 🔧 Inject fresh data into index.html
+        continue-on-error: true
         run: |
           python3 <<'PYEOF'
           import re, sys
@@ -197,6 +200,7 @@ jobs:
           PYEOF
 
       - name: 📤 Commit and push updated files
+        continue-on-error: true
         run: |
           git config --local user.email "signal-bot@github-actions"
           git config --local user.name "SIGNAL Newsletter Bot"
