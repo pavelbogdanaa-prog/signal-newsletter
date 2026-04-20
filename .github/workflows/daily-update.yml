@@ -81,46 +81,65 @@ jobs:
             \"generationConfig\": {\"maxOutputTokens\": 8000, \"temperature\": 0.2, \"thinkingConfig\": {\"thinkingBudget\": 0}}
           }"
 
-          MODELS=("gemini-2.5-flash" "gemini-2.5-flash" "gemini-2.5-flash-lite" "gemini-2.0-flash")
-          DELAYS=(0 20 45 60)
+          # Try many models with backoff. If all fail transiently, keep old data.
+          MODELS=("gemini-2.5-flash" "gemini-2.5-flash-lite" "gemini-2.0-flash" "gemini-2.5-flash" "gemini-2.5-flash-lite" "gemini-2.0-flash-lite" "gemini-2.5-flash" "gemini-2.0-flash")
+          DELAYS=(0 30 30 60 60 60 90 90)
           RESPONSE=""
+          SUCCESS=0
           for i in "${!MODELS[@]}"; do
             MODEL="${MODELS[$i]}"
             DELAY="${DELAYS[$i]}"
             if [ "$DELAY" -gt 0 ]; then
-              echo "⏳ Attempt $((i+1)) with $MODEL after ${DELAY}s backoff..."
+              echo "⏳ Attempt $((i+1))/${#MODELS[@]} with $MODEL after ${DELAY}s..."
               sleep "$DELAY"
             else
-              echo "▶️  Attempt 1 with $MODEL"
+              echo "▶️  Attempt 1/${#MODELS[@]} with $MODEL"
             fi
             RESPONSE=$(curl -s "https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=$GEMINI_API_KEY" \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD")
-            # Retry only on transient errors (5xx / UNAVAILABLE)
-            if echo "$RESPONSE" | python3 -c "import json,sys; d=json.load(sys.stdin); e=d.get('error',{}); sys.exit(0 if e.get('code',0) in (429,500,502,503,504) else 1)" 2>/dev/null; then
-              echo "⚠️  Transient error — retrying..."
-              continue
+            STATUS=$(echo "$RESPONSE" | python3 -c "import json,sys
+          try:
+              d=json.load(sys.stdin)
+              e=d.get('error',{})
+              code=e.get('code',0)
+              if code==0: print('ok')
+              elif code in (429,500,502,503,504): print('retry')
+              else: print('fatal')
+          except: print('retry')" 2>/dev/null)
+            if [ "$STATUS" = "ok" ]; then
+              echo "✅ Success on attempt $((i+1)) with $MODEL"
+              SUCCESS=1
+              break
+            elif [ "$STATUS" = "fatal" ]; then
+              echo "❌ Non-retryable error — aborting retries"
+              break
+            else
+              echo "⚠️  Transient error on $MODEL — retrying..."
             fi
-            break
           done
 
-          # Log raw response for debugging
           echo "--- API Response (truncated) ---"
           echo "$RESPONSE" | head -c 500
+          echo ""
 
-          # Extract the text content from the response
+          if [ "$SUCCESS" != "1" ]; then
+            echo "⚠️  All Gemini attempts failed. Keeping previous daily-data.js so the email still goes out with last known data."
+            if [ -s daily-data.js ]; then
+              echo "✅ Previous daily-data.js retained ($(wc -c < daily-data.js) bytes)"
+              exit 0
+            else
+              echo "❌ No previous daily-data.js to fall back to — aborting"
+              exit 1
+            fi
+          fi
+
+          # Extract text from successful response
           echo "$RESPONSE" | python3 -c "
           import json, sys
           data = json.load(sys.stdin)
-
-          # Check for API errors
-          if 'error' in data:
-              print(f'API ERROR: {data[\"error\"]}', file=sys.stderr)
-              sys.exit(1)
-
           try:
               text = data['candidates'][0]['content']['parts'][0]['text'].strip()
-              # Strip markdown code fences if present
               if text.startswith('\`\`\`'):
                   lines = text.split('\n')
                   text = '\n'.join(lines[1:-1])
@@ -129,17 +148,17 @@ jobs:
               print(f'ERROR parsing response: {e}', file=sys.stderr)
               print(f'Response keys: {list(data.keys())}', file=sys.stderr)
               sys.exit(1)
-          " > daily-data.js
+          " > daily-data.js.new
 
-          # Fail if output is empty
-          if [ ! -s daily-data.js ]; then
-            echo "❌ daily-data.js is empty — aborting"
-            exit 1
+          if [ -s daily-data.js.new ]; then
+            mv daily-data.js.new daily-data.js
+            echo "✅ daily-data.js generated successfully"
+            echo "--- Preview (first 5 lines) ---"
+            head -5 daily-data.js
+          else
+            rm -f daily-data.js.new
+            echo "⚠️  New data was empty. Keeping previous daily-data.js."
           fi
-
-          echo "✅ daily-data.js generated successfully"
-          echo "--- Preview (first 5 lines) ---"
-          head -5 daily-data.js
 
       - name: ✅ Validate JavaScript syntax
         run: node --check daily-data.js && echo "✅ JS syntax valid" || echo "⚠️ JS syntax error — keeping previous version"
