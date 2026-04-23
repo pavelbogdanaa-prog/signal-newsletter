@@ -126,132 +126,227 @@
      ██████████████████████████████████████████████ -->
 <script>
 const SIGNAL_DATA = {
-  date: "Thursday · April 23, 2026",
-  alert: { type: "warning", icon: "⚠️", title: "Geopolitical Tensions Weigh on Markets", body: "Escalating tensions in the Strait of Hormuz between the U.S. and Iran are impacting global risk sentiment, leading to declines in major indices and elevated oil prices." },
-  ticker: [
-    { label: "S&P 500", value: "7,101.54", dir: "down", arrow: "▼ 0.39%" },
-    { label: "NASDAQ", value: "24,452.10", dir: "down", arrow: "▼ 0.83%" },
-    { label: "Dow Jones", value: "49,305.17", dir: "down", arrow: "▼ 0.37%" },
-    { label: "DAX", value: "24,155.45", dir: "down", arrow: "▼ 0.16%" },
-    { label: "Nikkei 225", value: "59,140.23", dir: "down", arrow: "▼ 0.75%" },
-    { label: "Hang Seng", value: "25,915.20", dir: "down", arrow: "▼ 0.95%" }
-  ],
-  market: [
-    { label: "S&P 500", value: "7,101.54", change: "▼ 0.39%", dir: "down" },
-    { label: "NASDAQ", value: "24,452.10", change: "▼ 0.83%", dir: "down" },
-    { label: "Dow Jones", value: "49,305.17", change: "▼ 0.37%", dir: "down" },
-    { label: "DAX", value: "24,155.45", change: "▼ 0.16%", dir: "down" },
-    { label: "Nikkei 225", value: "59,140.23", change: "▼ 0.75%", dir: "down" },
-    { label: "Hang Seng", value: "25,915.20", change: "▼ 0.95%", dir: "down" }
-  ],
-  marketSummary: "U.S. equity markets experienced a downturn today, with the S&P 500, Nasdaq, and Dow Jones all closing lower. This broad market retreat was influenced by escalating geopolitical tensions in the Strait of Hormuz and a sector-wide sell-off in software stocks following disappointing earnings reports from some industry players.",
-  stocks: [
+  "date": "Thursday · April 23, 2026",
+  "alert": {
+    "type": "warning",
+    "icon": "⚠️",
+    "title": "Market Downturn Amid Geopolitical Tensions & Tech Sell-off",
+    "body": "Global markets are experiencing a downturn today, with major indices in the red, as geopolitical tensions in the Middle East persist and a tech sector sell-off weighs heavily on investor sentiment."
+  },
+  "ticker": [
     {
-      ticker: "RHM.DE",
-      name: "Rheinmetall AG · XETRA",
-      price: "€XXX.XX", // No specific price found for RHM.DE for April 23, 2026
-      change: "▲/▼ X.X%", // No specific change found for RHM.DE for April 23, 2026
-      dir: "flat", // Assuming flat due to lack of specific data
-      news: "<strong>🔑 Today:</strong> No specific news for Rheinmetall AG was found for April 23, 2026. The defense sector generally remains in focus due to ongoing global geopolitical developments.",
-      outlook: "Rheinmetall's 2026 outlook remains strong, driven by increased global defense spending and modernization efforts across various militaries. The company is expected to benefit from its robust order backlog and strategic acquisitions.",
-      badge: "🛡️ Defense Focus",
-      badgeClass: "badge-buy"
+      "label": "S&P 500",
+      "value": "7,107.32",
+      "dir": "down",
+      "arrow": "▼ 0.43%"
     },
     {
-      ticker: "NVDA",
-      name: "NVIDIA Corp · NASDAQ",
-      price: "$202.77",
-      change: "▲ 0.36%",
-      dir: "up",
-      news: "<strong>🔑 Today:</strong> NVIDIA shares are trading slightly up today, with key news revolving around expanded partnerships with Google Cloud for agentic and physical AI, and the launch of Ising, an open-source family of AI models for quantum processor calibration. Additionally, NVIDIA is collaborating with Cadence Design Systems to advance AI development in robotics.",
-      outlook: "NVIDIA's 2026 outlook is exceptionally strong, fueled by its dominance in AI data center GPUs and continued innovation in AI and accelerated computing. The company is expected to maintain its leadership position through new product releases and strategic collaborations.",
-      badge: "칩 AI Leader",
-      badgeClass: "badge-buy"
+      "label": "NASDAQ",
+      "value": "24,427.79",
+      "dir": "down",
+      "arrow": "▼ 0.93%"
     },
     {
-      ticker: "AMD",
-      name: "Advanced Micro Devices Inc · NASDAQ",
-      price: "$302.95",
-      change: "▲ 6.67%",
-      dir: "up",
-      news: "<strong>🔑 Today:</strong> AMD stock surged today, hitting a new all-time high of $304.38, following the launch of its Ryzen 9 9950X3D2 Dual Edition CPU. Stifel also raised its price target for AMD to $320, citing growing AI computing requirements and deepening partnerships with major technology companies.",
-      outlook: "AMD's 2026 outlook is highly positive, driven by strong demand for its high-performance computing and AI solutions. The company's expanding product portfolio and strategic wins in the data center market are expected to contribute to continued revenue growth.",
-      badge: "🚀 AI Growth",
-      badgeClass: "badge-buy"
+      "label": "Dow Jones",
+      "value": "49,304.98",
+      "dir": "down",
+      "arrow": "▼ 0.37%"
     },
     {
-      ticker: "MSFT",
-      name: "Microsoft Corp · NASDAQ",
-      price: "$421.37",
-      change: "▼ 3.65%",
-      dir: "down",
-      news: "<strong>🔑 Today:</strong> Microsoft shares are down today amid a broader software sector decline and concerns about its cloud order backlog, with 45% attributed to OpenAI. Despite this, Guggenheim reaffirmed a 'buy' rating with a $586 price objective, citing underappreciated AI and cloud growth potential ahead of Q3 earnings on April 29.",
-      outlook: "Microsoft's 2026 outlook remains robust, underpinned by strong cloud growth (Azure), increasing adoption of AI-powered solutions like Copilot, and continued enterprise demand for its software and services. The company's strategic investments in AI are expected to drive long-term growth.",
-      badge: "☁️ AI & Cloud",
-      badgeClass: "badge-hold"
+      "label": "DAX",
+      "value": "24,155.45",
+      "dir": "down",
+      "arrow": "▼ 0.16%"
+    },
+    {
+      "label": "Nikkei 225",
+      "value": "N/A",
+      "dir": "flat",
+      "arrow": "→ 0.0%"
+    },
+    {
+      "label": "Hang Seng",
+      "value": "26,163.24",
+      "dir": "down",
+      "arrow": "▼ 1.22%"
     }
   ],
-  etfs: [
+  "market": [
     {
-      ticker: "EUNL.DE",
-      name: "iShares Core MSCI World UCITS ETF · XETRA",
-      stats: "Price: €XXX.XX\nChange: ▲/▼ X.X%\nTER: 0.20%\nExchange: XETRA", // No specific price/change found for EUNL.DE for April 23, 2026
-      badge: "Global Diversification",
-      badgeClass: "badge-hold",
-      desc: "The iShares Core MSCI World UCITS ETF provides broad exposure to developed market equities worldwide. Today, global markets are experiencing some volatility due to geopolitical tensions, which could impact the ETF's performance.",
-      verdict: "This ETF remains a solid long-term holding for diversified global equity exposure, though short-term performance may be affected by current market uncertainties."
+      "label": "S&P 500",
+      "value": "7,107.32",
+      "change": "▼ 0.43%",
+      "dir": "down"
     },
     {
-      ticker: "4MMR.DE",
-      name: "Global X Defense Tech UCITS ETF · XETRA",
-      stats: "Price: €XXX.XX\nChange: ▲/▼ X.X%\nTER: 0.50%\nExchange: XETRA", // No specific price/change found for 4MMR.DE for April 23, 2026
-      badge: "Defense Tech",
-      badgeClass: "badge-buy",
-      desc: "The Global X Defense Tech UCITS ETF focuses on companies involved in the defense technology sector. Given the current geopolitical climate and increased defense spending globally, this ETF is likely to see continued interest.",
-      verdict: "With rising global tensions, the defense technology sector is poised for growth, making this ETF a potentially attractive investment for those seeking exposure to this theme."
+      "label": "NASDAQ",
+      "value": "24,427.79",
+      "change": "▼ 0.93%",
+      "dir": "down"
     },
     {
-      ticker: "ITA",
-      name: "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      stats: "Price: $XXX.XX\nChange: ▲/▼ X.X%\nTER: 0.42%\nExchange: NYSE Arca", // No specific price/change found for ITA for April 23, 2026
-      badge: "US Defense",
-      badgeClass: "badge-buy",
-      desc: "The iShares U.S. Aerospace & Defense ETF invests in U.S. companies that manufacture commercial and military aircraft and other defense equipment. The ongoing geopolitical developments and emphasis on national security are supportive factors for this ETF.",
-      verdict: "This ETF offers targeted exposure to the U.S. aerospace and defense industry, which is expected to benefit from sustained government spending and global security concerns."
+      "label": "Dow Jones",
+      "value": "49,304.98",
+      "change": "▼ 0.37%",
+      "dir": "down"
+    },
+    {
+      "label": "DAX",
+      "value": "24,155.45",
+      "change": "▼ 0.16%",
+      "dir": "down"
+    },
+    {
+      "label": "Nikkei 225",
+      "value": "N/A",
+      "change": "→ 0.0%",
+      "dir": "flat"
+    },
+    {
+      "label": "Hang Seng",
+      "value": "26,163.24",
+      "change": "▼ 1.22%",
+      "dir": "down"
     }
   ],
-  macro: [
+  "marketSummary": "Today, global markets are broadly lower, with the S&P 500, NASDAQ, and Dow Jones all experiencing declines. This downturn is largely attributed to ongoing geopolitical uncertainty in the Middle East, which is causing oil prices to swing and keeping investors on edge. Additionally, a significant sell-off in the technology sector, driven by disappointing earnings responses from some major players and concerns about AI's impact on legacy software, is contributing to the negative market mood.",
+  "stocks": [
     {
-      theme: "⚔️ Geopolitical Tensions",
-      what: "Escalating tensions between the U.S. and Iran in the Strait of Hormuz, with President Trump ordering the U.S. Navy to 'shoot and kill' boats laying mines.",
-      impact: "This is leading to increased market volatility, elevated oil prices, and a cautious sentiment among investors, impacting risk assets globally."
+      "ticker": "RHM.DE",
+      "name": "Rheinmetall AG · XETRA",
+      "price": "€1,407.00",
+      "change": "▼ 1.11%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> No specific news for RHM.DE was found for today, April 23, 2026. However, the broader market sentiment, particularly in Europe, is cautious with the DAX also showing a slight decline. Investors are likely reacting to the general geopolitical climate and tech sector performance.",
+      "outlook": "The 2026 outlook for companies in the industrial sector like RHM.DE will likely be influenced by global economic stability and supply chain resilience. Any escalation in geopolitical tensions could impact manufacturing and international trade, while a stable environment could support growth.",
+      "badge": " neutral",
+      "badgeClass": "badge-hold"
     },
     {
-      theme: "🤖 AI-driven Disruption",
-      what: "Concerns about AI-driven disruption across the software sector are reignited following disappointing earnings reports from some software companies.",
-      impact: "This theme is contributing to a sector-wide sell-off in software stocks, with investors scrutinizing companies' AI strategies and capital expenditure requirements."
+      "ticker": "NVDA",
+      "name": "NVIDIA Corp · NASDAQ",
+      "price": "$198.97",
+      "change": "▼ 1.74%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> NVIDIA is making headlines with strategic AI partnerships, including collaborations with Google on agentic and physical AI advancements, and with Oklo for nuclear fuel validation to power AI infrastructure. These deals are generating bullish sentiment among investors, positioning NVIDIA at the forefront of next-generation computing. However, the stock is down today amidst a broader tech sell-off.",
+      "outlook": "NVIDIA's 2026 outlook remains strong, with analysts projecting significant data center revenue growth, fueled by the upcoming Vera Rubin platform in the second half of 2026. Despite potential market share declines and increased competition in the GPU sector, demand for AI infrastructure is expected to continue rising through 2030.",
+      "badge": "🚀 Buy",
+      "badgeClass": "badge-buy"
     },
     {
-      theme: "📈 Inflationary Pressures",
-      what: "Elevated crude oil prices, partly due to the Strait of Hormuz closure, continue to fuel inflation concerns.",
-      impact: "This keeps risk sentiment in check and could influence central bank monetary policy decisions, potentially leading to a more hawkish stance to combat rising prices."
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices · NASDAQ",
+      "price": "$304.14",
+      "change": "▲ 0.22%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> AMD's stock hit a new all-time high of $304.38, reflecting robust performance and investor confidence. This surge is attributed to strong data center demand and the company's expanding role in the AI compute market, with analysts upgrading ratings and raising price targets. Additionally, AMD unveiled the Ryzen 9 9950X3D2 Dual Edition, a flagship desktop processor, reinforcing its leadership in high-performance computing.",
+      "outlook": "AMD's 2026 outlook is bullish, with projections for significant revenue growth, particularly in its Data Center segment, driven by AI tailwinds and multi-billion, multi-year AI infrastructure deals. However, some analysts note potential gross margin compression and valuation concerns.",
+      "badge": "📈 Buy",
+      "badgeClass": "badge-buy"
     },
     {
-      theme: "📊 Tech Sector Earnings",
-      what: "Investor attention is focused on upcoming tech earnings, with Microsoft's Q3 report due on April 29, 2026.",
-      impact: "These reports will provide crucial insights into cloud growth, AI adoption rates, and capital expenditure guidance, which could significantly impact market sentiment and individual stock performance."
+      "ticker": "MSFT",
+      "name": "Microsoft Corp · NASDAQ",
+      "price": "$416.40",
+      "change": "▼ 3.82%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> Microsoft is facing a $2.3 billion class-action lawsuit in Britain, accusing the tech giant of abusing its dominant market position and overcharging businesses for Windows Server software on rival cloud platforms. In other news, Microsoft is offering its first-ever voluntary retirement program to eligible U.S. employees, impacting approximately 7% of its workforce, as it reallocates resources towards artificial intelligence.",
+      "outlook": "Microsoft's 2026 outlook is generally bullish, with analysts setting a median price target implying significant upside. The company is expected to see continued strong performance in its cloud services (Azure) and Microsoft 365, driven by strategic investments in AI and infrastructure. However, potential challenges include overly optimistic revenue expectations and slower-than-anticipated enterprise AI adoption.",
+      "badge": "⚖️ Hold",
+      "badgeClass": "badge-hold"
     }
   ],
-  calendar: [
-    { date: "Thu Apr 23", event: "US Initial Jobless Claims", why: "Indicates the health of the labor market; higher claims suggest economic weakening. Today's claims rose by 6,000 to 214,000, above consensus." },
-    { date: "Thu Apr 23", event: "Japan S&P Global Manufacturing PMI Flash APR", why: "Key indicator of manufacturing sector health. Today's reading was 54.9, up from 51.6." },
-    { date: "Thu Apr 23", event: "UK Gfk Consumer Confidence APR", why: "Measures consumer sentiment, impacting spending and economic growth. Today's reading was -25, lower than the previous -21." },
-    { date: "Mon Apr 27", event: "US Treasury Auctions", why: "Several Treasury bill auctions are scheduled, impacting bond yields and liquidity." },
-    { date: "Wed Apr 29", event: "Microsoft Q3 Earnings Release", why: "Crucial for tech sector sentiment, providing insights into cloud growth and AI investments." }
+  "etfs": [
+    {
+      "ticker": "EUNL.DE",
+      "name": "iShares Core MSCI World UCITS ETF · XETRA",
+      "stats": "Price: €116.96\nChange: ▲ 0.34%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Diversify",
+      "badgeClass": "badge-hold",
+      "desc": "EUNL.DE is an iShares Core MSCI World UCITS ETF, designed to give investors broad exposure to global developed market equities. Its performance today, showing a slight gain, suggests resilience amidst a generally down market, possibly due to its diversified nature.",
+      "verdict": "Given the current market volatility, a globally diversified ETF like EUNL.DE can offer a relatively stable investment, providing exposure to a wide range of developed markets."
+    },
+    {
+      "ticker": "4MMR.DE",
+      "name": "Global X Defense Tech UCITS ETF · XETRA",
+      "stats": "Price: €26.56\nChange: ▼ 0.58%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Ethical Focus",
+      "badgeClass": "badge-hold",
+      "desc": "4MMR.DE is an iShares MSCI World Islamic UCITS ETF, focusing on Sharia-compliant global equities. Its slight decline today aligns with the broader negative market sentiment, though its specific ethical screening may offer a different risk profile for certain investors.",
+      "verdict": "For investors seeking Sharia-compliant exposure to global equities, 4MMR.DE remains a relevant option, but its performance will largely mirror the broader global market trends."
+    },
+    {
+      "ticker": "ITA",
+      "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
+      "stats": "Price: $218.34\nChange: ▼ 0.37%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Defense Play",
+      "badgeClass": "badge-watch",
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks the performance of U.S. equities in the aerospace and defense sector. Today's slight decline in ITA could be influenced by broader market weakness, despite the sector's often defensive nature and ongoing government contracts.",
+      "verdict": "ITA provides targeted exposure to the U.S. aerospace and defense industry. While offering long-term growth potential due to national security and global transportation demands, investors should be mindful of geopolitical and budgetary risks."
+    }
   ],
-  quote: {
-    text: "Wall Street's main indexes were flat on Thursday, as investors awaited clear signals on the U.S.-Iran war, while a batch of mixed earnings reignited concerns about AI-driven disruption across the software sector.",
-    source: "Reuters · April 23, 2026"
+  "macro": [
+    {
+      "theme": "⚔️ Geopolitical Tensions",
+      "what": "Continued uncertainty surrounding the U.S.-Israel war with Iran is impacting global markets and causing oil prices to swing.",
+      "impact": "Increased market volatility and investor caution, leading to a general downturn in stock indices and rising commodity prices like oil."
+    },
+    {
+      "theme": "💻 Tech Sector Sell-off",
+      "what": "Major technology stocks are experiencing declines today, partly due to disappointing earnings reports and concerns about the disruptive potential of AI on legacy software businesses.",
+      "impact": "Negative pressure on indices like the NASDAQ and Dow Jones, with investors reassessing valuations in the tech sector."
+    },
+    {
+      "theme": "🤖 AI Infrastructure Boom",
+      "what": "Despite broader tech concerns, companies like NVIDIA and AMD are seeing strong demand and making significant advancements in AI infrastructure and chip development.",
+      "impact": "Continued investment and growth opportunities within the semiconductor and AI-related industries, even as other tech segments face headwinds."
+    },
+    {
+      "theme": "💼 Labor Market Conditions",
+      "what": "A report indicated a slight increase in U.S. workers applying for unemployment benefits last week, though the numbers remain historically healthy.",
+      "impact": "Provides a steady flow of second-tier data shaping the macro backdrop, with jobless claims offering a weekly read on labor market health."
+    },
+    {
+      "theme": "☁️ Cloud Computing Scrutiny",
+      "what": "Microsoft is facing a significant class-action lawsuit in the UK over alleged anti-competitive practices in its cloud computing services.",
+      "impact": "Could lead to increased regulatory oversight and potential financial penalties for major tech companies, impacting their cloud business models and profitability."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "Thu Apr 23",
+      "event": "US Jobless Claims",
+      "why": "Provides a weekly insight into the health of the U.S. labor market and potential economic shifts."
+    },
+    {
+      "date": "Thu Apr 23",
+      "event": "Regional Business Surveys (e.g., Kansas City Fed manufacturing)",
+      "why": "Updates on factory activity, orders, and sentiment, offering a gauge of manufacturing sector health."
+    },
+    {
+      "date": "Wed Apr 29",
+      "event": "Microsoft (MSFT) Earnings Report",
+      "why": "A key earnings release that will provide insights into the performance of a major tech company and its outlook, particularly in AI and cloud services."
+    },
+    {
+      "date": "Mon Apr 1",
+      "event": "Final Manufacturing PMI (EUR, GBP, USD)",
+      "why": "Important indicators of manufacturing sector health across major economies, influencing currency and market sentiment."
+    },
+    {
+      "date": "Wed Apr 10",
+      "event": "CPI (USD)",
+      "why": "Key inflation data for the U.S., which can significantly influence Federal Reserve policy decisions and market expectations."
+    },
+    {
+      "date": "Wed Apr 29",
+      "event": "FOMC Policy Decision Announcement",
+      "why": "The Federal Open Market Committee's interest rate decision and accompanying statements heavily influence interest rates and the overall U.S. economy."
+    }
+  ],
+  "quote": {
+    "text": "The stock market is a device for transferring money from the impatient to the patient.",
+    "source": "Warren Buffett"
   }
 };
 </script>
