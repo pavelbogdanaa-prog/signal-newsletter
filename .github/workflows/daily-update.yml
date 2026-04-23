@@ -14,152 +14,300 @@ jobs:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🤖 Generate daily-data.js via Gemini API
+      - name: 📊 Fetch market prices via yfinance
+        continue-on-error: true
+        run: |
+          pip install -q yfinance
+          python3 <<'PYEOF'
+          import yfinance as yf, json, sys
+          from datetime import datetime, timezone
+
+          SYMBOLS = [
+              '^GSPC', '^IXIC', '^DJI', '^GDAXI', '^N225', '^HSI',
+              'RHM.DE', 'NVDA', 'AMD', 'MSFT',
+              'EUNL.DE', '4MMR.DE', 'ITA',
+              'BZ=F', 'GC=F', '^TNX'
+          ]
+
+          def fmt(price, currency=''):
+              if price is None: return 'N/A'
+              if price >= 100000: return f'{currency}{price:,.0f}'
+              return f'{currency}{price:,.2f}'
+
+          def arrow_pct(pct):
+              if pct is None: return '→ 0.0%'
+              a = '▲' if pct > 0 else ('▼' if pct < 0 else '→')
+              return f'{a} {abs(pct):.2f}%'
+
+          def direction(pct):
+              if pct is None: return 'flat'
+              return 'up' if pct > 0.05 else ('down' if pct < -0.05 else 'flat')
+
+          try:
+              data = yf.download(SYMBOLS, period='5d', auto_adjust=True, progress=False)
+              closes = data['Close']
+          except Exception as e:
+              print(f'❌ yfinance download failed: {e}', file=sys.stderr)
+              sys.exit(1)
+
+          def price_and_pct(sym):
+              try:
+                  s = closes[sym].dropna()
+                  if len(s) < 1: return None, None
+                  price = float(s.iloc[-1])
+                  pct = float((s.iloc[-1] - s.iloc[-2]) / s.iloc[-2] * 100) if len(s) >= 2 else None
+                  return price, pct
+              except Exception as e:
+                  print(f'⚠️  {sym}: {e}', file=sys.stderr)
+                  return None, None
+
+          INDICES = [
+              ('^GSPC', 'S&P 500', ''),
+              ('^IXIC', 'NASDAQ', ''),
+              ('^DJI', 'Dow Jones', ''),
+              ('^GDAXI', 'DAX', ''),
+              ('^N225', 'Nikkei 225', ''),
+              ('^HSI', 'Hang Seng', ''),
+          ]
+          STOCKS = [
+              ('RHM.DE', 'Rheinmetall AG · XETRA', '€'),
+              ('NVDA', 'NVIDIA Corp · NASDAQ', '$'),
+              ('AMD', 'Advanced Micro Devices · NASDAQ', '$'),
+              ('MSFT', 'Microsoft Corp · NASDAQ', '$'),
+          ]
+          ETFS = [
+              ('EUNL.DE', 'iShares Core MSCI World UCITS ETF · XETRA', '€', '0.20%', 'XETRA'),
+              ('4MMR.DE', 'Global X Defense Tech UCITS ETF · XETRA', '€', '0.50%', 'XETRA'),
+              ('ITA', 'iShares U.S. Aerospace & Defense ETF · NYSE Arca', '$', '0.42%', 'NYSE Arca'),
+          ]
+
+          out = {'ticker': [], 'market': [], 'stocks': {}, 'etfs': {}, 'prices_summary': ''}
+          lines = ['VERIFIED PRICES (yfinance — do NOT alter these in your output):', 'Indices:']
+
+          for sym, label, _ in INDICES:
+              price, pct = price_and_pct(sym)
+              v, arr, d = fmt(price), arrow_pct(pct), direction(pct)
+              out['ticker'].append({'label': label, 'value': v, 'dir': d, 'arrow': arr})
+              out['market'].append({'label': label, 'value': v, 'change': arr, 'dir': d})
+              lines.append(f'  {label}: {v} ({arr})')
+
+          lines.append('Stocks:')
+          for sym, name, currency in STOCKS:
+              price, pct = price_and_pct(sym)
+              v, arr, d = fmt(price, currency), arrow_pct(pct), direction(pct)
+              out['stocks'][sym] = {'price': v, 'change': arr, 'dir': d}
+              lines.append(f'  {sym}: {v} ({arr})')
+
+          lines.append('ETFs:')
+          for sym, name, currency, ter, exchange in ETFS:
+              price, pct = price_and_pct(sym)
+              v, arr, d = fmt(price, currency), arrow_pct(pct), direction(pct)
+              out['etfs'][sym] = {
+                  'price': v, 'change': arr, 'dir': d,
+                  'stats': f'Price: {v}\nChange: {arr}\nTER: {ter}\nExchange: {exchange}'
+              }
+              lines.append(f'  {sym}: {v} ({arr})')
+
+          lines.append('Commodities/Bonds (context only):')
+          for sym, label, currency, suffix in [
+              ('BZ=F', 'Brent Oil', '$', ''), ('GC=F', 'Gold', '$', ''), ('^TNX', '10Y Treasury', '', '%')
+          ]:
+              price, pct = price_and_pct(sym)
+              v = (fmt(price, currency) if price else 'N/A') + suffix
+              lines.append(f'  {label}: {v} ({arrow_pct(pct)})')
+
+          out['prices_summary'] = '\n'.join(lines)
+          with open('prices.json', 'w') as f:
+              json.dump(out, f, indent=2, ensure_ascii=False)
+          print('✅ prices.json written')
+          print('\n'.join(lines))
+          PYEOF
+
+      - name: 🤖 Generate commentary via Gemini API
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          TODAY=$(date -u +"%A · %B %-d, %Y")
+          python3 <<'PYEOF'
+          import json, os, sys, time
+          import urllib.request, urllib.error
 
-          PROMPT="Today is ${TODAY}. Generate a fresh daily-data.js file for the SIGNAL stock market newsletter.
+          TODAY = __import__('datetime').datetime.now(__import__('datetime').timezone.utc).strftime('%A · %B %-d, %Y')
+          API_KEY = os.environ['GEMINI_API_KEY']
 
-          ASSETS TO COVER: RHM.DE (Rheinmetall), NVDA (NVIDIA), AMD, MSFT (Microsoft), EUNL.DE (iShares MSCI World), 4MMR.DE (Global X Defence Tech ETF), ITA (iShares US Aerospace & Defense ETF).
-
-          Search for and include today's:
-          - Latest market prices and % changes for all assets
-          - Top 1-2 news stories per stock (most important catalyst today)
-          - Main macro themes and their market impact
-          - This week's key economic calendar events
-          - One relevant market quote from today
-
-          CRITICAL RULES:
-          1. Output ONLY valid JavaScript — no markdown, no backticks, no explanation
-          2. Start with exactly: window.SIGNAL_DATA = {
-          3. Follow this EXACT JSON structure (copy structure, replace values with today's data):
-
-          window.SIGNAL_DATA = {
-            date: \"${TODAY}\",
-            alert: { type: \"critical|warning|positive\", icon: \"emoji\", title: \"TITLE\", body: \"body text\" },
-            ticker: [ { label: \"S&P 500\", value: \"0,000\", dir: \"up|down|flat\", arrow: \"▲|▼|→ X.X%\" }, ... ],
-            market: [ { label: \"S&P 500\", value: \"0,000\", change: \"▲ X.X%\", dir: \"up|down|flat\" }, ... ],
-            marketSummary: \"2-3 sentence summary of today's market mood. HTML allowed.\",
-            stocks: [
-              {
-                ticker: \"RHM.DE\",
-                name: \"Rheinmetall AG · XETRA\",
-                price: \"€X,XXX\",
-                change: \"▲/▼ X.X%\",
-                dir: \"up|down|flat\",
-                news: \"<strong>🔑 Today:</strong> 2-3 sentences of today's top news for this stock. HTML allowed.\",
-                outlook: \"1-2 sentences static 2026 outlook. HTML allowed.\",
-                badge: \"emoji + label\",
-                badgeClass: \"badge-buy|badge-hold|badge-watch\"
-              }
-            ],
-            etfs: [
-              {
-                ticker: \"EUNL.DE\",
-                name: \"full name\",
-                stats: \"Price: X\\nChange: X\\nTER: X\\nExchange: X\",
-                badge: \"label\",
-                badgeClass: \"badge-buy|badge-hold|badge-watch\",
-                desc: \"2-3 sentence description with today's context. HTML allowed.\",
-                verdict: \"1-2 sentence verdict. HTML allowed.\"
-              }
-            ],
-            macro: [ { theme: \"emoji + name\", what: \"explanation\", impact: \"market impact\" } ],
-            calendar: [ { date: \"Day Mon DD\", event: \"event name\", why: \"why it matters\" } ],
-            quote: { text: \"quote text\", source: \"Name, Title · Date\" }
-          };
-
-          Include 6 market cards, 4 stocks (RHM, NVDA, AMD, MSFT), 3 ETFs (EUNL, 4MMR, ITA), 4-5 macro themes, 5-6 calendar events. Output ONLY the JavaScript, nothing else."
-
-          # Call Gemini API with Google Search grounding (retry on 503/overload)
-          PROMPT_JSON=$(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')
-          PAYLOAD="{
-            \"contents\": [{\"role\": \"user\", \"parts\": [{\"text\": $PROMPT_JSON}]}],
-            \"tools\": [{\"google_search\": {}}],
-            \"generationConfig\": {\"maxOutputTokens\": 8000, \"temperature\": 0.2, \"thinkingConfig\": {\"thinkingBudget\": 0}}
-          }"
-
-          # Try many models with backoff. If all fail transiently, keep old data.
-          MODELS=("gemini-2.5-flash" "gemini-2.5-flash-lite" "gemini-2.0-flash" "gemini-2.5-flash" "gemini-2.5-flash-lite" "gemini-2.0-flash-lite" "gemini-2.5-flash" "gemini-2.0-flash")
-          DELAYS=(0 30 30 60 60 60 90 90)
-          RESPONSE=""
-          SUCCESS=0
-          for i in "${!MODELS[@]}"; do
-            MODEL="${MODELS[$i]}"
-            DELAY="${DELAYS[$i]}"
-            if [ "$DELAY" -gt 0 ]; then
-              echo "⏳ Attempt $((i+1))/${#MODELS[@]} with $MODEL after ${DELAY}s..."
-              sleep "$DELAY"
-            else
-              echo "▶️  Attempt 1/${#MODELS[@]} with $MODEL"
-            fi
-            RESPONSE=$(curl -s "https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=$GEMINI_API_KEY" \
-              -H "Content-Type: application/json" \
-              -d "$PAYLOAD")
-            STATUS=$(echo "$RESPONSE" | python3 -c "import json,sys
           try:
-              d=json.load(sys.stdin)
-              e=d.get('error',{})
-              code=e.get('code',0)
-              if code==0: print('ok')
-              elif code in (429,500,502,503,504): print('retry')
-              else: print('fatal')
-          except: print('retry')" 2>/dev/null)
-            if [ "$STATUS" = "ok" ]; then
-              echo "✅ Success on attempt $((i+1)) with $MODEL"
-              SUCCESS=1
-              break
-            elif [ "$STATUS" = "fatal" ]; then
-              echo "❌ Non-retryable error — aborting retries"
-              break
-            else
-              echo "⚠️  Transient error on $MODEL — retrying..."
-            fi
-          done
+              prices_data = json.load(open('prices.json'))
+              prices_text = prices_data.get('prices_summary', 'Prices unavailable')
+          except Exception:
+              prices_text = 'Prices unavailable — use your best estimate'
 
-          echo "--- API Response (truncated) ---"
-          echo "$RESPONSE" | head -c 500
-          echo ""
+          PROMPT = f"""Today is {TODAY}.
 
-          if [ "$SUCCESS" != "1" ]; then
-            echo "⚠️  All Gemini attempts failed. Keeping previous daily-data.js so the email still goes out with last known data."
-            if [ -s daily-data.js ]; then
-              echo "✅ Previous daily-data.js retained ($(wc -c < daily-data.js) bytes)"
-              exit 0
-            else
-              echo "❌ No previous daily-data.js to fall back to — aborting"
-              exit 1
-            fi
-          fi
+          {prices_text}
 
-          # Extract text from successful response
-          echo "$RESPONSE" | python3 -c "
+          You are writing the SIGNAL stock market newsletter. The prices above are exact and verified — do NOT include or change price/change values in your output. Your job is ONLY to generate commentary and news.
+
+          Using Google Search, find today's top news and write commentary. Output ONLY valid JSON (no markdown, no backticks, no explanation). Follow this exact structure:
+
+          {{
+            "alert": {{ "type": "critical|warning|positive", "icon": "emoji", "title": "SHORT TITLE", "body": "1-2 sentence body" }},
+            "marketSummary": "2-3 sentence summary of today's market mood. HTML allowed.",
+            "stocks": {{
+              "RHM.DE": {{ "news": "<strong>🔑 Today:</strong> 2-3 sentences on today's top catalyst. HTML allowed.", "outlook": "1-2 sentence 2026 outlook.", "badge": "emoji + label", "badgeClass": "badge-buy|badge-hold|badge-watch" }},
+              "NVDA":   {{ "news": "...", "outlook": "...", "badge": "...", "badgeClass": "..." }},
+              "AMD":    {{ "news": "...", "outlook": "...", "badge": "...", "badgeClass": "..." }},
+              "MSFT":   {{ "news": "...", "outlook": "...", "badge": "...", "badgeClass": "..." }}
+            }},
+            "etfs": {{
+              "EUNL.DE": {{ "desc": "2-3 sentence description with today's context. HTML allowed.", "verdict": "1-2 sentence verdict.", "badge": "label", "badgeClass": "badge-buy|badge-hold|badge-watch" }},
+              "4MMR.DE": {{ "desc": "...", "verdict": "...", "badge": "...", "badgeClass": "..." }},
+              "ITA":     {{ "desc": "...", "verdict": "...", "badge": "...", "badgeClass": "..." }}
+            }},
+            "macro":    [ {{ "theme": "emoji + name", "what": "explanation", "impact": "market impact" }} ],
+            "calendar": [ {{ "date": "Day Mon DD", "event": "event name", "why": "why it matters" }} ],
+            "quote":    {{ "text": "quote text", "source": "Name, Title · Date" }}
+          }}
+
+          Include 4-5 macro themes and 5-6 calendar events. Output ONLY the JSON object."""
+
+          payload = json.dumps({
+              'contents': [{'role': 'user', 'parts': [{'text': PROMPT}]}],
+              'tools': [{'google_search': {}}],
+              'generationConfig': {'maxOutputTokens': 4000, 'temperature': 0.2, 'thinkingConfig': {'thinkingBudget': 0}}
+          }).encode()
+
+          MODELS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.0-flash',
+                    'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.0-flash-lite',
+                    'gemini-2.5-flash', 'gemini-2.0-flash']
+          DELAYS = [0, 30, 30, 60, 60, 60, 90, 90]
+
+          result_text = None
+          for i, (model, delay) in enumerate(zip(MODELS, DELAYS)):
+              if delay: print(f'⏳ Attempt {i+1}/{len(MODELS)} with {model} after {delay}s...'); time.sleep(delay)
+              else: print(f'▶️  Attempt 1/{len(MODELS)} with {model}')
+              url = f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={API_KEY}'
+              try:
+                  req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
+                  with urllib.request.urlopen(req, timeout=120) as resp:
+                      data = json.loads(resp.read())
+              except Exception as e:
+                  print(f'⚠️  Request error: {e}')
+                  continue
+              err = data.get('error', {})
+              code = err.get('code', 0)
+              if code in (429, 500, 502, 503, 504):
+                  print(f'⚠️  Transient {code} on {model} — retrying...')
+                  continue
+              elif code != 0:
+                  print(f'❌ Fatal error {code}: {err.get("message")}')
+                  break
+              try:
+                  text = data['candidates'][0]['content']['parts'][0]['text'].strip()
+                  if text.startswith('```'):
+                      lines = text.split('\n')
+                      text = '\n'.join(lines[1:-1] if lines[-1].strip() == '```' else lines[1:])
+                  json.loads(text)  # validate
+                  result_text = text
+                  print(f'✅ Success on attempt {i+1} with {model}')
+                  break
+              except Exception as e:
+                  print(f'⚠️  Parse error: {e}')
+                  continue
+
+          if result_text:
+              with open('commentary.json', 'w') as f:
+                  f.write(result_text)
+              print('✅ commentary.json written')
+          else:
+              print('⚠️  All Gemini attempts failed — merge step will use fallback commentary')
+          PYEOF
+
+      - name: 🔀 Merge prices + commentary into daily-data.js
+        continue-on-error: true
+        run: |
+          python3 <<'PYEOF'
           import json, sys
-          data = json.load(sys.stdin)
-          try:
-              text = data['candidates'][0]['content']['parts'][0]['text'].strip()
-              if text.startswith('\`\`\`'):
-                  lines = text.split('\n')
-                  text = '\n'.join(lines[1:-1])
-              print(text)
-          except (KeyError, IndexError) as e:
-              print(f'ERROR parsing response: {e}', file=sys.stderr)
-              print(f'Response keys: {list(data.keys())}', file=sys.stderr)
-              sys.exit(1)
-          " > daily-data.js.new
+          from datetime import datetime, timezone
 
-          if [ -s daily-data.js.new ]; then
-            mv daily-data.js.new daily-data.js
-            echo "✅ daily-data.js generated successfully"
-            echo "--- Preview (first 5 lines) ---"
-            head -5 daily-data.js
-          else
-            rm -f daily-data.js.new
-            echo "⚠️  New data was empty. Keeping previous daily-data.js."
-          fi
+          TODAY = datetime.now(timezone.utc).strftime('%A · %B %-d, %Y')
+
+          try:
+              prices = json.load(open('prices.json'))
+          except Exception as e:
+              print(f'❌ Cannot read prices.json: {e}', file=sys.stderr)
+              sys.exit(1)
+
+          try:
+              commentary = json.load(open('commentary.json'))
+          except Exception:
+              commentary = {}
+              print('⚠️  No commentary.json — using fallback text')
+
+          STOCKS_META = [
+              ('RHM.DE', 'Rheinmetall AG · XETRA'),
+              ('NVDA',   'NVIDIA Corp · NASDAQ'),
+              ('AMD',    'Advanced Micro Devices · NASDAQ'),
+              ('MSFT',   'Microsoft Corp · NASDAQ'),
+          ]
+          ETFS_META = [
+              ('EUNL.DE', 'iShares Core MSCI World UCITS ETF · XETRA'),
+              ('4MMR.DE', 'Global X Defense Tech UCITS ETF · XETRA'),
+              ('ITA',     'iShares U.S. Aerospace & Defense ETF · NYSE Arca'),
+          ]
+
+          c_stocks = commentary.get('stocks', {})
+          c_etfs   = commentary.get('etfs', {})
+
+          stocks_out = []
+          for sym, name in STOCKS_META:
+              p = prices.get('stocks', {}).get(sym, {})
+              c = c_stocks.get(sym, {})
+              stocks_out.append({
+                  'ticker':     sym,
+                  'name':       name,
+                  'price':      p.get('price', 'N/A'),
+                  'change':     p.get('change', '→ 0.0%'),
+                  'dir':        p.get('dir', 'flat'),
+                  'news':       c.get('news', '<strong>🔑 Today:</strong> Commentary pending.'),
+                  'outlook':    c.get('outlook', '2026 outlook pending.'),
+                  'badge':      c.get('badge', '📊 Monitor'),
+                  'badgeClass': c.get('badgeClass', 'badge-hold'),
+              })
+
+          etfs_out = []
+          for sym, name in ETFS_META:
+              p = prices.get('etfs', {}).get(sym, {})
+              c = c_etfs.get(sym, {})
+              etfs_out.append({
+                  'ticker':     sym,
+                  'name':       name,
+                  'stats':      p.get('stats', 'Price: N/A\nChange: N/A'),
+                  'badge':      c.get('badge', 'ETF'),
+                  'badgeClass': c.get('badgeClass', 'badge-hold'),
+                  'desc':       c.get('desc', 'ETF commentary pending.'),
+                  'verdict':    c.get('verdict', 'Verdict pending.'),
+              })
+
+          data = {
+              'date':          TODAY,
+              'alert':         commentary.get('alert', {'type': 'positive', 'icon': 'ℹ️', 'title': 'Market Update', 'body': 'Live prices from yfinance.'}),
+              'ticker':        prices.get('ticker', []),
+              'market':        prices.get('market', []),
+              'marketSummary': commentary.get('marketSummary', 'Market summary loading.'),
+              'stocks':        stocks_out,
+              'etfs':          etfs_out,
+              'macro':         commentary.get('macro', []),
+              'calendar':      commentary.get('calendar', []),
+              'quote':         commentary.get('quote', {'text': 'Markets in motion.', 'source': f'SIGNAL · {TODAY}'}),
+          }
+
+          js = 'window.SIGNAL_DATA = ' + json.dumps(data, indent=2, ensure_ascii=False) + ';'
+          with open('daily-data.js', 'w') as f:
+              f.write(js)
+          print('✅ daily-data.js written')
+          for s in stocks_out:
+              print(f'  {s["ticker"]}: {s["price"]} {s["change"]}')
+          PYEOF
 
       - name: ✅ Validate JavaScript syntax
         continue-on-error: true
