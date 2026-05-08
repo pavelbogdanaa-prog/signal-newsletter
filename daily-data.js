@@ -1,224 +1,224 @@
 window.SIGNAL_DATA = {
-  "date": "Thursday · May 7, 2026",
+  "date": "Friday · May 8, 2026",
   "alert": {
-    "type": "positive",
-    "icon": "🚀",
-    "title": "Market Surges on Strong Economic Data",
-    "body": "Major indices climbed today, fueled by robust economic indicators and positive corporate earnings reports, signaling continued investor confidence."
+    "type": "warning",
+    "icon": "⚠️",
+    "title": "Market Pullback Amid Geopolitical Tensions",
+    "body": "U.S. stocks experienced a pullback from recent highs today as geopolitical tensions in the Middle East and fluctuating oil prices created investor uncertainty."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,365.12",
-      "dir": "up",
-      "arrow": "▲ 1.46%"
+      "value": "7,337.11",
+      "dir": "down",
+      "arrow": "▼ 0.38%"
     },
     {
       "label": "NASDAQ",
-      "value": "25,838.94",
-      "dir": "up",
-      "arrow": "▲ 2.02%"
+      "value": "25,806.20",
+      "dir": "down",
+      "arrow": "▼ 0.13%"
     },
     {
       "label": "Dow Jones",
-      "value": "49,910.59",
-      "dir": "up",
-      "arrow": "▲ 1.24%"
+      "value": "49,596.97",
+      "dir": "down",
+      "arrow": "▼ 0.63%"
     },
     {
       "label": "DAX",
-      "value": "24,972.84",
-      "dir": "up",
-      "arrow": "▲ 0.22%"
+      "value": "24,451.05",
+      "dir": "down",
+      "arrow": "▼ 0.86%"
     },
     {
       "label": "Nikkei 225",
-      "value": "62,833.84",
-      "dir": "up",
-      "arrow": "▲ 5.58%"
+      "value": "62,713.65",
+      "dir": "down",
+      "arrow": "▼ 0.19%"
     },
     {
       "label": "Hang Seng",
-      "value": "26,626.28",
-      "dir": "up",
-      "arrow": "▲ 1.57%"
+      "value": "26,392.95",
+      "dir": "down",
+      "arrow": "▼ 0.88%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,365.12",
-      "change": "▲ 1.46%",
-      "dir": "up"
+      "value": "7,337.11",
+      "change": "▼ 0.38%",
+      "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "25,838.94",
-      "change": "▲ 2.02%",
-      "dir": "up"
+      "value": "25,806.20",
+      "change": "▼ 0.13%",
+      "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "49,910.59",
-      "change": "▲ 1.24%",
-      "dir": "up"
+      "value": "49,596.97",
+      "change": "▼ 0.63%",
+      "dir": "down"
     },
     {
       "label": "DAX",
-      "value": "24,972.84",
-      "change": "▲ 0.22%",
-      "dir": "up"
+      "value": "24,451.05",
+      "change": "▼ 0.86%",
+      "dir": "down"
     },
     {
       "label": "Nikkei 225",
-      "value": "62,833.84",
-      "change": "▲ 5.58%",
-      "dir": "up"
+      "value": "62,713.65",
+      "change": "▼ 0.19%",
+      "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "26,626.28",
-      "change": "▲ 1.57%",
-      "dir": "up"
+      "value": "26,392.95",
+      "change": "▼ 0.88%",
+      "dir": "down"
     }
   ],
-  "marketSummary": "Today's trading session saw a broad-based rally across global markets, with technology and growth stocks leading the charge. Investors are increasingly optimistic about the economic outlook, driving significant gains in major indices.",
+  "marketSummary": "Major U.S. indices, including the S&P 500, NASDAQ, and Dow Jones, all saw declines today, retreating from their recent record highs. This downturn is largely attributed to ongoing concerns surrounding the U.S.-Iran conflict and its potential impact on global oil supplies, which led to volatile crude prices. Despite the broader market dip, some individual stocks, particularly in the AI sector, showed resilience.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,395.80",
-      "change": "▼ 3.18%",
+      "price": "€1,288.60",
+      "change": "▼ 3.95%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall AG reported strong order intake for its defense division, exceeding analyst expectations. The company highlighted ongoing geopolitical tensions as a key driver for sustained demand in its military vehicles and ammunition segments.",
-      "outlook": "Rheinmetall is well-positioned to benefit from increased defense spending globally through 2026, though supply chain challenges could present headwinds.",
-      "badge": "🛡️ Defense Strength",
-      "badgeClass": "badge-buy"
+      "news": "<strong>🔑 Today:</strong> No specific news was found for RHM.DE today. The stock experienced a significant decline, consistent with the broader market's cautious mood. Without direct catalysts, its movement likely reflects general investor sentiment and sector trends.",
+      "outlook": "The 2026 outlook for Rheinmetall (RHM.DE) remains tied to global defense spending and the company's ability to secure new contracts and expand its international presence. Geopolitical events could continue to influence its performance.",
+      "badge": " neutral",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$207.83",
-      "change": "▲ 5.77%",
+      "price": "$211.50",
+      "change": "▲ 1.77%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> NVIDIA announced a new suite of AI chips designed for enterprise data centers, promising significant performance improvements. The company also unveiled partnerships with major cloud providers to accelerate AI adoption.",
-      "outlook": "NVIDIA's dominance in AI hardware is expected to continue, with ongoing innovation and strategic partnerships driving growth through 2026.",
-      "badge": "💡 AI Leader",
+      "news": "<strong>🔑 Today:</strong> NVIDIA is making strategic moves to solidify its AI infrastructure supply chain and expand market access. The company is funding the construction of new Corning fiber-optic factories through a multi-billion-dollar prepayment and has partnered with IREN to deploy up to 5 gigawatts of NVIDIA DSX-aligned AI infrastructure. Additionally, CEO Jensen Huang has been invited on a Trump administration trip to China, signaling potential for wider market access.",
+      "outlook": "NVIDIA's 2026 outlook remains highly bullish, driven by accelerating demand for its AI chips in data centers and cloud computing. While customer concentration and rising competition are noted risks, the company's dominant market share and CUDA software ecosystem provide a strong competitive moat.",
+      "badge": "🚀 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$421.39",
-      "change": "▲ 18.61%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Advanced Micro Devices unveiled its latest EPYC server processors, directly challenging Intel and NVIDIA in the high-performance computing market. The new chips offer enhanced power efficiency and AI capabilities.",
-      "outlook": "AMD is aggressively gaining market share in the server and AI chip space, posing a significant competitive threat and offering strong growth potential into 2026.",
-      "badge": "🚀 Server Challenger",
+      "price": "$408.46",
+      "change": "▼ 3.07%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> AMD's stock saw a significant decline today, despite recent positive news regarding its Q1 2026 earnings beat and strong Q2 guidance, which highlighted robust AI and data center demand. The company's data center revenue surpassed Intel's for the first time in Q1 2026, driven by the rise of agentic AI. However, supply chain constraints, particularly CoWoS advanced packaging capacity, could become a bottleneck for shipments.",
+      "outlook": "AMD's 2026 outlook is strong, with expectations for significant top-line and bottom-line growth, particularly in its data center segment due to high demand for EPYC server processors and Instinct GPUs. Analysts are largely bullish, with several firms raising price targets, citing AMD as a key player in agentic AI. However, competition from Intel and NVIDIA, along with potential slowdowns in AI spending, remain challenges.",
+      "badge": "📈 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$413.96",
-      "change": "▲ 0.63%",
+      "price": "$420.77",
+      "change": "▲ 1.65%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Microsoft detailed its strategy for integrating generative AI across its entire cloud and productivity suite, emphasizing enhanced user experience and business efficiency. The company also announced new AI-powered developer tools.",
-      "outlook": "Microsoft's comprehensive AI integration across its ecosystem positions it for sustained growth, leveraging its strong enterprise relationships through 2026.",
-      "badge": "☁️ AI Ecosystem",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> Microsoft is offering its first voluntary retirement program in the U.S., making approximately 8,750 employees (7% of its U.S. workforce) eligible for healthcare, cash, and stock perks. This comes amidst ongoing efforts to simplify the Windows Insider Program and address Windows 11 update and performance issues. The company also recently reported strong fiscal Q3 2026 results, with AI business exceeding a $37 billion annual revenue run rate and Azure growth of 40%.",
+      "outlook": "The consensus among financial analysts for Microsoft's 2026 outlook remains overwhelmingly bullish, with an average price target suggesting significant upside. Analysts anticipate sustained momentum driven by high-margin software and cloud computing segments, with AI monetization expected to significantly boost profits. However, concerns exist regarding high AI cloud capacity spending and potential impacts of trade policy.",
+      "badge": "🌟 Buy",
+      "badgeClass": "badge-buy"
     }
   ],
   "etfs": [
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €120.00\nChange: ▲ 0.36%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Global Diversification",
-      "badgeClass": "badge-buy",
-      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) offers broad diversification across developed market equities. Today's performance reflects the overall positive sentiment in global equity markets.",
-      "verdict": "A solid core holding for long-term investors seeking exposure to global developed markets, benefiting from today's market upswing."
+      "stats": "Price: €119.36\nChange: ▼ 0.20%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Hold",
+      "badgeClass": "badge-hold",
+      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) is an exchange-traded fund that aims to track the performance of the MSCI World Index, investing in public equity markets of developed countries globally. It provides broad-based exposure to large and mid-cap companies across diversified sectors. Today, as global markets experienced a slight downturn, EUNL.DE also saw a minor decrease, reflecting its broad market exposure.",
+      "verdict": "EUNL.DE remains a solid choice for investors seeking diversified exposure to developed global equity markets, offering a cost-effective way to track the MSCI World Index."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €25.52\nChange: ▼ 0.95%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Emerging Markets",
+      "stats": "Price: €25.09\nChange: ▼ 0.36%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Watch",
       "badgeClass": "badge-watch",
-      "desc": "The Xtrackers MSCI Emerging Markets Swap UCITS ETF 1C (4MMR.DE) provides exposure to emerging market equities. Today's slight dip may indicate some profit-taking after recent gains, but the long-term trend remains positive.",
-      "verdict": "Emerging markets offer higher growth potential but also increased volatility; today's movement is within expected ranges for this asset class."
+      "desc": "No specific news or detailed description was found for 4MMR.DE today. As an ETF, its performance likely mirrors broader market or sector trends. Its slight decline today suggests it followed the general cautious sentiment in the market.",
+      "verdict": "Without specific information, it's difficult to provide a detailed verdict. Investors should research the underlying index and holdings of 4MMR.DE to understand its performance drivers."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $223.42\nChange: ▲ 3.74%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Italian Equities",
+      "stats": "Price: $222.51\nChange: ▼ 0.41%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Hold",
       "badgeClass": "badge-hold",
-      "desc": "The iShares MSCI Italy Capped ETF (ITA) tracks large and mid-cap Italian equities. The ETF's performance today aligns with broader European market movements, showing resilience.",
-      "verdict": "Offers targeted exposure to the Italian economy, which can be beneficial for diversification but carries specific country-related risks."
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks a market-cap-weighted index of U.S. manufacturers, assemblers, and distributors of airplane and defense equipment. It provides exposure to the Industrials sector, specifically the aerospace and defense industry. Today, ITA experienced a slight decline, consistent with the broader market's cautious tone, despite ongoing geopolitical tensions that could otherwise benefit the defense sector.",
+      "verdict": "ITA offers targeted exposure to the U.S. aerospace and defense sector. Its performance is closely tied to government spending, global security, and technological advancements in the industry."
     }
   ],
   "macro": [
     {
-      "theme": "💡 AI Revolution",
-      "what": "Continued advancements and widespread adoption of artificial intelligence technologies across various sectors.",
-      "impact": "Drives significant growth in tech stocks, particularly semiconductor and software companies, and boosts productivity across industries."
+      "theme": "⚔️ Geopolitical Tensions",
+      "what": "The ongoing U.S.-Iran conflict and exchange of fire in the Strait of Hormuz are creating significant global uncertainty.",
+      "impact": "This conflict is directly impacting oil prices, causing volatility and contributing to a cautious sentiment in the stock market."
     },
     {
-      "theme": "📈 Global Economic Recovery",
-      "what": "Signs of sustained economic growth in major economies, supported by strong consumer spending and industrial production.",
-      "impact": "Boosts overall market sentiment, benefiting cyclical stocks and commodities, and supporting higher interest rate expectations."
+      "theme": "⛽ Oil Price Volatility",
+      "what": "Brent crude oil prices have been fluctuating significantly, initially falling on hopes of a peace deal but later paring losses after renewed hostilities.",
+      "impact": "Uncertainty in oil prices can lead to higher energy costs, impacting consumer spending and corporate profits, and contributing to broader market instability."
     },
     {
-      "theme": "🛡️ Geopolitical Tensions",
-      "what": "Ongoing international conflicts and trade disputes creating uncertainty and influencing defense spending and supply chains.",
-      "impact": "Increases demand for defense stocks and can lead to supply chain disruptions, affecting manufacturing and commodity prices."
+      "theme": "💼 U.S. Jobs Report",
+      "what": "Investors are keenly awaiting the U.S. non-farm payrolls report for April, which is expected to show an increase in jobs.",
+      "impact": "A strong jobs report could signal a robust economy, but also potentially influence the Federal Reserve's monetary policy decisions regarding interest rates."
     },
     {
-      "theme": "⚡ Energy Transition",
-      "what": "Accelerated investment in renewable energy sources and electric vehicles, alongside shifts in traditional energy markets.",
-      "impact": "Benefits companies in the renewable energy sector, EV manufacturers, and battery technology, while impacting fossil fuel producers."
+      "theme": "☁️ AI Infrastructure Spending",
+      "what": "Major tech companies continue to commit massive capital expenditures to AI infrastructure, driving demand for AI chips and related technologies.",
+      "impact": "This sustained investment is a significant tailwind for semiconductor companies like NVIDIA and AMD, but also raises concerns about the sustainability of such high spending."
     },
     {
-      "theme": "🏦 Central Bank Policy",
-      "what": "Monetary policy decisions by major central banks, including interest rate adjustments and quantitative easing/tightening measures.",
-      "impact": "Influences borrowing costs, inflation expectations, currency valuations, and overall investment flows into different asset classes."
+      "theme": "🏛️ Federal Reserve Policy",
+      "what": "Federal Reserve officials, like Mary Daly, are affirming their commitment to a 2% inflation target, noting that current monetary policy is 'slightly restrictive' and rising energy prices haven't yet impacted long-term inflation expectations.",
+      "impact": "The Fed's cautious approach to inflation management and potential future rate decisions will continue to influence bond yields and the broader economic environment."
     }
   ],
   "calendar": [
     {
       "date": "Fri May 08",
-      "event": "US Non-Farm Payrolls",
-      "why": "A key indicator of labor market health, significantly influencing Federal Reserve policy and market sentiment."
+      "event": "U.S. Non-Farm Payrolls Report",
+      "why": "This report provides crucial insights into the health of the U.S. labor market, influencing investor sentiment and monetary policy expectations."
     },
     {
-      "date": "Mon May 11",
-      "event": "China Inflation Data (CPI & PPI)",
-      "why": "Provides insights into the Chinese economy's inflationary pressures and consumer demand, impacting global trade."
+      "date": "Fri May 08",
+      "event": "U.S. Unemployment Rate",
+      "why": "A key indicator of economic health, the unemployment rate helps assess labor market tightness and potential inflationary pressures."
     },
     {
-      "date": "Tue May 12",
-      "event": "US Producer Price Index (PPI)",
-      "why": "Measures inflation at the wholesale level, offering a leading indicator for consumer inflation and Fed policy."
+      "date": "Fri May 08",
+      "event": "University of Michigan Consumer Sentiment",
+      "why": "This survey gauges consumer confidence, which can impact spending habits and overall economic growth."
     },
     {
-      "date": "Wed May 13",
-      "event": "Bank of England Interest Rate Decision",
-      "why": "Crucial for understanding the UK's monetary policy direction and its impact on the British economy and currency."
+      "date": "Mon May 12",
+      "event": "U.S. Hourly Earnings SA M/M (Final)",
+      "why": "Final data on hourly earnings provides a clearer picture of wage growth, a significant factor in inflation and consumer purchasing power."
     },
     {
-      "date": "Thu May 14",
-      "event": "Eurozone GDP Growth Rate",
-      "why": "Indicates the overall economic performance of the Eurozone, affecting currency values and investment strategies."
+      "date": "Tue May 13",
+      "event": "U.S. PPI ex-Food & Energy NSA Y/Y",
+      "why": "The Producer Price Index (excluding food and energy) offers insights into inflation at the wholesale level, which can foreshadow future consumer price trends."
     },
     {
-      "date": "Fri May 15",
-      "event": "US Retail Sales",
-      "why": "A vital measure of consumer spending, reflecting the strength of the US economy and potential inflationary pressures."
+      "date": "Wed May 14",
+      "event": "U.S. Retail Sales Control Group SA M/M",
+      "why": "This measure of retail sales is a key indicator of consumer spending, a major component of economic activity."
     }
   ],
   "quote": {
     "text": "The stock market is a device for transferring money from the impatient to the patient.",
-    "source": "Warren Buffett, Investor · N/A"
+    "source": "Warren Buffett"
   }
 };
