@@ -1,5 +1,5 @@
 window.SIGNAL_DATA = {
-  "date": "Wednesday · June 24, 2026",
+  "date": "Thursday · June 25, 2026",
   "alert": {
     "type": "positive",
     "icon": "ℹ️",
@@ -9,77 +9,77 @@ window.SIGNAL_DATA = {
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,365.46",
+      "value": "7,358.22",
       "dir": "down",
-      "arrow": "▼ 1.44%"
+      "arrow": "▼ 0.10%"
     },
     {
       "label": "NASDAQ",
-      "value": "25,587.04",
+      "value": "25,476.64",
       "dir": "down",
-      "arrow": "▼ 2.21%"
+      "arrow": "▼ 0.43%"
     },
     {
       "label": "Dow Jones",
-      "value": "51,666.84",
-      "dir": "down",
-      "arrow": "▼ 0.09%"
+      "value": "51,848.90",
+      "dir": "up",
+      "arrow": "▲ 0.35%"
     },
     {
       "label": "DAX",
-      "value": "24,697.56",
-      "dir": "down",
-      "arrow": "▼ 0.79%"
+      "value": "24,894.33",
+      "dir": "up",
+      "arrow": "▲ 0.62%"
     },
     {
       "label": "Nikkei 225",
-      "value": "69,174.97",
-      "dir": "down",
-      "arrow": "▼ 0.88%"
+      "value": "72,366.34",
+      "dir": "up",
+      "arrow": "▲ 4.61%"
     },
     {
       "label": "Hang Seng",
-      "value": "23,412.18",
-      "dir": "up",
-      "arrow": "▲ 0.33%"
+      "value": "23,076.91",
+      "dir": "down",
+      "arrow": "▼ 1.43%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,365.46",
-      "change": "▼ 1.44%",
+      "value": "7,358.22",
+      "change": "▼ 0.10%",
       "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "25,587.04",
-      "change": "▼ 2.21%",
+      "value": "25,476.64",
+      "change": "▼ 0.43%",
       "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "51,666.84",
-      "change": "▼ 0.09%",
-      "dir": "down"
+      "value": "51,848.90",
+      "change": "▲ 0.35%",
+      "dir": "up"
     },
     {
       "label": "DAX",
-      "value": "24,697.56",
-      "change": "▼ 0.79%",
-      "dir": "down"
+      "value": "24,894.33",
+      "change": "▲ 0.62%",
+      "dir": "up"
     },
     {
       "label": "Nikkei 225",
-      "value": "69,174.97",
-      "change": "▼ 0.88%",
-      "dir": "down"
+      "value": "72,366.34",
+      "change": "▲ 4.61%",
+      "dir": "up"
     },
     {
       "label": "Hang Seng",
-      "value": "23,412.18",
-      "change": "▲ 0.33%",
-      "dir": "up"
+      "value": "23,076.91",
+      "change": "▼ 1.43%",
+      "dir": "down"
     }
   ],
   "marketSummary": "Market summary loading.",
@@ -87,8 +87,8 @@ window.SIGNAL_DATA = {
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,014.40",
-      "change": "▼ 13.05%",
+      "price": "€936.80",
+      "change": "▼ 1.29%",
       "dir": "down",
       "news": "<strong>🔑 Today:</strong> Commentary pending.",
       "outlook": "2026 outlook pending.",
@@ -98,8 +98,8 @@ window.SIGNAL_DATA = {
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$200.04",
-      "change": "▼ 4.13%",
+      "price": "$199.00",
+      "change": "▼ 0.52%",
       "dir": "down",
       "news": "<strong>🔑 Today:</strong> Commentary pending.",
       "outlook": "2026 outlook pending.",
@@ -109,9 +109,9 @@ window.SIGNAL_DATA = {
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$519.85",
-      "change": "▼ 5.76%",
-      "dir": "down",
+      "price": "$519.74",
+      "change": "▼ 0.02%",
+      "dir": "flat",
       "news": "<strong>🔑 Today:</strong> Commentary pending.",
       "outlook": "2026 outlook pending.",
       "badge": "📊 Monitor",
@@ -120,9 +120,9 @@ window.SIGNAL_DATA = {
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$373.94",
-      "change": "▲ 1.80%",
-      "dir": "up",
+      "price": "$365.46",
+      "change": "▼ 2.27%",
+      "dir": "down",
       "news": "<strong>🔑 Today:</strong> Commentary pending.",
       "outlook": "2026 outlook pending.",
       "badge": "📊 Monitor",
@@ -133,7 +133,7 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €124.28\nChange: ▲ 0.24%\nTER: 0.20%\nExchange: XETRA",
+      "stats": "Price: €124.69\nChange: ▼ 0.08%\nTER: 0.20%\nExchange: XETRA",
       "badge": "ETF",
       "badgeClass": "badge-hold",
       "desc": "ETF commentary pending.",
@@ -142,7 +142,7 @@ window.SIGNAL_DATA = {
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €23.58\nChange: ▼ 1.32%\nTER: 0.50%\nExchange: XETRA",
+      "stats": "Price: €23.01\nChange: ▼ 1.56%\nTER: 0.50%\nExchange: XETRA",
       "badge": "ETF",
       "badgeClass": "badge-hold",
       "desc": "ETF commentary pending.",
@@ -151,7 +151,7 @@ window.SIGNAL_DATA = {
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $235.93\nChange: ▲ 0.18%\nTER: 0.42%\nExchange: NYSE Arca",
+      "stats": "Price: $236.19\nChange: ▲ 0.11%\nTER: 0.42%\nExchange: NYSE Arca",
       "badge": "ETF",
       "badgeClass": "badge-hold",
       "desc": "ETF commentary pending.",
@@ -162,6 +162,6 @@ window.SIGNAL_DATA = {
   "calendar": [],
   "quote": {
     "text": "Markets in motion.",
-    "source": "SIGNAL · Wednesday · June 24, 2026"
+    "source": "SIGNAL · Thursday · June 25, 2026"
   }
 };
