@@ -1,224 +1,234 @@
 window.SIGNAL_DATA = {
-  "date": "Friday · June 26, 2026",
+  "date": "Monday · June 29, 2026",
   "alert": {
     "type": "warning",
     "icon": "⚠️",
-    "title": "Tech Sector Under Pressure",
-    "body": "Major tech stocks, including Microsoft and Nvidia, are experiencing significant selling pressure today, contributing to a mixed market performance."
+    "title": "AI Sector Volatility",
+    "body": "The AI sector is experiencing significant volatility today, with major players like NVIDIA and AMD seeing declines amidst ongoing concerns about an 'AI bubble' and geopolitical tensions impacting chip sales."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,357.49",
+      "value": "7,354.02",
       "dir": "flat",
-      "arrow": "▼ 0.01%"
+      "arrow": "▼ 0.05%"
     },
     {
       "label": "NASDAQ",
-      "value": "25,358.60",
+      "value": "25,297.62",
       "dir": "down",
-      "arrow": "▼ 0.46%"
+      "arrow": "▼ 0.24%"
     },
     {
       "label": "Dow Jones",
-      "value": "51,920.62",
-      "dir": "up",
-      "arrow": "▲ 0.14%"
+      "value": "51,876.11",
+      "dir": "down",
+      "arrow": "▼ 0.09%"
     },
     {
       "label": "DAX",
-      "value": "24,699.97",
-      "dir": "down",
-      "arrow": "▼ 1.18%"
+      "value": "24,686.48",
+      "dir": "up",
+      "arrow": "▲ 0.06%"
     },
     {
       "label": "Nikkei 225",
-      "value": "69,360.88",
-      "dir": "down",
-      "arrow": "▼ 4.15%"
+      "value": "69,468.11",
+      "dir": "up",
+      "arrow": "▲ 0.15%"
     },
     {
       "label": "Hang Seng",
-      "value": "22,671.86",
-      "dir": "down",
-      "arrow": "▼ 1.76%"
+      "value": "23,026.68",
+      "dir": "up",
+      "arrow": "▲ 1.57%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,357.49",
-      "change": "▼ 0.01%",
+      "value": "7,354.02",
+      "change": "▼ 0.05%",
       "dir": "flat"
     },
     {
       "label": "NASDAQ",
-      "value": "25,358.60",
-      "change": "▼ 0.46%",
+      "value": "25,297.62",
+      "change": "▼ 0.24%",
       "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "51,920.62",
-      "change": "▲ 0.14%",
-      "dir": "up"
+      "value": "51,876.11",
+      "change": "▼ 0.09%",
+      "dir": "down"
     },
     {
       "label": "DAX",
-      "value": "24,699.97",
-      "change": "▼ 1.18%",
-      "dir": "down"
+      "value": "24,686.48",
+      "change": "▲ 0.06%",
+      "dir": "up"
     },
     {
       "label": "Nikkei 225",
-      "value": "69,360.88",
-      "change": "▼ 4.15%",
-      "dir": "down"
+      "value": "69,468.11",
+      "change": "▲ 0.15%",
+      "dir": "up"
     },
     {
       "label": "Hang Seng",
-      "value": "22,671.86",
-      "change": "▼ 1.76%",
-      "dir": "down"
+      "value": "23,026.68",
+      "change": "▲ 1.57%",
+      "dir": "up"
     }
   ],
-  "marketSummary": "Global markets are showing a mixed to negative sentiment today. Asian markets, particularly Japan and South Korea, saw significant plunges as traders locked in profits from recent AI-driven rallies. In the US, the Nasdaq is down, dragged by losses in big tech, while the Dow Jones shows a slight gain. Investors are digesting new economic data and concerns about AI investment costs and competition continue to weigh on sentiment.",
+  "marketSummary": "U.S. stock futures edged higher today as investors monitored a fragile U.S.-Iran ceasefire, though the broader market mood remains mixed with ongoing concerns about AI sector valuations. Last week saw a rotation out of technology stocks, with the S&P 500 and Nasdaq Composite experiencing losses. Oil prices are up amid escalating tensions between the U.S. and Iran over the weekend.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€933.70",
-      "change": "▼ 1.61%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> No specific company-specific news for RHM.DE was immediately available today. The stock's decline likely reflects broader market sentiment and sector-specific pressures in Europe, as the DAX index also saw a notable drop.",
-      "outlook": "The outlook for RHM.DE in 2026 will likely be influenced by the broader European economic recovery and any specific developments within its industry.",
+      "price": "€954.70",
+      "change": "▲ 0.86%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> No specific news for RHM.DE was found for today, June 29, 2026. However, the broader European market, specifically the DAX, saw a slight uptick.",
+      "outlook": "Without specific news, the outlook for RHM.DE remains tied to overall market sentiment and any sector-specific developments in its industry.",
       "badge": " neutral",
       "badgeClass": "badge-hold"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$195.74",
+      "price": "$192.53",
       "change": "▼ 1.64%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Nvidia is experiencing continued selling pressure as investors rotate out of the AI-chip trade, despite strong fundamentals and an 85% revenue increase in the latest quarter. Concerns about the sustainability of profit growth and intensifying competition in the AI data center space are contributing to the decline.",
-      "outlook": "Analysts remain largely bullish on Nvidia's 2026 outlook, citing strong AI infrastructure demand, AWS cloud expansion, and Blackwell-related supply commitments. However, the potential for hyperscaler custom silicon to reduce Nvidia's revenue share is a key risk.",
-      "badge": "⚠️ Watch",
+      "news": "<strong>🔑 Today:</strong> NVIDIA's CEO Jensen Huang emphasized that national security takes priority over commercial opportunities, stating the company would side with U.S. interests in business conflicts. This comes as NVIDIA faces stalled AI chip sales in China due to U.S. export controls, with local chipmakers gaining ground. Despite this, NVIDIA and Australia's Firmus Technologies announced a partnership to deploy 170,000 AI accelerators in Indonesia, targeting $25-$30 billion in revenue over six years.",
+      "outlook": "NVIDIA's 2026 outlook is characterized by strong demand visibility through 2027, with a significant order backlog. However, the market is grappling with what price-to-earnings multiple is sustainable as growth normalizes from triple digits.",
+      "badge": " cautionary",
       "badgeClass": "badge-watch"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$532.57",
-      "change": "▲ 2.47%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD is seeing positive movement today, continuing its strong performance in 2026, driven by robust AI data center demand and its expanding MI-series GPU ramp. The company's Q1 2026 earnings beat expectations, and lead customer forecasts for its MI450 and Helios rack-scale platform are exceeding initial plans.",
-      "outlook": "AMD is expected to see continued strong growth in 2026, fueled by its strategic pivot into AI and its emergence as a key challenger in the data center market. Analysts have a broadly positive market view, with price targets in the $430–$600 range.",
-      "badge": "🚀 Buy",
+      "price": "$521.58",
+      "change": "▼ 2.06%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> UBS recently raised its price target on Advanced Micro Devices (AMD) from $455 to $670, maintaining a Buy rating. This bullish sentiment is driven by the increasing popularity of standalone CPU racks and AMD's competitive edge in core density and multithreading, making its processors well-suited for AI applications. Institutional interest in AMD remains strong, with multiple firms raising price targets due to optimism around AI infrastructure and data center growth.",
+      "outlook": "AMD's 2026 outlook is largely tied to the performance of its MI-series data-center accelerators, with analysts' price targets varying significantly based on the anticipated success of this product line. The company's data center segment saw a 57% year-over-year increase in Q1 2026 revenue.",
+      "badge": " bullish",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$352.83",
-      "change": "▼ 3.46%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft shares are under significant selling pressure, marking what could be its worst June performance since 2000. Investors are concerned about rising AI investment costs, increased competition, and a tough macroeconomic environment eroding long-term profitability. Additionally, Italy's antitrust authority has launched an investigation into Microsoft for alleged unfair business practices related to its Microsoft 365 subscription services and the integration of AI tools.",
-      "outlook": "Despite the current pullback, the consensus among financial analysts for Microsoft's 2026 outlook remains overwhelmingly bullish, with many seeing the drop as a buying opportunity. The bull case rests on Azure and Copilot monetization compounding faster than current models.",
-      "badge": "⚠️ Watch",
-      "badgeClass": "badge-watch"
+      "price": "$372.97",
+      "change": "▲ 5.71%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> Microsoft shares rallied significantly, attributed to strong demand for its AI and cloud offerings, particularly Azure and Microsoft 365 Copilot. The company continues to expand its AI infrastructure and data center capacity. Additionally, Microsoft has partnered with Pitchbook for a federated Copilot to enhance financial insights for Microsoft 365 users. In other news, Microsoft removed 119 malicious Edge extensions that were stealing credentials and running ad fraud.",
+      "outlook": "The consensus among financial analysts for Microsoft in 2026 remains overwhelmingly bullish, with most rating it a \"Strong Buy\" or \"Buy.\" Analysts project sustained momentum, particularly as new AI capacity comes online in the second half of 2026.",
+      "badge": " positive",
+      "badgeClass": "badge-buy"
     }
   ],
   "etfs": [
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €122.99\nChange: ▼ 0.89%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Hold",
+      "stats": "Price: €124.00\nChange: ▲ 0.21%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Diversify",
       "badgeClass": "badge-hold",
-      "desc": "The iShares Core MSCI World UCITS ETF USD (Acc) aims to mirror the performance of the MSCI World Index, providing diversified exposure to global developed market equities. Its accumulating structure, where dividends are reinvested, supports compounded growth. Today's decline is in line with the broader negative sentiment seen across global indices.",
-      "verdict": "This ETF offers solid returns for the risk taken, making it a good option for investors seeking growth without excessive volatility."
+      "desc": "The iShares Core MSCI World UCITS ETF (Acc EUR) aims to mirror the performance of the MSCI World Index by investing in a portfolio of equities that closely track the index. It seeks to provide investors with a total return through capital and income gains.",
+      "verdict": "EUNL.DE is well-suited for investors seeking diversified global equity exposure with strong returns relative to risk."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €22.74\nChange: ▼ 1.37%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Neutral",
-      "badgeClass": "badge-hold",
-      "desc": "No specific news or detailed description for 4MMR.DE was found today. Its decline likely reflects the broader negative market sentiment in Europe, as indicated by the DAX's significant drop.",
-      "verdict": "Without further information, it's difficult to provide a specific verdict. Investors should research the ETF's holdings and strategy."
+      "stats": "Price: €23.08\nChange: ▼ 0.39%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Research",
+      "badgeClass": "badge-watch",
+      "desc": "No specific description or news for 4MMR.DE was found in the provided search results. Therefore, a detailed description and verdict cannot be generated at this time.",
+      "verdict": "Further research is needed to provide a comprehensive verdict for 4MMR.DE."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $237.38\nChange: ▲ 0.50%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Buy",
+      "stats": "Price: $236.78\nChange: ▼ 0.25%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Defense Play",
       "badgeClass": "badge-buy",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks a market-cap-weighted index of US manufacturers, assemblers, and distributors of airplane and defense equipment. The fund offers targeted exposure to domestic aerospace and defense companies. ITA has gained for three consecutive days and is up over 5% in the past two weeks.",
-      "verdict": "Despite some technical weaknesses, ITA has shown recent gains. It could be a strategic play for investors looking for exposure to the defense sector, which has seen sustained growth."
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) provides targeted access to the U.S. aerospace and defense industry, tracking the Dow Jones U.S. Select Aerospace & Defense Index. It focuses on large-cap leaders and benefits from the stability of government contracts. The fund's top holdings include GE Aerospace, RTX, and Boeing.",
+      "verdict": "ITA is a compelling option for investors seeking long-term growth in the specialized aerospace and defense sector, especially with the Pentagon's FY2027 budget moving through Congress."
     }
   ],
   "macro": [
     {
-      "theme": "📉 Tech Sector Correction",
-      "what": "Major technology stocks, including those in the 'Magnificent Seven,' are experiencing a significant downturn in June, with Microsoft facing its worst June performance since 2000.",
-      "impact": "This correction is driven by investor concerns over high AI investment costs, increased competition, and a re-evaluation of profitability in the tech sector."
+      "theme": "🕊️ Geopolitical Tensions",
+      "what": "A fragile ceasefire between the U.S. and Iran is being monitored by investors, following renewed military strikes over the weekend. Oil prices have risen due to these escalating tensions.",
+      "impact": "Increased volatility in oil markets and a cautious sentiment among investors, particularly in sectors sensitive to global stability."
     },
     {
-      "theme": "🌍 Global Market Volatility",
-      "what": "Asian markets, particularly Japan and South Korea, plunged significantly today as traders took profits from recent AI-driven rallies. This contributed to a mixed global market performance.",
-      "impact": "Increased volatility reflects investor reactions to the rapid influx of capital into AI and broader economic uncertainties, leading to sharp swings in market indices."
+      "theme": "🤖 AI Sector Scrutiny",
+      "what": "Concerns about an 'AI bubble' are growing, with some experts drawing parallels to the dot-com bubble. This is leading to increased scrutiny of valuations and potential over-investment in AI infrastructure.",
+      "impact": "Rotation out of technology stocks and into other sectors, leading to mixed market performance and increased volatility in AI-related equities."
     },
     {
-      "theme": "⚖️ Regulatory Scrutiny",
-      "what": "Italy's antitrust authority has launched an investigation into Microsoft for alleged unfair business practices related to its Microsoft 365 subscription services and the integration of AI tools.",
-      "impact": "Such regulatory challenges could impact Microsoft's reputation and pricing strategies in Europe, potentially influencing other tech giants as well."
+      "theme": "💼 Jobs Data Focus",
+      "what": "Key jobs data releases are expected this week, which will be closely watched by investors to gauge the strength of the economy.",
+      "impact": "This data could significantly influence expectations for the Federal Reserve's next policy moves regarding interest rates."
     },
     {
-      "theme": "⛽ Oil Price Retreat",
-      "what": "Oil prices have made a stunning retreat to pre-war levels this week.",
-      "impact": "Lower oil prices could ease inflationary pressures, but also signal concerns about global economic demand."
+      "theme": "🏠 Housing Market Shift",
+      "what": "New figures suggest that the housing shortage in the U.S. will end in the coming decade due to easing demand from smaller generations and thinning immigration, potentially leading to a drop in prices.",
+      "impact": "Potential long-term implications for real estate investments and related sectors, with a possible shift in consumer spending patterns."
     },
     {
-      "theme": "🏛️ Central Bank Stance",
-      "what": "New York Fed President John Williams expects inflation readings to edge down, but substantial risks remain. The central bank's board reiterated its intention to keep the overnight interest-rate target at 6.5% for the foreseeable future.",
-      "impact": "This signals a continued cautious approach to monetary policy, with interest rates likely to remain stable, impacting borrowing costs and investment decisions."
+      "theme": "☁️ Cloud & AI Infrastructure Spending",
+      "what": "Fierce competition in artificial intelligence is driving excessive investment spending on cloud and AI infrastructure, which the Bank for International Settlements warns could tip some economies into recession.",
+      "impact": "While boosting GDP in the short term, this could lead to long-term economic vulnerabilities and impact the profitability of companies heavily investing in this area."
     }
   ],
   "calendar": [
     {
-      "date": "Fri Jun 26",
-      "event": "U.S. Wholesale Inventories (May P)",
-      "why": "This data provides insights into the supply chain and future economic activity."
-    },
-    {
-      "date": "Mon Jun 29",
-      "event": "Japan Unemployment Rate (May)",
-      "why": "A key indicator of Japan's economic health and consumer spending potential."
-    },
-    {
-      "date": "Tue Jun 30",
-      "event": "U.S. S&P/Case-Shiller Home Price Index (Apr)",
-      "why": "This report offers insights into the housing market's strength and broader economic stability."
-    },
-    {
       "date": "Wed Jul 01",
-      "event": "U.S. FOMC Minutes",
-      "why": "The minutes provide detailed insights into the Federal Reserve's monetary policy discussions and future outlook."
+      "event": "ISM Manufacturing PMI",
+      "why": "A key indicator of economic health, providing insights into the manufacturing sector's activity."
     },
     {
       "date": "Thu Jul 02",
-      "event": "U.S. Initial Jobless Claims",
-      "why": "A weekly indicator of labor market health, reflecting new unemployment filings."
+      "event": "Employment Situation Report",
+      "why": "Crucial data on the labor market, including non-farm payrolls and unemployment rate, influencing Fed policy expectations."
     },
     {
       "date": "Fri Jul 03",
-      "event": "U.S. Nonfarm Payrolls",
-      "why": "A highly anticipated monthly report on employment, significantly impacting market sentiment and Fed policy expectations."
+      "event": "Independence Day Observed (Market Close)",
+      "why": "U.S. markets will be closed, impacting trading volume and liquidity."
+    },
+    {
+      "date": "Wed Jul 08",
+      "event": "FOMC Minutes",
+      "why": "Detailed insights into the Federal Open Market Committee's discussions and outlook on monetary policy."
+    },
+    {
+      "date": "Mon Jul 14",
+      "event": "Consumer Price Index (CPI)",
+      "why": "A primary measure of inflation, highly influential on interest rate decisions and market sentiment."
+    },
+    {
+      "date": "Tue Jul 15",
+      "event": "Producer Price Index (PPI)",
+      "why": "Indicates inflationary pressures from the producer's perspective, often a precursor to consumer price changes."
+    },
+    {
+      "date": "Wed Jul 22",
+      "event": "AMD Advancing AI 2026 Event",
+      "why": "AMD CEO Dr. Lisa Su is expected to present next-generation MI450 accelerators and EPYC 'Zen 6' CPUs, which could significantly impact the company's stock and the broader AI sector."
+    },
+    {
+      "date": "Wed Jul 29",
+      "event": "FOMC Meeting & Fed Funds Target Upper Bound",
+      "why": "The Federal Open Market Committee will announce its interest rate decision and provide an updated economic outlook, significantly impacting all markets."
     }
   ],
   "quote": {
-    "text": "The buildout of AI factories — the largest infrastructure expansion in human history — is accelerating at extraordinary speed.",
-    "source": "Jensen Huang, Founder and CEO of NVIDIA · May 20, 2026"
+    "text": "The value of any AI-driven insight starts with the quality of the underlying data.",
+    "source": "Chantrelle Nielsen, Principal Product Management for Microsoft 365 Copilot · June 29, 2026"
   }
 };
