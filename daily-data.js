@@ -1,224 +1,224 @@
 window.SIGNAL_DATA = {
-  "date": "Wednesday · July 1, 2026",
+  "date": "Thursday · July 2, 2026",
   "alert": {
-    "type": "positive",
-    "icon": "🚀",
-    "title": "AI & Tech Drive Market Gains",
-    "body": "The stock market is showing strong momentum today, largely fueled by continued enthusiasm and significant advancements in the AI and technology sectors. Major indices are up, with the Nasdaq leading the charge."
+    "type": "warning",
+    "icon": "⚠️",
+    "title": "Tech Sector Under Pressure",
+    "body": "Major tech indices and several prominent tech stocks saw declines today, with concerns over a potential chip supply glut and shifting investor sentiment weighing on the sector."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,499.36",
-      "dir": "up",
-      "arrow": "▲ 0.79%"
+      "value": "7,483.23",
+      "dir": "down",
+      "arrow": "▼ 0.22%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,213.72",
-      "dir": "up",
-      "arrow": "▲ 1.52%"
+      "value": "26,040.03",
+      "dir": "down",
+      "arrow": "▼ 0.66%"
     },
     {
       "label": "Dow Jones",
-      "value": "52,319.20",
-      "dir": "up",
-      "arrow": "▲ 0.26%"
+      "value": "52,305.24",
+      "dir": "flat",
+      "arrow": "▼ 0.03%"
     },
     {
       "label": "DAX",
-      "value": "25,074.12",
+      "value": "25,149.96",
       "dir": "up",
-      "arrow": "▲ 0.31%"
+      "arrow": "▲ 0.44%"
     },
     {
       "label": "Nikkei 225",
-      "value": "70,474.96",
-      "dir": "up",
-      "arrow": "▲ 0.59%"
+      "value": "68,733.15",
+      "dir": "down",
+      "arrow": "▼ 2.47%"
     },
     {
       "label": "Hang Seng",
-      "value": "22,881.02",
-      "dir": "down",
-      "arrow": "▼ 0.63%"
+      "value": "23,055.03",
+      "dir": "up",
+      "arrow": "▲ 0.76%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,499.36",
-      "change": "▲ 0.79%",
-      "dir": "up"
+      "value": "7,483.23",
+      "change": "▼ 0.22%",
+      "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "26,213.72",
-      "change": "▲ 1.52%",
-      "dir": "up"
+      "value": "26,040.03",
+      "change": "▼ 0.66%",
+      "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "52,319.20",
-      "change": "▲ 0.26%",
-      "dir": "up"
+      "value": "52,305.24",
+      "change": "▼ 0.03%",
+      "dir": "flat"
     },
     {
       "label": "DAX",
-      "value": "25,074.12",
-      "change": "▲ 0.31%",
+      "value": "25,149.96",
+      "change": "▲ 0.44%",
       "dir": "up"
     },
     {
       "label": "Nikkei 225",
-      "value": "70,474.96",
-      "change": "▲ 0.59%",
-      "dir": "up"
+      "value": "68,733.15",
+      "change": "▼ 2.47%",
+      "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "22,881.02",
-      "change": "▼ 0.63%",
-      "dir": "down"
+      "value": "23,055.03",
+      "change": "▲ 0.76%",
+      "dir": "up"
     }
   ],
-  "marketSummary": "U.S. stock markets are broadly higher today, with the Nasdaq Composite leading the gains, reflecting renewed investor confidence in technology and growth stocks. The S&P 500 and Dow Jones also posted gains, albeit at a more measured pace. This positive sentiment comes despite mixed economic data and ongoing geopolitical concerns, as investors continue to focus on the robust performance of the AI sector.",
+  "marketSummary": "Global markets presented a mixed picture today. While the DAX and Hang Seng managed modest gains, the S&P 500, NASDAQ, and Dow Jones all edged lower, primarily dragged down by a sell-off in chip stocks. The Nikkei 225 also experienced a significant decline. Investor sentiment appears cautious amidst ongoing discussions about interest rates and a potential oversupply in the semiconductor industry.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,038.20",
-      "change": "▲ 4.82%",
+      "price": "€1,067.40",
+      "change": "▲ 1.60%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall AG is seeing a strong rebound today, gaining 4.82%. This comes after recent volatility due to Germany's cancellation of the F126 frigate program, which had a significant impact on the company's naval defense pipeline. However, new defense partnerships and an artillery contract from Ukraine are helping to offset these concerns.",
-      "outlook": "The 2026 outlook for Rheinmetall remains tied to European defense spending and its expanding role in ammunition, vehicles, air defense, and digital intelligence. While national procurement shifts pose a risk, the overall demand for defense products is expected to support growth.",
-      "badge": "🛡️ Defense Boost",
+      "news": "<strong>🔑 Today:</strong> Rheinmetall AG saw a positive movement today, despite having missed revenue expectations in Q1 2026. The company has reaffirmed its full-year 2026 guidance, anticipating significant growth in both EPS and revenue.",
+      "outlook": "Rheinmetall maintains a positive outlook for 2026, expecting consolidated sales between €14.0 billion and €14.5 billion and an operating margin of around 19%.",
+      "badge": "⬆️ Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$200.09",
-      "change": "▲ 2.63%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> NVIDIA is up 2.63% today, continuing to benefit from strong demand for AI infrastructure. Recent reports highlight robust revenue trends and positive analyst sentiment, with demand for Blackwell-based AI systems remaining stronger than expected.",
-      "outlook": "NVIDIA's 2026 outlook is highly positive, with AI infrastructure spending expected to remain a primary growth driver. Analysts anticipate the stock could climb above $220 by July 1, 2026, with some bullish scenarios placing it even higher.",
-      "badge": "💡 AI Leader",
-      "badgeClass": "badge-buy"
+      "price": "$197.58",
+      "change": "▼ 1.25%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> NVIDIA experienced a slight dip today, following a month-long decline in June. However, an optimistic forecast from SemiAnalysis suggests NVIDIA's data center revenue in the second half of fiscal year 2027 will exceed Wall Street's consensus by about 20%, driven by the resolution of supply bottlenecks and accelerated growth of the Vera Rubin platform.",
+      "outlook": "NVIDIA's outlook for 2026 remains strong, with the company continuing to lead in AI infrastructure development and a clear data center product roadmap extending into 2028.",
+      "badge": "➡️ Hold",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$580.91",
-      "change": "▲ 7.68%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD is experiencing a significant surge, up 7.68%, following reports that it will be raising prices on Radeon GPU and memory bundles by 10% in July due to tight global memory supply and rising GDDR6 costs. Additionally, Wells Fargo recently raised its price target on AMD, citing strength in server CPUs.",
-      "outlook": "The 2026 outlook for AMD is strong, driven by its momentum in the data center market and advancements in AI-driven memory optimization technology. The company's 6th Generation 2nm EPYC Venice server CPUs are ramping up production, with further growth expected.",
-      "badge": "🚀 Chip Innovator",
-      "badgeClass": "badge-buy"
+      "price": "$540.88",
+      "change": "▼ 6.89%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> AMD shares declined today amidst a broader sell-off in chip stocks. This comes despite strong Q1 2026 results and an optimistic outlook for server CPU demand driven by agentic AI workloads.",
+      "outlook": "AMD anticipates strong growth for 2026, with revenue expected to accelerate past 46% growth through Q4 2026, driven by its EPYC server CPUs and Instinct GPUs.",
+      "badge": "➡️ Hold",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$373.02",
-      "change": "▲ 1.21%",
+      "price": "$384.28",
+      "change": "▲ 3.02%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Microsoft is up 1.21% today, despite reports that the company is planning job cuts impacting less than 2.5% of its global workforce, particularly within the Xbox division, sales, and consulting. This restructuring is seen as a strategic shift to optimize operations and reallocate resources towards AI investments.",
-      "outlook": "Microsoft's 2026 outlook remains strong, with the company strategically investing heavily in AI infrastructure. While job cuts indicate a focus on efficiency, the overall financial metrics and AI-driven initiatives position Microsoft for future growth.",
-      "badge": "☁️ AI & Cloud",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> Microsoft saw a positive movement today. The company is preparing for a significant transition in January 2026, when it will automatically update the Outlook desktop application on Windows devices to a new interface.",
+      "outlook": "Microsoft's 2026 outlook includes the transition to a new Outlook for Windows interface in January, with ongoing updates throughout the year to enhance functionality and user experience.",
+      "badge": "⬆️ Buy",
+      "badgeClass": "badge-buy"
     }
   ],
   "etfs": [
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €125.21\nChange: ▲ 0.14%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Hold",
-      "badgeClass": "badge-hold",
-      "desc": "The iShares Core MSCI World UCITS ETF is showing a modest gain today. This ETF provides broad exposure to global equities, and its performance is influenced by the overall market sentiment, which today is leaning positive due to tech sector strength.",
-      "verdict": "With a general buy signal from its long-term moving average and consistently positive technical signals, EUNL.DE appears to be a solid hold for diversified global exposure."
+      "stats": "Price: €125.36\nChange: ▼ 0.41%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Buy",
+      "badgeClass": "badge-buy",
+      "desc": "The iShares Core MSCI World UCITS ETF aims to mirror the performance of the MSCI World Index, providing diversified exposure to global developed market equities. It seeks to deliver a total return through capital and income gains.",
+      "verdict": "This ETF is well-suited for investors seeking broad exposure to established global companies and has historically shown strong returns relative to risk."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €23.82\nChange: ▲ 1.60%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Buy",
-      "badgeClass": "badge-buy",
-      "desc": "The Xtrackers MSCI World UCITS ETF is up today, reflecting the positive global market mood. As a broad market ETF, its performance is closely tied to the overall health of the world economy and major equity indices.",
-      "verdict": "Given the current market momentum and positive outlooks for global equities, 4MMR.DE remains a good option for investors seeking diversified international exposure."
+      "stats": "Price: €24.39\nChange: ▲ 0.37%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Hold",
+      "badgeClass": "badge-hold",
+      "desc": "No specific news or detailed description for 4MMR.DE was found in the provided search results. Therefore, a general description of its function as an ETF is provided.",
+      "verdict": "Without specific news or detailed information, a general 'hold' is advised, pending further research into its underlying assets and performance."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $242.42\nChange: ▲ 1.38%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Watch",
-      "badgeClass": "badge-watch",
-      "desc": "The iShares U.S. Aerospace & Defense ETF is performing well today, likely benefiting from the broader positive market sentiment and ongoing developments in the defense sector, as seen with companies like Rheinmetall.",
-      "verdict": "With increased defense spending and new partnerships in the sector, ITA could see continued positive movement, making it a watch for investors interested in aerospace and defense."
+      "stats": "Price: $243.86\nChange: ▲ 0.59%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Buy",
+      "badgeClass": "badge-buy",
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks the Dow Jones U.S. Select Aerospace & Defense Index, investing in U.S. equities within the aerospace and defense sector. It offers targeted exposure to manufacturers of commercial and military aircraft.",
+      "verdict": "ITA provides a focused investment in the U.S. aerospace and defense industry, which could see continued interest given global geopolitical dynamics."
     }
   ],
   "macro": [
     {
-      "theme": "🤖 AI Investment Boom",
-      "what": "Companies are pouring unprecedented sums into AI infrastructure, driving significant capital expenditures across the tech sector.",
-      "impact": "This sustained investment is a major tailwind for technology stocks, particularly chipmakers and cloud service providers, and is expected to fuel continued earnings growth."
+      "theme": " semiconductors",
+      "what": "Concerns over a potential glut in semiconductor supply have been clouding investor sentiment, leading to a sell-off in chip stocks.",
+      "impact": "This has negatively impacted major tech indices and individual chip manufacturers like NVIDIA and AMD today."
     },
     {
-      "theme": "🌍 Global Growth & Earnings",
-      "what": "Sturdy global growth is expected in 2026, with the US likely to outperform due to reduced tariff drag, tax cuts, and easier financial conditions. Corporate earnings are exceeding estimates across various sectors.",
-      "impact": "Positive earnings surprises and rising estimates are supporting the stock market bull run, potentially leading to new highs, especially if investors continue to focus on profit growth."
+      "theme": " interest rates",
+      "what": "Federal Reserve officials now anticipate at least one interest rate increase in 2026, a shift from earlier expectations of rate cuts.",
+      "impact": "Higher interest rates typically make stocks less attractive as bonds offer more competitive returns, potentially leading to market corrections."
     },
     {
-      "theme": "⚙️ Tech Sector Restructuring",
-      "what": "Several major tech companies, including Microsoft, are undergoing restructuring and job cuts to optimize operations and reallocate resources towards strategic areas like AI.",
-      "impact": "While potentially causing short-term uncertainty, these moves are aimed at improving efficiency and funding future growth initiatives, ultimately strengthening the long-term prospects of these companies."
+      "theme": " AI Infrastructure Buildout",
+      "what": "The 'buildout of AI factories' continues to be a major theme, with significant investments from tech giants driving demand for AI hardware and platforms.",
+      "impact": "This ongoing demand is a strong tailwind for companies like NVIDIA and AMD, despite recent stock fluctuations."
     },
     {
-      "theme": "📈 Inflationary Pressures",
-      "what": "Inflation has seen a recent spike, with May reaching 4.2%, its highest in three years. Elevated energy prices due to geopolitical conflicts are contributing to these pressures.",
-      "impact": "Persistent inflation could lead to higher interest rates and lower bond prices, potentially putting pressure on stocks and affecting the Federal Reserve's ability to deliver rate cuts."
+      "theme": " European Defense Spending",
+      "what": "Increased European and NATO defense budgets, particularly Germany's multiyear boost, are creating a large and sustainable order intake pipeline for defense contractors.",
+      "impact": "This is a significant positive for companies like Rheinmetall, supporting robust top-line revenue growth."
     },
     {
-      "theme": " geopolitical Tensions",
-      "what": "Uncertainty persists over conflicts in the Middle East and access to the Strait of Hormuz, impacting energy markets and overall sentiment.",
-      "impact": "Geopolitical tensions can create volatility in crude oil prices and bond yields, potentially leading to cautious trading and a shift in investor focus from earnings growth to inflation risks."
+      "theme": " Global Economic Outlook",
+      "what": "The International Monetary Fund (IMF) is preparing to release its World Economic Outlook Update for July 2026, which will provide analyses and projections of the world economy.",
+      "impact": "This report will offer crucial insights into global economic prospects, influencing investor confidence and market trends in the near and medium term."
     }
   ],
   "calendar": [
     {
-      "date": "Wed Jul 01",
-      "event": "Construction Spending SA M/M",
-      "why": "Provides insight into the health of the construction sector, a key component of economic activity."
-    },
-    {
-      "date": "Wed Jul 01",
-      "event": "ISM Manufacturing",
-      "why": "A crucial indicator of the manufacturing sector's health, reflecting economic expansion or contraction."
-    },
-    {
       "date": "Thu Jul 02",
-      "event": "Employment Situation for June 2026",
-      "why": "A highly anticipated report that offers a comprehensive look at the labor market, influencing Federal Reserve policy."
+      "event": "Employment Situation for June 2026 (Preliminary)",
+      "why": "This report provides key insights into the health of the labor market, influencing monetary policy decisions and overall economic sentiment."
+    },
+    {
+      "date": "Mon Jul 06",
+      "event": "ISM Services Business Activity",
+      "why": "The ISM Services Index is a crucial indicator of the economic health of the services sector, which is a significant part of many economies."
     },
     {
       "date": "Wed Jul 08",
       "event": "FOMC Minutes",
-      "why": "Detailed minutes from the Federal Open Market Committee meeting provide insights into the Fed's monetary policy discussions and future outlook."
+      "why": "The minutes from the Federal Open Market Committee meeting provide detailed insights into the Fed's discussions and rationale behind monetary policy decisions, offering clues about future interest rate movements."
     },
     {
       "date": "Tue Jul 14",
       "event": "Consumer Price Index (CPI) for June 2026",
-      "why": "A key inflation indicator that significantly impacts interest rate expectations and market sentiment."
+      "why": "The CPI is a key measure of inflation, directly impacting purchasing power and influencing central bank decisions on interest rates."
     },
     {
       "date": "Wed Jul 15",
       "event": "Producer Price Index (PPI) for June 2026",
-      "why": "Measures inflation at the wholesale level, often a precursor to consumer price changes."
+      "why": "The PPI measures inflation from the perspective of producers, often serving as a leading indicator for consumer inflation."
+    },
+    {
+      "date": "Wed Jul 29",
+      "event": "FOMC Meeting & Fed Funds Target Upper Bound",
+      "why": "This Federal Open Market Committee meeting will include a decision on the Fed Funds Target Upper Bound, a critical factor for interest rates and market liquidity."
     }
   ],
   "quote": {
-    "text": "The market's 2026 gains have come almost entirely from earnings growth rather than investors paying higher prices for the same profits. If earnings disappoint, the structure of the rally faces its most serious challenge of the year.",
-    "source": "Ben Snider, Chief U.S. Equity Strategist · Goldman Sachs · June 28, 2026"
+    "text": "The stock market is a device for transferring money from the impatient to the patient.",
+    "source": "Warren Buffett, Investor · Undated"
   }
 };
