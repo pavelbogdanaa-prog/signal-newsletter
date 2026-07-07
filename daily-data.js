@@ -1,224 +1,224 @@
 window.SIGNAL_DATA = {
-  "date": "Monday · July 6, 2026",
+  "date": "Tuesday · July 7, 2026",
   "alert": {
-    "type": "warning",
-    "icon": "⚠️",
-    "title": "Tech Sector Volatility",
-    "body": "NVIDIA's Kyber architecture delay and Microsoft's planned layoffs are creating headwinds for the tech sector today, despite some positive movements in other areas."
+    "type": "positive",
+    "icon": "🚀",
+    "title": "Tech Leads Market Rally",
+    "body": "U.S. stocks continued their upward momentum today, with technology shares driving significant gains across the S&P 500, NASDAQ, and Dow Jones."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,483.24",
-      "dir": "flat",
-      "arrow": "▲ 0.00%"
+      "value": "7,537.43",
+      "dir": "up",
+      "arrow": "▲ 0.72%"
     },
     {
       "label": "NASDAQ",
-      "value": "25,832.67",
-      "dir": "down",
-      "arrow": "▼ 0.80%"
+      "value": "26,121.16",
+      "dir": "up",
+      "arrow": "▲ 1.12%"
     },
     {
       "label": "Dow Jones",
-      "value": "52,900.07",
+      "value": "53,055.91",
       "dir": "up",
-      "arrow": "▲ 1.14%"
+      "arrow": "▲ 0.29%"
     },
     {
       "label": "DAX",
-      "value": "25,838.53",
-      "dir": "up",
-      "arrow": "▲ 0.23%"
+      "value": "25,723.26",
+      "dir": "down",
+      "arrow": "▼ 0.37%"
     },
     {
       "label": "Nikkei 225",
-      "value": "69,737.69",
-      "dir": "flat",
-      "arrow": "▼ 0.01%"
+      "value": "68,256.96",
+      "dir": "down",
+      "arrow": "▼ 2.12%"
     },
     {
       "label": "Hang Seng",
-      "value": "23,616.32",
-      "dir": "up",
-      "arrow": "▲ 1.14%"
+      "value": "23,496.89",
+      "dir": "down",
+      "arrow": "▼ 0.51%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,483.24",
-      "change": "▲ 0.00%",
-      "dir": "flat"
+      "value": "7,537.43",
+      "change": "▲ 0.72%",
+      "dir": "up"
     },
     {
       "label": "NASDAQ",
-      "value": "25,832.67",
-      "change": "▼ 0.80%",
-      "dir": "down"
+      "value": "26,121.16",
+      "change": "▲ 1.12%",
+      "dir": "up"
     },
     {
       "label": "Dow Jones",
-      "value": "52,900.07",
-      "change": "▲ 1.14%",
+      "value": "53,055.91",
+      "change": "▲ 0.29%",
       "dir": "up"
     },
     {
       "label": "DAX",
-      "value": "25,838.53",
-      "change": "▲ 0.23%",
-      "dir": "up"
+      "value": "25,723.26",
+      "change": "▼ 0.37%",
+      "dir": "down"
     },
     {
       "label": "Nikkei 225",
-      "value": "69,737.69",
-      "change": "▼ 0.01%",
-      "dir": "flat"
+      "value": "68,256.96",
+      "change": "▼ 2.12%",
+      "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "23,616.32",
-      "change": "▲ 1.14%",
-      "dir": "up"
+      "value": "23,496.89",
+      "change": "▼ 0.51%",
+      "dir": "down"
     }
   ],
-  "marketSummary": "U.S. stock futures are showing mixed signals as markets react to a holiday-shortened week and key economic data releases. While the Dow Jones shows strength, the NASDAQ is down, reflecting ongoing volatility in the tech sector. Investors are closely watching for the Federal Reserve's June meeting minutes later this week for further clues on interest rate policy.",
+  "marketSummary": "U.S. markets are extending their rally today, with a strong performance from technology stocks. The S&P 500, NASDAQ, and Dow Jones all posted gains, with the Dow reaching a new record close. This positive sentiment comes despite mixed signals from Asian markets, which largely traded lower. Investors are closely watching for further indications of economic health and corporate earnings.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,112.40",
-      "change": "▲ 1.74%",
+      "price": "€1,141.20",
+      "change": "▲ 0.99%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> No specific news for RHM.DE was found today. However, the broader market saw the DAX index rise, which could provide some positive sentiment for German equities.",
-      "outlook": "The outlook for RHM.DE remains tied to the performance of the broader German and European markets, with ongoing geopolitical stability and economic growth being key factors.",
-      "badge": " neutral",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> RHM.DE showed positive momentum today, with its stock price increasing. Technical analysis indicates a breakout above its 200-day exponential moving average, suggesting a continuation of its upward trend. Momentum indicators are also positive, reinforcing the bullish outlook for the stock.",
+      "outlook": "The technical setup for RHM.DE appears favorable, with strong momentum suggesting potential for further gains in the near term.",
+      "badge": "⬆️ Buy",
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$194.83",
-      "change": "▼ 1.39%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> NVIDIA announced a significant delay in the rollout of its Kyber rack-scale architecture, intended for the 2027 Rubin Ultra chips, pushing the launch to 2028 due to manufacturing challenges with a critical circuit board. This delay has intensified market worries about NVIDIA's aggressive product iteration schedule.",
-      "outlook": "NVIDIA's long-term growth story in AI infrastructure remains intact, but the short-term technical picture has deteriorated. The stock's pullback may attract long-term investors, but a break below the $190 support level could lead to further declines.",
-      "badge": " cautious",
-      "badgeClass": "badge-watch"
+      "price": "$195.55",
+      "change": "▲ 0.37%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> NVIDIA's stock saw a modest gain today, despite recent reports of a potential one-year delay for its next-generation Kyber AI server platform. NVIDIA pushed back against these delay claims, stating its roadmap remains intact. This news comes as the company continues to dominate the AI infrastructure landscape.",
+      "outlook": "Analysts remain overwhelmingly bullish on NVIDIA, with an average price target suggesting significant upside through 2026, driven by its leadership in AI accelerators and data center expansion.",
+      "badge": "💡 Buy",
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$517.82",
-      "change": "▼ 4.26%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> AMD is gaining traction in the self-driving technology sector, with Japanese startup Turing adding AMD Ventures as an investor and beginning to use AMD's AI accelerators. This move helps Turing diversify its supply chain and reduce computing costs, lessening its reliance on rival Nvidia.",
-      "outlook": "Analysts are optimistic about AMD's future potential, particularly in the AI and server markets, with strong customer validation and partnerships. The company is well-positioned for success in the tech industry, despite facing intense competition.",
-      "badge": " bullish",
+      "price": "$552.05",
+      "change": "▲ 6.61%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> AMD experienced a significant surge today, with its stock price increasing by 6.61%. This rise is attributed to increasing bullish sentiment from Wall Street analysts amid the ongoing AI boom, with some analysts raising price targets. AMD's focus on enterprise AI and its diversified business strategy are key drivers.",
+      "outlook": "AMD's outlook for 2026 is positive, with strong growth expected from its data center segment and AI accelerators. The company's 'Advancing AI' event later this month is anticipated to further boost investor confidence.",
+      "badge": "🚀 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$390.49",
-      "change": "▲ 1.62%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Microsoft is reportedly planning another round of layoffs, potentially impacting 5,000 to 5,700 employees, primarily in sales, consulting, and the Xbox gaming division. This aligns with the start of Microsoft's new fiscal year and its strategy to prioritize AI investments while seeking efficiencies elsewhere.",
-      "outlook": "Despite recent stock declines and layoff news, Microsoft's strong fundamentals, accelerating AI revenue, and a 20-million-seat Copilot business suggest potential for growth in the second half of 2026.",
-      "badge": " neutral",
-      "badgeClass": "badge-hold"
+      "price": "$386.74",
+      "change": "▼ 0.96%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> Microsoft's stock saw a slight dip today following the announcement of approximately 4,800 job cuts, representing about 2.1% of its global workforce. A significant portion of these layoffs, around 3,200 roles, are within the Xbox gaming division, which is undergoing a 'reset' due to increased competition and rising hardware costs.",
+      "outlook": "Despite the recent layoffs and a challenging first half of 2026, Microsoft's long-term outlook remains positive, driven by accelerating AI revenue and strong cloud growth. Wall Street analysts have a 'Moderate Buy' consensus rating with a significant upside potential.",
+      "badge": "⚠️ Watch",
+      "badgeClass": "badge-watch"
     }
   ],
   "etfs": [
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €126.10\nChange: ▲ 0.27%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Buy",
-      "badgeClass": "badge-buy",
-      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) aims to track the performance of the MSCI World Index, offering diversified exposure to large and mid-cap companies across 23 developed markets. It seeks to provide investors with a total return through capital and income gains.",
-      "verdict": "This ETF is well-suited for investors seeking strong returns relative to risk and broad exposure to global developed market equities."
+      "stats": "Price: €126.19\nChange: ▼ 0.12%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Hold",
+      "badgeClass": "badge-hold",
+      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) aims to track the performance of the MSCI World Index, offering diversified exposure to large and mid-cap companies across 23 developed markets globally. Today, the ETF experienced a slight decrease, reflecting broader market movements.",
+      "verdict": "EUNL.DE provides a cost-effective way for investors to achieve broad international equity diversification. It is well-suited for those seeking strong returns relative to risk."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €25.35\nChange: ▲ 1.08%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Hold",
-      "badgeClass": "badge-hold",
-      "desc": "No specific news or detailed description for 4MMR.DE was found today. Generally, ETFs like 4MMR.DE provide diversified exposure to a basket of securities, often with a specific theme or region.",
-      "verdict": "Without further information, it's difficult to provide a specific verdict. Investors should research the underlying holdings and investment strategy of 4MMR.DE."
+      "stats": "Price: €25.63\nChange: ▲ 0.83%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Watch",
+      "badgeClass": "badge-watch",
+      "desc": "The 4MMR.DE ETF saw a modest gain today. This ETF is likely focused on a specific market segment, and its performance today suggests positive sentiment within that area.",
+      "verdict": "Further analysis of 4MMR.DE's specific holdings and investment strategy would be beneficial to provide a more detailed verdict. However, today's performance indicates some underlying strength."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: N/A\nChange: → 0.0%\nTER: 0.42%\nExchange: NYSE Arca",
+      "stats": "Price: $250.78\nChange: ▲ 1.04%\nTER: 0.42%\nExchange: NYSE Arca",
       "badge": "Buy",
       "badgeClass": "badge-buy",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks a market-cap-weighted index of U.S.-listed manufacturers, assemblers, and distributors of aircraft and aircraft parts, as well as producers of components and equipment for the defense industry. It offers targeted access to the U.S. aerospace and defense industry.",
-      "verdict": "ITA is a compelling option for investors seeking long-term growth in the specialized aerospace and defense sector, benefiting from government contracts and innovation. However, concentration risk remains high due to the undiversified nature of the industry."
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) provides targeted exposure to the U.S. aerospace and defense industry, including manufacturers of commercial and military aircraft. The ETF saw an increase today, indicating positive sentiment in the sector.",
+      "verdict": "ITA is a compelling option for investors seeking long-term growth in the specialized aerospace and defense sector, benefiting from government contracts and innovation."
     }
   ],
   "macro": [
     {
-      "theme": "💻 AI Infrastructure Spending",
-      "what": "UBS research indicates that value creation in the artificial intelligence infrastructure sector is projected to soar by 600% over four years, significantly outpacing the 100% growth expected for 'hyperscalers.'",
-      "impact": "This suggests a continued strong investment flow into companies building the foundational technology for AI, potentially benefiting chipmakers and data center providers."
+      "theme": "🤖 AI Investment Boom",
+      "what": "Massive capital expenditures by tech giants are fueling the AI infrastructure buildout, with billions being invested in data centers and AI accelerators.",
+      "impact": "This sustained investment is a primary driver of growth for semiconductor companies and cloud service providers, but also raises concerns about potential oversupply and margin compression."
     },
     {
-      "theme": "⚙️ Manufacturing Challenges",
-      "what": "NVIDIA's delay of its Kyber rack-scale architecture due to manufacturing difficulties with a critical circuit board highlights potential vulnerabilities in the supply chain for advanced tech.",
-      "impact": "Such delays can impact product roadmaps and open opportunities for competitors, while also signaling potential constraints on rapid technological advancements."
+      "theme": "💼 Tech Sector Restructuring",
+      "what": "Several major tech companies, including Microsoft, are undergoing workforce reductions and reorganizations, often citing a need to improve efficiency and reallocate resources towards AI.",
+      "impact": "While these layoffs can create short-term market uncertainty, they are viewed by some as strategic moves to streamline operations and focus on long-term growth areas like AI."
     },
     {
-      "theme": "💼 Tech Layoffs",
-      "what": "Microsoft's planned layoffs, targeting thousands of employees in sales, consulting, and Xbox, reflect a broader trend in Big Tech to prioritize AI investments and seek efficiencies elsewhere.",
-      "impact": "While potentially boosting profitability for individual companies, widespread tech layoffs could signal a cautious economic outlook and impact consumer spending."
+      "theme": "📈 Inflationary Pressures",
+      "what": "Inflation remains a concern, with energy and AI-driven capital expenditures contributing to elevated core services inflation.",
+      "impact": "Sticky inflation could influence central bank decisions regarding interest rates, potentially impacting market liquidity and investor sentiment."
     },
     {
-      "theme": "🚗 Self-Driving Tech Adoption",
-      "what": "Japanese self-driving startup Turing is integrating AMD's AI accelerators and has received backing from AMD Ventures, diversifying its hardware reliance away from Nvidia.",
-      "impact": "This indicates growing competition in the AI chip market for autonomous driving and a push towards more diversified supply chains in the industry."
+      "theme": " geopolitics",
+      "what": "Geopolitical concerns, such as tensions in the West Asia region, continue to influence oil prices and broader market stability.",
+      "impact": "These events can lead to volatility in commodity markets and impact investor confidence in global economic stability."
     },
     {
-      "theme": "🏛️ Federal Reserve Outlook",
-      "what": "Investors are keenly awaiting the Federal Reserve's June meeting minutes for further indications on the future trajectory of interest rates.",
-      "impact": "Clues about interest rate policy can significantly influence market sentiment, bond yields, and investor decisions across all sectors."
+      "theme": "📊 Earnings Season Focus",
+      "what": "Investors are keenly awaiting upcoming earnings reports from major tech companies, including Microsoft, Meta, Amazon, Alphabet, and NVIDIA.",
+      "impact": "These reports will be crucial in determining whether significant AI investments are translating into stronger growth and profitability, potentially shifting market leadership."
     }
   ],
   "calendar": [
     {
       "date": "Wed Jul 08",
       "event": "FOMC Minutes",
-      "why": "The minutes from the Federal Open Market Committee meeting provide detailed insights into the Fed's economic outlook and monetary policy discussions, which can significantly impact market expectations for interest rates."
+      "why": "The minutes from the Federal Open Market Committee meeting provide detailed insights into the Fed's economic outlook and monetary policy discussions, which can influence market expectations for future interest rate decisions."
     },
     {
-      "date": "Thu Jul 10",
+      "date": "Thu Jul 09",
       "event": "Initial Jobless Claims",
-      "why": "This weekly report offers a real-time look at the health of the labor market, with lower numbers indicating a stronger economy and potentially influencing Fed policy."
+      "why": "This weekly report offers a timely look at the health of the labor market, with lower numbers indicating a stronger economy and potentially influencing consumer spending and inflation."
     },
     {
       "date": "Wed Jul 15",
       "event": "PPI ex-Food & Energy NSA Y/Y",
-      "why": "The Producer Price Index (excluding food and energy) is a key inflation indicator at the wholesale level. A higher-than-expected reading could signal future consumer inflation."
+      "why": "The Producer Price Index (excluding food and energy) provides a measure of inflation at the wholesale level, which can be a leading indicator of consumer price inflation."
     },
     {
       "date": "Thu Jul 16",
       "event": "Retail Sales Control Group SA M/M",
-      "why": "This data provides insight into consumer spending habits, a major driver of economic growth. Strong retail sales can indicate a robust economy."
+      "why": "This data point reflects consumer spending patterns, a key driver of economic growth. Strong retail sales can signal a healthy economy."
+    },
+    {
+      "date": "Wed Jul 22",
+      "event": "AMD 'Advancing AI' Event",
+      "why": "AMD is expected to unveil new AI platforms and customer deployment details, which could significantly impact the company's stock and the broader AI sector."
     },
     {
       "date": "Wed Jul 29",
       "event": "FOMC Meeting & Fed Funds Target Upper Bound",
-      "why": "This Federal Reserve meeting includes an announcement on the federal funds rate, a critical benchmark interest rate that influences borrowing costs across the economy."
-    },
-    {
-      "date": "Thu Jul 30",
-      "event": "GDP SAAR Q/Q (First Preliminary)",
-      "why": "The first preliminary estimate of Gross Domestic Product (GDP) provides a broad measure of economic activity. Strong GDP growth indicates a healthy economy."
+      "why": "This Federal Open Market Committee meeting will include an announcement on the Fed Funds Target Upper Bound, directly impacting interest rates and monetary policy."
     }
   ],
   "quote": {
-    "text": "The stock market is a device for transferring money from the impatient to the patient.",
+    "text": "The market is a device for transferring money from the impatient to the patient.",
     "source": "Warren Buffett, Investor · Undated"
   }
 };
