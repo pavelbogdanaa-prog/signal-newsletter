@@ -1,131 +1,131 @@
 window.SIGNAL_DATA = {
-  "date": "Thursday · July 9, 2026",
+  "date": "Friday · July 10, 2026",
   "alert": {
-    "type": "warning",
-    "icon": "⚠️",
-    "title": "Geopolitical Tensions Weigh on Markets",
-    "body": "Global markets are experiencing shaky trading today as renewed hostilities in the Gulf region have sent oil prices climbing and raised concerns about inflation and interest rate hikes."
+    "type": "positive",
+    "icon": "⬆️",
+    "title": "Chip Stocks Lead Market Rally",
+    "body": "The Nasdaq surged today, fueled by a rally in chip stocks, which helped to offset concerns about geopolitical tensions in the Middle East."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,482.71",
-      "dir": "down",
-      "arrow": "▼ 0.28%"
+      "value": "7,543.64",
+      "dir": "up",
+      "arrow": "▲ 0.81%"
     },
     {
       "label": "NASDAQ",
-      "value": "25,870.65",
+      "value": "26,206.89",
       "dir": "up",
-      "arrow": "▲ 0.20%"
+      "arrow": "▲ 1.30%"
     },
     {
       "label": "Dow Jones",
-      "value": "52,348.39",
-      "dir": "down",
-      "arrow": "▼ 1.09%"
+      "value": "52,487.41",
+      "dir": "up",
+      "arrow": "▲ 0.27%"
     },
     {
       "label": "DAX",
-      "value": "24,959.15",
-      "dir": "up",
-      "arrow": "▲ 0.25%"
+      "value": "25,115.95",
+      "dir": "flat",
+      "arrow": "▼ 0.01%"
     },
     {
       "label": "Nikkei 225",
-      "value": "67,743.85",
+      "value": "68,557.73",
       "dir": "up",
-      "arrow": "▲ 1.38%"
+      "arrow": "▲ 1.20%"
     },
     {
       "label": "Hang Seng",
-      "value": "24,030.18",
-      "dir": "down",
-      "arrow": "▼ 0.70%"
+      "value": "24,175.12",
+      "dir": "up",
+      "arrow": "▲ 0.60%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,482.71",
-      "change": "▼ 0.28%",
-      "dir": "down"
+      "value": "7,543.64",
+      "change": "▲ 0.81%",
+      "dir": "up"
     },
     {
       "label": "NASDAQ",
-      "value": "25,870.65",
-      "change": "▲ 0.20%",
+      "value": "26,206.89",
+      "change": "▲ 1.30%",
       "dir": "up"
     },
     {
       "label": "Dow Jones",
-      "value": "52,348.39",
-      "change": "▼ 1.09%",
-      "dir": "down"
-    },
-    {
-      "label": "DAX",
-      "value": "24,959.15",
-      "change": "▲ 0.25%",
+      "value": "52,487.41",
+      "change": "▲ 0.27%",
       "dir": "up"
     },
     {
+      "label": "DAX",
+      "value": "25,115.95",
+      "change": "▼ 0.01%",
+      "dir": "flat"
+    },
+    {
       "label": "Nikkei 225",
-      "value": "67,743.85",
-      "change": "▲ 1.38%",
+      "value": "68,557.73",
+      "change": "▲ 1.20%",
       "dir": "up"
     },
     {
       "label": "Hang Seng",
-      "value": "24,030.18",
-      "change": "▼ 0.70%",
-      "dir": "down"
+      "value": "24,175.12",
+      "change": "▲ 0.60%",
+      "dir": "up"
     }
   ],
-  "marketSummary": "Today's market mood is cautious, with major indices showing mixed performance. The S&P 500 and Dow Jones are slightly down, while the NASDAQ, DAX, and Nikkei 225 are seeing modest gains. Geopolitical concerns surrounding renewed conflict in the Gulf are driving oil prices higher, fueling inflation fears and potentially impacting central bank decisions on interest rates.",
+  "marketSummary": "Global markets are experiencing a mixed but generally positive day. US indices are up, with the S&P 500, NASDAQ, and Dow Jones all showing gains, largely driven by a strong performance in the technology sector. European markets are slightly down, while Asian markets saw gains. Geopolitical concerns in the Middle East continue to be a factor, but positive news from the chip industry has provided a boost to investor sentiment.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,012.80",
-      "change": "▼ 4.34%",
+      "price": "€994.30",
+      "change": "▼ 1.87%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall is in focus after agreeing with Lockheed Martin to co-produce ATACMS missiles in Germany, a move supported by US and German authorities aimed at bolstering European defense autonomy. This agreement comes after a recent pullback in Rheinmetall's share price.",
-      "outlook": "Analysts maintain a generally bullish outlook for Rheinmetall in 2026, citing Europe's rearmament cycle and a substantial order backlog. However, concerns about free cash flow conversion and potential delays in large defense contracts remain.",
-      "badge": "🛡️ Defense Boost",
-      "badgeClass": "badge-buy"
+      "news": "<strong>🔑 Today:</strong> Rheinmetall AG saw a slight dip today. The company's stock has been volatile recently, with a previous decline after its Q1 2026 earnings report in early May, which disappointed on revenue. However, the company maintained its full-year 2026 guidance, projecting sales of €14.0-14.5 billion.",
+      "outlook": "Analysts generally maintain a 'Buy' consensus for RHM.DE, with an average 12-month price target suggesting significant upside. The company's substantial order backlog, driven by Europe's rearmament cycle, is a key upside driver for 2026.",
+      "badge": "🤝 Hold",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$204.12",
-      "change": "▲ 3.65%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> NVIDIA shares surged following reports that China may permit its major AI companies to acquire a limited number of H200 chips. Additionally, Vultr and SUSE have launched a turnkey NVIDIA AI platform, aiming to simplify the deployment of sophisticated AI applications for enterprises.",
-      "outlook": "Analysts remain overwhelmingly bullish on NVIDIA for 2026, with many reaffirming its position as a top AI stock. The company is expected to maintain a significant share of AI capital spending, and its strong long-term AI demand is seen as a key driver.",
-      "badge": "🚀 AI Momentum",
+      "price": "$202.78",
+      "change": "▼ 0.66%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> NVIDIA's stock slipped today despite strong underlying fundamentals and robust demand for its AI chips. This decline is attributed to market rotation and profit-taking, as some investors believe the stock is overpriced.",
+      "outlook": "NVIDIA's outlook remains strong, with analysts overwhelmingly recommending a 'Strong Buy' or 'Buy'. The company is expected to continue benefiting from the massive AI capital expenditure boom, with its Data Center revenue projected to exceed current Wall Street consensus.",
+      "badge": "🚀 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$517.41",
-      "change": "▲ 0.25%",
+      "price": "$546.72",
+      "change": "▲ 5.66%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD announced it will report its fiscal second-quarter 2026 financial results on August 4th, with analysts anticipating a substantial rise in earnings per share. Goldman Sachs recently raised its price target on AMD, citing surging demand for high-performance CPUs driven by agentic AI workloads.",
-      "outlook": "AMD is expected to see strong growth in 2026, fueled by its strategic pivot into AI and expanding market share in data center GPUs and CPUs. While the stock has seen a significant run-up, analysts remain constructive, with some seeing further upside.",
-      "badge": "💡 Chip Innovation",
+      "news": "<strong>🔑 Today:</strong> AMD saw a significant surge today, outperforming many of its semiconductor peers. This comes after Goldman Sachs raised its price target on AMD, citing surging demand for high-performance CPUs driven by agentic AI workloads.",
+      "outlook": "AMD has a positive outlook for 2026, with its shares having surged significantly in the first half of the year. The company is set to unveil new AI platforms and customer deployment details at its 'Advancing AI' event later this month, which could further boost investor confidence.",
+      "badge": "🌟 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$383.34",
-      "change": "▼ 1.41%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft is reportedly shifting more Excel and Outlook AI prompts to its own MAI models, a move that could reduce AI costs and improve long-term profitability. The company also announced it will report fiscal fourth-quarter 2026 results on July 29th, with attention on cloud growth and AI spending.",
-      "outlook": "Despite recent stock volatility, the consensus among financial analysts for Microsoft in 2026 remains overwhelmingly bullish, with many viewing the recent decline as a buying opportunity. Analysts project sustained momentum, particularly in Azure cloud growth and AI revenue.",
-      "badge": "☁️ Cloud & AI Growth",
+      "price": "$384.36",
+      "change": "▲ 0.27%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> Microsoft saw a modest gain today, even as news emerged about a significant jump in its greenhouse gas emissions due to the accelerated buildout of AI infrastructure. The company also announced its fiscal Q4 2026 earnings date for July 29, keeping investor focus on upcoming results.",
+      "outlook": "Analysts remain overwhelmingly bullish on Microsoft for 2026, with a consensus of 'Strong Buy'. Key catalysts include the deployment of AI-powered 'Copilots' and the growth of high-margin AI services in Azure.",
+      "badge": "✅ Buy",
       "badgeClass": "badge-buy"
     }
   ],
@@ -133,92 +133,92 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €125.17\nChange: ▲ 0.54%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Diversified Global",
+      "stats": "Price: €125.92\nChange: ▲ 0.16%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Buy",
       "badgeClass": "badge-buy",
-      "desc": "The iShares Core MSCI World UCITS ETF (Acc) aims to track the performance of the MSCI World Index, offering diversified exposure to large and mid-cap companies across 23 developed markets globally. This ETF provides a way for investors to participate in the growth of established businesses and emerging leaders across various sectors and economies.",
-      "verdict": "EUNL.DE is a solid choice for investors seeking broad, diversified exposure to global developed market equities. Its performance has been strong over the past year, making it well-suited for those looking to maximize return per unit of risk."
+      "desc": "EUNL.DE, the iShares Core MSCI World UCITS ETF, aims to track the performance of the MSCI World Index, offering diversified exposure to large and mid-cap companies across 23 developed markets worldwide. It provides investors with a way to participate in the growth of established businesses and emerging leaders across various sectors and economies.",
+      "verdict": "This ETF is well-suited for investors seeking broad, diversified exposure to global developed market equities with a focus on long-term capital and income gains."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €24.37\nChange: ▼ 0.91%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Fixed Income",
-      "badgeClass": "badge-hold",
-      "desc": "The iShares Core Global Aggregate Bond UCITS ETF (Acc) (4MMR.DE) provides broad exposure to the global investment-grade bond market. It aims to track the performance of a diversified index of government, corporate, and securitized bonds from developed and emerging markets.",
-      "verdict": "In the current environment of rising Treasury yields and inflation concerns, bond ETFs like 4MMR.DE may face headwinds. Investors should carefully consider the impact of potential interest rate hikes on bond valuations."
+      "stats": "Price: €24.05\nChange: ▼ 0.33%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Buy",
+      "badgeClass": "badge-buy",
+      "desc": "The 4MMR.DE ETF, also known as the Xtrackers MSCI World UCITS ETF 1C, aims to replicate the performance of the MSCI World Index. It offers investors a cost-effective way to gain exposure to a globally diversified portfolio of developed market equities.",
+      "verdict": "This ETF is a solid choice for investors looking for a core global equity allocation, providing broad market exposure and diversification."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $239.63\nChange: ▼ 2.24%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "✈️ Defense Sector",
-      "badgeClass": "badge-buy",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) offers targeted exposure to U.S. companies involved in the aerospace and defense industry, including manufacturers of commercial and military aircraft and defense systems. It focuses on large-cap leaders and benefits from the stability of government contracts.",
-      "verdict": "Given the current geopolitical tensions and increased defense spending, ITA presents a compelling option for investors seeking long-term growth in this specialized sector. However, investors should be mindful of inherent geopolitical and budgetary risks."
+      "stats": "Price: $239.62\nChange: ▼ 0.00%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Watch",
+      "badgeClass": "badge-watch",
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) provides targeted exposure to U.S. companies in the aerospace and defense sector, including manufacturers of commercial and military aircraft and defense equipment. It tracks the Dow Jones U.S. Select Aerospace & Defense Index.",
+      "verdict": "ITA is a compelling option for investors seeking long-term growth in the specialized aerospace and defense sector, particularly given the stability of government contracts."
     }
   ],
   "macro": [
     {
-      "theme": " geopolitical tensions",
-      "what": "Renewed hostilities in the Gulf region have led to a spike in oil prices.",
-      "impact": "Higher oil prices are fueling inflation fears and could prompt central banks to raise interest rates, potentially slowing economic growth."
+      "theme": "🤖 AI Infrastructure Boom",
+      "what": "The rapid expansion of AI infrastructure is driving significant capital expenditures across the tech industry, particularly for data centers and high-end GPUs.",
+      "impact": "This trend is a major catalyst for semiconductor companies like NVIDIA and AMD, but also raises concerns about rising emissions and potential margin pressures for hyperscalers like Microsoft."
     },
     {
-      "theme": "📈 Inflation Concerns",
-      "what": "The rise in Brent crude oil prices above $78 a barrel is reigniting worries about persistent inflation.",
-      "impact": "Sustained inflation could lead to more aggressive monetary tightening by central banks, impacting borrowing costs and corporate earnings."
+      "theme": "🌍 Geopolitical Tensions",
+      "what": "Renewed US and Iranian attacks are prolonging the Middle East conflict, leading to concerns about inflation and market stability.",
+      "impact": "While chip stocks have helped to offset these fears today, ongoing geopolitical tensions could introduce volatility and impact oil prices and interest rates."
     },
     {
-      "theme": "🏛️ Central Bank Watch",
-      "what": "With inflation concerns mounting, the Federal Reserve and other central banks may be pressured to raise interest rates.",
-      "impact": "Higher interest rates can slow the economy and negatively affect prices for various investments, particularly growth stocks."
+      "theme": "📈 Inflation & Interest Rates",
+      "what": "Stubbornly high borrowing costs and fresh signs of inflation pressure are lingering concerns for investors. May saw inflation hit 4.2%, its highest in three years.",
+      "impact": "The Federal Reserve is not expected to cut interest rates in the second half of 2026, which could pressure rate-sensitive sectors and smaller companies."
     },
     {
-      "theme": "💻 AI Infrastructure Spending",
-      "what": "Companies like Microsoft are significantly increasing capital expenditures on data centers and AI infrastructure.",
-      "impact": "While these investments are crucial for long-term growth in the AI sector, they can put near-term pressure on profit margins and free cash flow for individual companies."
+      "theme": "💻 Cybersecurity Risks",
+      "what": "Microsoft is recommending shorter Windows update deployment timelines due to advances in AI, which are reducing the time attackers need to exploit vulnerabilities.",
+      "impact": "This highlights the increasing importance of robust cybersecurity measures for businesses and individuals, and could drive demand for cybersecurity solutions."
     },
     {
-      "theme": "🤝 M&A Activity",
-      "what": "Global merger and acquisition volume surpassed $3 trillion in the first half of 2026, driven by blockbuster AI deals.",
-      "impact": "Robust M&A activity can signal confidence in the market and create opportunities for investors, particularly in high-growth sectors like AI."
+      "theme": "📊 Market Rotation",
+      "what": "Investors are rotating capital out of some big tech names, particularly those with frothy valuations, and shifting attention to other semiconductor companies or those with underappreciated AI exposure.",
+      "impact": "This rotation can lead to volatility in individual tech stocks, even those with strong fundamentals, as seen with NVIDIA today."
     }
   ],
   "calendar": [
     {
-      "date": "Jul 9",
-      "event": "Initial Jobless Claims",
-      "why": "Provides insight into the health of the labor market, a key factor for economic growth and inflation."
+      "date": "Mon Jul 14",
+      "event": "US Hourly Earnings SA M/M (Final)",
+      "why": "This is a key indicator of wage inflation, which can influence Federal Reserve policy decisions."
     },
     {
-      "date": "Jul 9",
-      "event": "Existing Home Sales",
-      "why": "An indicator of the housing market's strength, which can influence consumer spending and overall economic activity."
+      "date": "Tue Jul 15",
+      "event": "US PPI ex-Food & Energy NSA Y/Y",
+      "why": "The Producer Price Index (PPI) provides insight into inflation at the wholesale level, which can foreshadow consumer price changes."
     },
     {
-      "date": "Jul 14",
-      "event": "Hourly Earnings SA M/M (Final)",
-      "why": "Important for gauging wage inflation and its potential impact on consumer purchasing power and corporate costs."
+      "date": "Wed Jul 16",
+      "event": "US Retail Sales Control Group SA M/M",
+      "why": "This report offers a snapshot of consumer spending, a major driver of economic growth."
     },
     {
-      "date": "Jul 15",
-      "event": "PPI ex-Food & Energy NSA Y/Y",
-      "why": "Measures producer price inflation, offering an early look at price pressures that could eventually reach consumers."
+      "date": "Fri Jul 22",
+      "event": "AMD 'Advancing AI' Event",
+      "why": "AMD is expected to unveil new AI platforms and customer deployment details, which could significantly impact investor confidence and the stock's performance."
     },
     {
-      "date": "Jul 16",
-      "event": "Retail sales ControlGroup SA M/M",
-      "why": "A key indicator of consumer spending, which is a major component of economic growth."
+      "date": "Wed Jul 29",
+      "event": "Microsoft Fiscal Q4 2026 Earnings",
+      "why": "Microsoft's earnings report will provide crucial insights into the company's financial health, cloud growth, and AI monetization efforts."
     },
     {
-      "date": "Jul 29",
-      "event": "FOMC Meeting & Fed Funds Target Upper Bound",
-      "why": "The Federal Open Market Committee's interest rate decision and economic outlook are crucial for market direction."
+      "date": "Thu Jul 30",
+      "event": "US GDP SAAR Q/Q (First Preliminary)",
+      "why": "The initial estimate of Gross Domestic Product (GDP) is a comprehensive measure of economic activity and growth."
     }
   ],
   "quote": {
-    "text": "The stock market is a device for transferring money from the impatient to the patient.",
-    "source": "Warren Buffett, CEO of Berkshire Hathaway · Date Unknown"
+    "text": "This is still very much an AI bull market. For a bit, it was starting to broaden out, but that's contingent on oil prices and interest rates staying anchored, and with this flare-up in the Middle East, that calls that part of the bull market into question.",
+    "source": "Ross Mayfield, Investment Strategy Analyst at Baird · July 10, 2026"
   }
 };
