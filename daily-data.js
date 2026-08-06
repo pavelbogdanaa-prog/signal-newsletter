@@ -1,131 +1,131 @@
 window.SIGNAL_DATA = {
-  "date": "Wednesday · August 5, 2026",
+  "date": "Thursday · August 6, 2026",
   "alert": {
-    "type": "positive",
-    "icon": "📈",
-    "title": "Market Reaches New Highs on Easing Geopolitical Tensions",
-    "body": "Global markets are showing strong upward momentum today, with major indices hitting record highs as geopolitical tensions ease and corporate earnings continue to impress."
+    "type": "warning",
+    "icon": "⚠️",
+    "title": "Mixed Market Signals Amid Tech Volatility",
+    "body": "Global markets are showing a mixed performance today, with major indices experiencing slight declines while some individual tech stocks see significant swings. Geopolitical developments and earnings reports are driving much of the day's activity."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,736.52",
-      "dir": "up",
-      "arrow": "▲ 1.79%"
+      "value": "7,723.55",
+      "dir": "down",
+      "arrow": "▼ 0.17%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,584.99",
-      "dir": "up",
-      "arrow": "▲ 2.59%"
+      "value": "26,363.44",
+      "dir": "down",
+      "arrow": "▼ 0.83%"
     },
     {
       "label": "Dow Jones",
-      "value": "54,085.88",
+      "value": "54,349.12",
       "dir": "up",
-      "arrow": "▲ 1.71%"
+      "arrow": "▲ 0.49%"
     },
     {
       "label": "DAX",
-      "value": "26,250.71",
-      "dir": "up",
-      "arrow": "▲ 0.18%"
+      "value": "26,100.11",
+      "dir": "down",
+      "arrow": "▼ 0.10%"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,300.44",
-      "dir": "up",
-      "arrow": "▲ 3.66%"
+      "value": "65,683.26",
+      "dir": "down",
+      "arrow": "▼ 0.93%"
     },
     {
       "label": "Hang Seng",
-      "value": "25,915.82",
-      "dir": "up",
-      "arrow": "▲ 0.24%"
+      "value": "25,530.28",
+      "dir": "down",
+      "arrow": "▼ 1.49%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,736.52",
-      "change": "▲ 1.79%",
-      "dir": "up"
+      "value": "7,723.55",
+      "change": "▼ 0.17%",
+      "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "26,584.99",
-      "change": "▲ 2.59%",
-      "dir": "up"
+      "value": "26,363.44",
+      "change": "▼ 0.83%",
+      "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "54,085.88",
-      "change": "▲ 1.71%",
+      "value": "54,349.12",
+      "change": "▲ 0.49%",
       "dir": "up"
     },
     {
       "label": "DAX",
-      "value": "26,250.71",
-      "change": "▲ 0.18%",
-      "dir": "up"
+      "value": "26,100.11",
+      "change": "▼ 0.10%",
+      "dir": "down"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,300.44",
-      "change": "▲ 3.66%",
-      "dir": "up"
+      "value": "65,683.26",
+      "change": "▼ 0.93%",
+      "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "25,915.82",
-      "change": "▲ 0.24%",
-      "dir": "up"
+      "value": "25,530.28",
+      "change": "▼ 1.49%",
+      "dir": "down"
     }
   ],
-  "marketSummary": "A wave of optimism is sweeping across global markets today, propelling major indices to new record highs. The easing of geopolitical tensions, particularly concerning the Strait of Hormuz, has significantly boosted investor sentiment, leading to a sharp decline in oil prices and a broader rally in equities. Strong corporate earnings reports are further fueling this positive momentum, with companies across various sectors exceeding expectations.",
+  "marketSummary": "Today's market mood is a blend of caution and opportunity. Major indices like the S&P 500 and NASDAQ are down slightly, reflecting broader market jitters, particularly in the tech sector. However, the Dow Jones shows resilience with a modest gain. Asian markets generally trended lower, influenced by ongoing geopolitical concerns, while Indian markets opened higher. The overall sentiment is one of careful observation as investors digest earnings reports and monitor global events.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,214.80",
-      "change": "▲ 3.39%",
+      "price": "€1,203.60",
+      "change": "▲ 0.25%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> No specific news for RHM.DE was found in the search results. However, the broader market rally and positive sentiment may be influencing its performance.",
-      "outlook": "The company is likely to benefit from the overall positive market sentiment and strong economic conditions.",
-      "badge": "▲ Buy",
-      "badgeClass": "badge-buy"
+      "news": "<strong>🔑 Today:</strong> Rheinmetall AG has revised its full-year sales forecast for 2026 downwards to a range of €13.7 billion to €14.2 billion, from a previous range of €14 billion to €14.5 billion. This adjustment follows the German government's decision to cancel a delayed frigate program. Despite this, the company reported a strong first half of 2026, with operating profit increasing by 74% year-over-year to €786 million, surpassing expectations.",
+      "outlook": "Analysts maintain a generally bullish outlook for Rheinmetall, citing its strong position in the global defense sector due to increased defense spending and a substantial order backlog of €63 billion. However, the recent sales forecast adjustment and concerns about free cash flow conversion rates are factors to watch.",
+      "badge": "🛡️ Hold",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$211.94",
-      "change": "▲ 2.56%",
+      "price": "$219.22",
+      "change": "▲ 3.43%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Nvidia is benefiting from the broader AI-driven rally in semiconductor stocks, with strong demand for AI processors continuing to be a key theme. While specific news for Nvidia today is limited, the sector's overall strength is a positive indicator.",
-      "outlook": "Nvidia is expected to maintain its leadership in the AI chip market, with continued innovation and strong demand for its products.",
-      "badge": "▲ Buy",
+      "news": "<strong>🔑 Today:</strong> NVIDIA shares are up following Elon Musk's announcement that SpaceX will exclusively use NVIDIA chips for its AI infrastructure, specifically highlighting the Vera Rubin architecture. This commitment signals strong future demand for NVIDIA's AI hardware, reinforcing bullish sentiment. However, intensifying competition and the need for enormous AI financing could challenge sustained growth.",
+      "outlook": "NVIDIA's long-term outlook remains strong, driven by its dominance in the AI chip market and expanding ecosystem. However, some analysts suggest that while growth will continue, the stock may not deliver the same 'millionaire-maker' returns as in the past due to its already massive market capitalization.",
+      "badge": "🚀 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$518.58",
-      "change": "▲ 7.00%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD reported strong second-quarter earnings, exceeding revenue and profit expectations. CEO Lisa Su expressed confidence in the company's server CPU growth and indicated that the $30 billion estimate for 2027 Instinct revenue might be conservative. However, the company's third-quarter revenue outlook was slightly below analyst expectations, leading to some after-hours trading pressure.",
-      "outlook": "AMD is well-positioned to capitalize on the growing data center and AI markets, with strong product pipelines and increasing market share.",
-      "badge": "▲ Buy",
-      "badgeClass": "badge-buy"
+      "price": "$482.05",
+      "change": "▼ 7.04%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> AMD is experiencing a significant downturn, with its stock dropping by 7.04%. This decline comes amid a broader sell-off in AI-related tech stocks, following recent momentum. No specific company-driving news was immediately available, suggesting the movement is likely tied to sector-wide sentiment and profit-taking.",
+      "outlook": "The outlook for AMD remains tied to the competitive landscape of the semiconductor and AI markets. While the long-term demand for AI-related hardware is robust, AMD faces strong competition from industry giants like NVIDIA. Investors will be closely watching for future product announcements and market share gains.",
+      "badge": "📉 Watch",
+      "badgeClass": "badge-watch"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$492.81",
-      "change": "▲ 1.06%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Microsoft's Azure growth continues to exceed expectations, with revenue accelerating and an increasing annualized revenue run rate, indicating strong AI infrastructure demand. Recent earnings also showed robust performance, with EPS and revenue beating consensus. The company is actively expanding its data center capacity to meet cloud demand.",
-      "outlook": "Microsoft is poised for continued growth, driven by its strong cloud offerings, AI integration, and expanding data center infrastructure.",
-      "badge": "▲ Buy",
+      "price": "$487.46",
+      "change": "▼ 1.09%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> Microsoft is facing scrutiny over its reliance on OpenAI, with new disclosures suggesting OpenAI accounts for approximately 70% of Microsoft's AI revenue. This highlights both the commercial value and the potential risk of heavy dependence on a single partner. Additionally, Microsoft has released its largest-ever security update, patching 570 flaws, many identified using AI.",
+      "outlook": "Analysts remain largely bullish on Microsoft, citing strong growth in Azure and AI, with Azure revenue surpassing $100 billion for fiscal 2026. The company's diversified technology platform and strategic positioning in cloud computing and AI are expected to drive sustained growth, despite concerns about AI infrastructure spending and antitrust scrutiny.",
+      "badge": "☁️ Buy",
       "badgeClass": "badge-buy"
     }
   ],
@@ -133,92 +133,92 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €128.46\nChange: ▲ 1.81%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Hold",
-      "badgeClass": "badge-hold",
-      "desc": "The EUNL.DE ETF, tracking a broad market index, is likely experiencing positive performance today due to the widespread market rally. The easing of geopolitical tensions and strong corporate earnings are contributing to a favorable environment for diversified investments.",
-      "verdict": "The current market conditions suggest a positive outlook for broad market ETFs like EUNL.DE."
+      "stats": "Price: €128.20\nChange: ▼ 0.03%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Global Core",
+      "badgeClass": "badge-buy",
+      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) aims to track the performance of the MSCI World Index, offering broad exposure to companies in developed countries. Today, the ETF is down slightly, reflecting the mixed global market sentiment. It provides investors with a diversified approach to global equities, covering 85% of listed equities in 23 developed countries.",
+      "verdict": "EUNL.DE is a solid choice for long-term investors seeking diversified exposure to developed markets. Its broad market-cap-weighted strategy and low expense ratio make it an attractive core holding."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €26.42\nChange: ▲ 5.03%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Hold",
+      "stats": "Price: €26.38\nChange: ▲ 0.59%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "N/A",
       "badgeClass": "badge-hold",
-      "desc": "Specific news for 4MMR.DE was not found. However, as a diversified ETF, it is likely benefiting from the overall positive market sentiment and the rally in major indices.",
-      "verdict": "Given the broad market strength, 4MMR.DE is likely to see positive movement."
+      "desc": "The 4MMR.DE ETF, while not having specific news today, generally tracks a broad market index, likely focusing on specific regions or sectors given its German listing. Its slight gain today suggests some positive underlying performance in its constituent holdings, contrasting with the broader European market's slight decline.",
+      "verdict": "Without specific details on 4MMR.DE's underlying index, a general verdict is difficult. However, for investors seeking exposure to its specific market segment, its positive movement today is a good sign."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $250.65\nChange: ▲ 1.86%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Buy",
+      "stats": "Price: $252.28\nChange: ▲ 0.65%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Defense Focus",
       "badgeClass": "badge-buy",
-      "desc": "The ITA ETF, which typically tracks the technology sector, is likely performing well today, given the strong gains in tech stocks, particularly in the AI and semiconductor space. The positive earnings reports from major tech companies are a significant driver.",
-      "verdict": "The technology sector's strong performance indicates a positive outlook for the ITA ETF."
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) provides targeted exposure to the U.S. aerospace and defense industry, including manufacturers of commercial and military aircraft. The ETF is up today, indicating strength in the sector, possibly driven by ongoing geopolitical developments and increased defense budgets.",
+      "verdict": "ITA is a compelling option for investors looking for targeted exposure to the strategic aerospace and defense sector. However, its concentrated portfolio can lead to higher volatility."
     }
   ],
   "macro": [
     {
-      "theme": "🕊️ Geopolitical De-escalation",
-      "what": "Progress towards a deal to reopen the Strait of Hormuz has significantly reduced oil price volatility and eased broader Middle East tensions.",
-      "impact": "Boosted investor confidence, leading to a rally in global markets and a decline in energy prices."
+      "theme": "🤖 AI Infrastructure Spending",
+      "what": "Significant capital expenditures by tech giants like Microsoft and SpaceX on AI infrastructure, including data centers and specialized chips.",
+      "impact": "Boosts demand for AI hardware manufacturers like NVIDIA but raises concerns about capital intensity and potential supply constraints for the companies making these investments."
     },
     {
-      "theme": "🤖 AI Revolution Continues",
-      "what": "Strong demand for AI hardware and services continues to drive growth for semiconductor and tech companies, with AMD and Microsoft reporting robust performance.",
-      "impact": "Elevated stock prices for AI-focused companies and continued investment in AI infrastructure."
+      "theme": "🛡️ Geopolitical Tensions & Defense Spending",
+      "what": "Ongoing geopolitical tensions continue to drive increased defense budgets globally, benefiting defense contractors.",
+      "impact": "Positive for defense companies like Rheinmetall and aerospace & defense ETFs like ITA, providing stable revenue streams and long-term order backlogs."
     },
     {
-      "theme": "🏦 Central Bank Policy",
-      "what": "The Reserve Bank of India maintained its repo rate at 5.25% and a neutral stance, while upgrading its GDP growth forecast and lowering inflation projections.",
-      "impact": "Indicates a cautious but optimistic approach to managing inflation and growth in India, with potential implications for emerging markets."
+      "theme": "☁️ Cloud Computing Growth",
+      "what": "Continued strong growth in cloud computing services, particularly in platforms like Microsoft Azure.",
+      "impact": "Positive for tech companies with strong cloud offerings, driving revenue and earnings growth."
     },
     {
-      "theme": "⚖️ Regulatory Landscape",
-      "what": "The EU AI Act's transparency obligations are now in effect, requiring companies to disclose AI interactions and generated content.",
-      "impact": "Increases compliance burdens for tech companies operating in the EU but aims to foster responsible AI development."
+      "theme": "🚨 Cybersecurity Concerns",
+      "what": "A record number of security flaws being patched by major software providers, partly due to AI-driven vulnerability detection.",
+      "impact": "Highlights the increasing importance of cybersecurity and the ongoing arms race between security measures and malicious actors, potentially boosting demand for cybersecurity solutions."
     },
     {
-      "theme": "⚡ Clean Energy Transition",
-      "what": "A U.S. appeals court has blocked the EPA from reclaiming nearly $20 billion in clean energy grants, supporting renewable energy projects.",
-      "impact": "Provides continued momentum for clean energy investments and signals a commitment to green initiatives."
+      "theme": "🏦 Central Bank Monetary Policy",
+      "what": "The Reserve Bank of India maintained a status quo on its benchmark policy rate, signaling a data-dependent approach to future rate decisions.",
+      "impact": "Influences market liquidity and investor sentiment, with a 'wait-and-watch' approach potentially leading to continued volatility as markets assess future rate trajectories."
     }
   ],
   "calendar": [
     {
-      "date": "Wed Aug 05",
-      "event": "ISM Services Business Activity (Jul)",
-      "why": "Key indicator for the health of the U.S. services sector, which is a significant driver of economic growth."
-    },
-    {
-      "date": "Wed Aug 05",
-      "event": "ADP Employment Report (Jul)",
-      "why": "Provides an early look at U.S. private sector job creation ahead of the official employment report."
-    },
-    {
-      "date": "Wed Aug 05",
-      "event": "RBI Monetary Policy Decision",
-      "why": "The Reserve Bank of India's decision on interest rates and monetary policy stance, impacting the Indian economy and broader Asian markets."
-    },
-    {
-      "date": "Wed Aug 05",
-      "event": "Euro Area Retail Trade (Jun)",
-      "why": "Measures consumer spending in the Eurozone, offering insights into economic activity."
-    },
-    {
       "date": "Thu Aug 06",
-      "event": "US Productivity (Q2 P)",
-      "why": "Indicates changes in labor productivity, a key factor in economic growth and inflation."
+      "event": "US Productivity SAAR Q/Q (Preliminary)",
+      "why": "Provides insight into economic efficiency and potential inflationary pressures."
     },
     {
       "date": "Fri Aug 07",
       "event": "US Employment Report (Jul)",
-      "why": "Crucial data on job creation, unemployment rate, and wage growth, heavily influencing market sentiment and central bank policy."
+      "why": "Key indicator of labor market health, influencing Federal Reserve monetary policy decisions."
+    },
+    {
+      "date": "Wed Aug 12",
+      "event": "US CPI (Jul)",
+      "why": "Crucial inflation data that heavily influences interest rate expectations and market sentiment."
+    },
+    {
+      "date": "Thu Aug 13",
+      "event": "US PPI (Jul)",
+      "why": "Measures producer-level inflation, offering a forward look at consumer price trends."
+    },
+    {
+      "date": "Fri Aug 14",
+      "event": "US Retail Sales (Jul)",
+      "why": "Indicates consumer spending strength, a major driver of economic growth."
+    },
+    {
+      "date": "Wed Aug 19",
+      "event": "FOMC Minutes",
+      "why": "Provides detailed insights into the Federal Reserve's monetary policy discussions and future outlook."
     }
   ],
   "quote": {
-    "text": "The market is a device for transferring money from the impatient to the patient.",
-    "source": "Warren Buffett, Investor · N/A"
+    "text": "The only way to do great work is to love what you do.",
+    "source": "Steve Jobs, Co-founder of Apple Inc. · Undated"
   }
 };
