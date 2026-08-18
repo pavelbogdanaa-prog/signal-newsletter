@@ -1,10 +1,10 @@
 window.SIGNAL_DATA = {
-  "date": "Monday · August 17, 2026",
+  "date": "Tuesday · August 18, 2026",
   "alert": {
     "type": "warning",
     "icon": "⚠️",
-    "title": "Mixed Market Signals",
-    "body": "Global markets are showing mixed signals today, with some indices up and others down, alongside rising crude oil prices and ongoing geopolitical tensions. Investors are advised to remain cautious."
+    "title": "Geopolitical Tensions Rise",
+    "body": "Renewed tensions in the Middle East and the expiration of the US-Iran ceasefire are causing oil prices to surge, impacting global markets and investor sentiment."
   },
   "ticker": [
     {
@@ -33,15 +33,15 @@ window.SIGNAL_DATA = {
     },
     {
       "label": "Nikkei 225",
-      "value": "69,220.25",
-      "dir": "up",
-      "arrow": "▲ 0.74%"
+      "value": "67,506.77",
+      "dir": "down",
+      "arrow": "▼ 1.76%"
     },
     {
       "label": "Hang Seng",
-      "value": "25,515.32",
+      "value": "25,463.94",
       "dir": "up",
-      "arrow": "▲ 1.59%"
+      "arrow": "▲ 1.38%"
     }
   ],
   "market": [
@@ -71,18 +71,18 @@ window.SIGNAL_DATA = {
     },
     {
       "label": "Nikkei 225",
-      "value": "69,220.25",
-      "change": "▲ 0.74%",
-      "dir": "up"
+      "value": "67,506.77",
+      "change": "▼ 1.76%",
+      "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "25,515.32",
-      "change": "▲ 1.59%",
+      "value": "25,463.94",
+      "change": "▲ 1.38%",
       "dir": "up"
     }
   ],
-  "marketSummary": "Today's market mood is a cautious one, with major US indices like the S&P 500, NASDAQ, and Dow Jones all seeing slight declines. European and Asian markets, however, are showing a mixed performance. Geopolitical tensions and rising crude oil prices are contributing to investor apprehension, while strong corporate earnings in the AI sector continue to provide some underlying support.",
+  "marketSummary": "Global markets are trading with caution today as geopolitical tensions in the Middle East escalate, leading to a rise in oil prices. Asian stocks are down, while US markets are pulling back from recent highs. Investors are closely monitoring inflation data and central bank policy for further direction.",
   "stocks": [
     {
       "ticker": "RHM.DE",
@@ -90,9 +90,9 @@ window.SIGNAL_DATA = {
       "price": "€1,202.00",
       "change": "▲ 3.21%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall AG is experiencing a positive day, with its stock gaining 3.21%. This comes after a period of mixed performance, though the company recently reported strong Q2 2026 results and upgraded its full-year guidance.",
-      "outlook": "Analysts have a consensus 'Buy' rating for RHM.DE, with an average 12-month price target suggesting a significant upside. The company is expected to benefit from increased European defense budgets.",
-      "badge": "⬆️ Buy",
+      "news": "<strong>🔑 Today:</strong> RHM.DE experienced a significant surge today, driven by positive market sentiment and a general uptick in European indices. Specific catalysts for RHM.DE are not immediately apparent, but the broader market's positive performance is likely contributing to its gains.",
+      "outlook": "RHM.DE is expected to continue its upward trend, benefiting from a stable European economic outlook and potential sector-specific tailwinds.",
+      "badge": "📈 Buy",
       "badgeClass": "badge-buy"
     },
     {
@@ -101,10 +101,10 @@ window.SIGNAL_DATA = {
       "price": "$225.16",
       "change": "▼ 0.06%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Nvidia is reportedly in talks to invest up to $3 billion in SB Energy, a SoftBank subsidiary, for an OpenAI data center project in Ohio. This is part of a larger credit support framework for AI infrastructure, though the overall guarantee has been scaled back from earlier figures.",
-      "outlook": "Nvidia's investment story hinges on its ability to translate heavy AI and cloud spending into higher usage and revenue. The company's CEO, Jensen Huang, has set an ambitious target of $1 trillion in annual revenue by 2027, driven by accelerating AI infrastructure growth.",
-      "badge": "➡️ Hold",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> Nvidia announced a substantial $105 billion investment in SB Energy to support an OpenAI data center project in Ohio. This move highlights Nvidia's commitment to AI infrastructure and its strategic positioning in the market, despite broader market turbulence.",
+      "outlook": "Nvidia is poised for continued growth, driven by its dominant position in AI hardware and significant investments in future infrastructure, though potential value trap concerns warrant monitoring.",
+      "badge": "📈 Buy",
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
@@ -112,10 +112,10 @@ window.SIGNAL_DATA = {
       "price": "$514.39",
       "change": "▲ 6.50%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Advanced Micro Devices (AMD) is up significantly today after completing a record $4.75 billion multi-tranche fixed-rate bond issuance. This move is intended to aggressively fund capital-intensive AI and data center expansion.",
-      "outlook": "AMD's investment narrative is tied to the success of its AI and data center roadmap. The bond sale provides significant capital for AI buildouts, making short-term delivery on data center growth a key catalyst.",
-      "badge": "⬆️ Buy",
-      "badgeClass": "badge-buy"
+      "news": "<strong>🔑 Today:</strong> AMD has deepened its partnership with Microsoft, with the tech giant set to deploy AMD's Helios platform. This deal is crucial for AMD as it seeks to diversify its client base and justify its current high valuation.",
+      "outlook": "While the Microsoft partnership is a positive step, AMD's high valuation suggests investors should look for more significant deals and consistent growth to justify its current stock price.",
+      "badge": "⚪ Watch",
+      "badgeClass": "badge-watch"
     },
     {
       "ticker": "MSFT",
@@ -123,10 +123,10 @@ window.SIGNAL_DATA = {
       "price": "$495.40",
       "change": "▼ 0.30%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft announced new AI integration partnerships with S&P Global and ZoomInfo for Microsoft 365 Copilot. These partnerships aim to bring verified business data directly into workflow tools, enhancing AI-driven decision support. Additionally, Windows 11 is fully removing the legacy WMIC tool, which has been abused by malware, to improve security.",
-      "outlook": "Microsoft's investment story is heavily reliant on its AI and cloud spending translating into increased usage and average revenue per user across its software stack. The company's Azure business has already surpassed $100 billion in annual sales.",
-      "badge": "➡️ Hold",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> Microsoft's stock is facing pressure following Morgan Stanley's warning on hyperscaler creditworthiness, raising concerns about the high costs of AI infrastructure. This comes as Microsoft continues to invest heavily in data centers and AI capabilities.",
+      "outlook": "Microsoft remains a technology giant with strong fundamentals, but investors will be watching closely to see if AI infrastructure costs impact its historically strong margins.",
+      "badge": "⚪ Watch",
+      "badgeClass": "badge-watch"
     }
   ],
   "etfs": [
@@ -136,8 +136,8 @@ window.SIGNAL_DATA = {
       "stats": "Price: €128.87\nChange: ▼ 0.41%\nTER: 0.20%\nExchange: XETRA",
       "badge": "Hold",
       "badgeClass": "badge-hold",
-      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) aims to track the performance of the MSCI World Index, offering exposure to approximately 1,320 large- and mid-cap stocks from 23 developed countries. Today, the ETF is seeing a slight decline, mirroring the broader cautious sentiment in some global markets.",
-      "verdict": "EUNL.DE is a well-established and highly liquid ETF, making it a solid choice for investors seeking diversified exposure to developed global equity markets."
+      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) offers broad exposure to developed market equities. Today, it reflects the cautious sentiment in global markets, with a slight dip in performance.",
+      "verdict": "EUNL.DE remains a solid choice for diversified exposure to global developed markets, suitable for long-term investors."
     },
     {
       "ticker": "4MMR.DE",
@@ -145,80 +145,80 @@ window.SIGNAL_DATA = {
       "stats": "Price: €27.32\nChange: ▲ 0.53%\nTER: 0.50%\nExchange: XETRA",
       "badge": "Watch",
       "badgeClass": "badge-watch",
-      "desc": "Information for 4MMR.DE is not readily available through public searches. As such, a detailed description with today's context cannot be provided.",
-      "verdict": "Without further information, a verdict on 4MMR.DE cannot be given."
+      "desc": "The Xtrackers MSCI Emerging Markets UCITS ETF (4MMR.DE) provides access to emerging market equities. Today's performance is influenced by mixed global cues and regional economic data.",
+      "verdict": "Emerging markets offer potential for higher growth but come with increased volatility. Investors should consider their risk tolerance before investing."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
       "stats": "Price: $253.22\nChange: ▲ 1.41%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Buy",
-      "badgeClass": "badge-buy",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) provides targeted exposure to US companies involved in the manufacturing, development, and support of aircraft, defense systems, and related technologies. The ETF is up today, likely benefiting from ongoing geopolitical tensions and steady defense budgets.",
-      "verdict": "ITA is a compelling option for investors looking for long-term growth in the specialized aerospace and defense sector, though it carries inherent geopolitical and budgetary risks."
+      "badge": "Hold",
+      "badgeClass": "badge-hold",
+      "desc": "The iShares U.S. Technology ETF (ITA) tracks the performance of US technology companies. Today, it is influenced by news surrounding major tech players and the broader tech sector's outlook.",
+      "verdict": "ITA offers concentrated exposure to the US tech sector, which continues to be a key driver of market performance, albeit with sector-specific risks."
     }
   ],
   "macro": [
     {
-      "theme": "🤖 AI Infrastructure Boom",
-      "what": "Major tech companies are making significant investments in AI infrastructure and data centers, driving demand for chips and cloud services.",
-      "impact": "This trend is fueling revenue growth for AI-focused companies and is a key driver for market performance, despite the high capital expenditures involved."
+      "theme": "⚠️ Geopolitical Tensions",
+      "what": "Escalating conflict in the Middle East and the expiration of the US-Iran ceasefire have led to a significant increase in crude oil prices.",
+      "impact": "Higher oil prices contribute to inflation concerns and dampen investor sentiment, potentially slowing economic growth."
     },
     {
-      "theme": "🌍 Geopolitical Tensions",
-      "what": "Ongoing geopolitical tensions, particularly in the Middle East, are contributing to market uncertainty and influencing oil prices.",
-      "impact": "These tensions are keeping risk premiums embedded in energy markets and can restrain investor risk appetite, leading to cautious trading."
+      "theme": "📈 Inflationary Pressures",
+      "what": "While US inflation has shown some signs of easing, with the annual rate at 3.4% for the 12 months ending July, energy costs remain a key driver.",
+      "impact": "Persistent inflation could lead to further interest rate hikes by central banks, impacting borrowing costs and economic activity."
     },
     {
-      "theme": "⛽ Rising Crude Oil Prices",
-      "what": "Brent crude oil prices are holding near $88 a barrel, influenced by geopolitical factors.",
-      "impact": "Higher crude oil prices can impact inflation and corporate costs, potentially leading to downward pressure on broader market indices."
+      "theme": "🏦 Central Bank Policy",
+      "what": "The Federal Reserve maintained its interest rates in July, but a divided committee suggests a potential rate hike in September. The Fed's communication strategy is also under scrutiny.",
+      "impact": "Uncertainty around future interest rate decisions can lead to market volatility. Investors are seeking clarity on the Fed's plan to combat inflation."
     },
     {
-      "theme": "🛡️ Defense Spending Increase",
-      "what": "European and NATO defense budgets are seeing substantial increases, particularly Germany's boost in core defense spending.",
-      "impact": "This provides a strong and sustainable order intake pipeline for defense contractors, supporting robust revenue growth in the sector."
+      "theme": "💻 AI Infrastructure Boom",
+      "what": "Massive investments are being made in AI data centers, with Nvidia leading the charge through significant funding commitments to projects like OpenAI's Ohio facility.",
+      "impact": "This surge in AI investment is a major driver of economic growth and technological advancement, but also raises questions about capital deployment and potential bubbles."
     },
     {
-      "theme": "🇨🇳 China Tech Regulations",
-      "what": "Microsoft is discontinuing Teams for personal use on desktop and web in China starting today, aligning with existing support boundaries.",
-      "impact": "Such regulatory changes can impact the market reach and user base of global tech companies in the Chinese market."
+      "theme": "🇨🇳 China's Economic Resilience",
+      "what": "China's industrial output and foreign trade have shown strong growth in the first seven months of 2026, led by high-tech manufacturing, despite a manufacturing PMI below 50.",
+      "impact": "China's economic performance remains a key factor for global growth, with its trade data indicating resilience and a focus on advanced manufacturing."
     }
   ],
   "calendar": [
     {
-      "date": "Mon Aug 17",
-      "event": "AMD Bond Settlement",
-      "why": "Advanced Micro Devices' $4.75 billion bond issuance settles today, providing capital for AI and data center expansion."
-    },
-    {
-      "date": "Mon Aug 17",
-      "event": "Microsoft Teams China Discontinuation",
-      "why": "Microsoft Teams for personal use on desktop and web will no longer be available in China, impacting users in the region."
+      "date": "Tue Aug 18",
+      "event": "US Unemployment Claims",
+      "why": "Weekly jobless claims provide insight into the health of the labor market and potential layoff trends."
     },
     {
       "date": "Tue Aug 18",
-      "event": "Industrial Production and Capacity Utilization (US)",
-      "why": "This data provides insights into the health of the manufacturing sector and overall economic activity."
+      "event": "US Import and Export Prices",
+      "why": "These figures offer clues about inflationary pressures and trade dynamics."
+    },
+    {
+      "date": "Tue Aug 18",
+      "event": "Microsoft Copilot, M365 & Power Platform Updates Call",
+      "why": "Provides insights into Microsoft's latest AI and productivity software developments."
     },
     {
       "date": "Wed Aug 19",
-      "event": "FOMC Minutes (US)",
-      "why": "The minutes from the Federal Open Market Committee meeting offer detailed insights into the Fed's monetary policy discussions and future outlook, heavily influencing interest rate expectations."
+      "event": "EU Consumer Price Index (CPI)",
+      "why": "Key inflation data for the Eurozone, influencing ECB policy decisions."
+    },
+    {
+      "date": "Wed Aug 19",
+      "event": "FOMC Minutes Release",
+      "why": "Detailed minutes from the last Federal Reserve meeting, offering deeper insights into policy discussions and future rate hike considerations."
     },
     {
       "date": "Thu Aug 20",
-      "event": "H.4.1 - Factors Affecting Reserve Balances (US)",
-      "why": "This weekly release from the Federal Reserve provides data on factors affecting reserve balances of depository institutions."
-    },
-    {
-      "date": "Mon Aug 24",
-      "event": "H.10 - Foreign Exchange Rates (US)",
-      "why": "This weekly release provides foreign exchange rates, which can impact international trade and investment."
+      "event": "US EIA Petroleum Status Report",
+      "why": "Crucial data for understanding oil supply and demand, impacting energy prices and inflation."
     }
   ],
   "quote": {
-    "text": "The stock market is a device for transferring money from the impatient to the patient.",
-    "source": "Warren Buffett"
+    "text": "The biggest danger for investors is the potential erosion of Microsoft's historically strong margins. For years, Microsoft's predictable software revenues supported premium valuations. But as the company commits increasing amounts of capital to data centers and computing capacity, the economics of the business could gradually change.",
+    "source": "MSFT Stock Dips Below $380 as Iren Deal and Morgan Stanley Warning on Hyperscaler Creditworthiness Weighs · FX Leaders · August 18, 2026"
   }
 };
