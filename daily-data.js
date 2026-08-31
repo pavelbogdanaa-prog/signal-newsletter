@@ -1,131 +1,131 @@
 window.SIGNAL_DATA = {
-  "date": "Friday · August 28, 2026",
+  "date": "Monday · August 31, 2026",
   "alert": {
-    "type": "warning",
+    "type": "critical",
     "icon": "⚠️",
-    "title": "Fed Rate Hike Expectations Rise",
-    "body": "Expectations for a Federal Reserve interest rate hike have increased significantly following Fed Chair Kevin Warsh's speech at the Jackson Hole symposium. Traders are now betting on a nearly 60% probability of a rate hike as soon as next month."
+    "title": "Middle East Tensions Escalate, Oil Prices Surge",
+    "body": "U.S. markets are sliding today following a U.S. strike on Iranian rocket launchers, raising concerns about further escalation in the Middle East and sending oil prices higher."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,713.00",
+      "value": "7,711.76",
       "dir": "down",
-      "arrow": "▼ 0.23%"
+      "arrow": "▼ 0.25%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,419.97",
+      "value": "26,402.42",
       "dir": "down",
-      "arrow": "▼ 0.46%"
+      "arrow": "▼ 0.52%"
     },
     {
       "label": "Dow Jones",
-      "value": "53,548.24",
+      "value": "53,559.99",
       "dir": "flat",
-      "arrow": "▼ 0.04%"
+      "arrow": "▼ 0.02%"
     },
     {
       "label": "DAX",
-      "value": "26,569.99",
-      "dir": "up",
-      "arrow": "▲ 0.77%"
+      "value": "26,392.35",
+      "dir": "down",
+      "arrow": "▼ 0.67%"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,131.98",
+      "value": "66,311.93",
       "dir": "down",
-      "arrow": "▼ 0.20%"
+      "arrow": "▼ 0.14%"
     },
     {
       "label": "Hang Seng",
-      "value": "25,565.74",
+      "value": "25,566.99",
       "dir": "down",
-      "arrow": "▼ 0.34%"
+      "arrow": "▼ 0.07%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,713.00",
-      "change": "▼ 0.23%",
+      "value": "7,711.76",
+      "change": "▼ 0.25%",
       "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "26,419.97",
-      "change": "▼ 0.46%",
+      "value": "26,402.42",
+      "change": "▼ 0.52%",
       "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "53,548.24",
-      "change": "▼ 0.04%",
+      "value": "53,559.99",
+      "change": "▼ 0.02%",
       "dir": "flat"
     },
     {
       "label": "DAX",
-      "value": "26,569.99",
-      "change": "▲ 0.77%",
-      "dir": "up"
+      "value": "26,392.35",
+      "change": "▼ 0.67%",
+      "dir": "down"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,131.98",
-      "change": "▼ 0.20%",
+      "value": "66,311.93",
+      "change": "▼ 0.14%",
       "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "25,565.74",
-      "change": "▼ 0.34%",
+      "value": "25,566.99",
+      "change": "▼ 0.07%",
       "dir": "down"
     }
   ],
-  "marketSummary": "U.S. stock markets are experiencing a mixed day as investors digest Federal Reserve Chair Kevin Warsh's speech at the Jackson Hole symposium, which has heightened expectations for an interest rate hike. While the Dow Jones shows slight gains, the S&P 500 and NASDAQ are trending downwards. European markets, however, are seeing some upward movement after recent declines.",
+  "marketSummary": "U.S. stock markets closed lower today, with all three major indexes in negative territory, as escalating geopolitical tensions in the Middle East weighed on investor sentiment. Despite today's downturn, Wall Street is still poised to end August with solid gains, particularly in technology stocks. Investors are also closely watching upcoming economic reports and Federal Reserve commentary for clues on future interest rate decisions.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,154.60",
-      "change": "▼ 1.59%",
+      "price": "€1,136.80",
+      "change": "▼ 3.10%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall's stock is under scrutiny today following the announcement of a joint venture with Lockheed Martin to produce attack arms and missiles in Germany. This move aims to bolster European defense capabilities and integrate Rheinmetall further into transatlantic supply chains. Despite this, the stock has seen a recent decline, prompting questions about the disconnect between strong company fundamentals and share price performance.",
-      "outlook": "Rheinmetall's 2026 outlook remains strong, with raised guidance for revenue between €13.7-14.2 billion and an operating margin around 19%. The company's order backlog has reached €80.4 billion, reinforcing its growth expectations.",
-      "badge": "🛡️ Defense Growth",
+      "news": "<strong>🔑 Today:</strong> Rheinmetall shares are down today, following a period of volatility. The company recently announced plans to invest approximately €270 million in expanding its Kassel facility, aiming to make it the largest tank factory in Europe and establish a drone testing center. This expansion is expected to increase employment at the site from 2,200 to 3,500 workers.",
+      "outlook": "Analysts generally maintain a 'Buy' consensus for RHM.DE, with an average 12-month price target suggesting a significant upside. The company's substantial order backlog of €73 billion and confirmed 2026 revenue guidance of €14 billion–€14.5 billion are key upside drivers, despite some recent revenue misses.",
+      "badge": "🛡️ Defense Expansion",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$218.83",
-      "change": "▼ 4.01%",
+      "price": "$217.55",
+      "change": "▼ 4.57%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> NVIDIA shares are experiencing a downward retracement today, largely attributed to profit-taking and technical consolidation after a period of strong upward momentum driven by blowout earnings. This comes despite the company reporting robust Q2 FY27 revenue of $96.2 billion, up 106% year-over-year, and announcing strategic partnerships and platform launches, including the NVIDIA DSX™ platform and collaborations for AI infrastructure buildout.",
-      "outlook": "NVIDIA's outlook for 2026 remains highly positive, with strong demand for its AI accelerators and continued expansion into new markets like stand-alone CPUs with its Rubin platform. The company anticipates significant revenue from its CPU ventures and is actively addressing potential supply bottlenecks.",
+      "news": "<strong>🔑 Today:</strong> NVIDIA's stock is down today, even as the company deepens its partnership with MediaTek to build next-generation AI computing platforms across AI infrastructure, local AI computing, and automotive sectors. This collaboration includes MediaTek adopting NVIDIA's NVLink Fusion platform for custom XPU development. Separately, Ark Invest significantly increased its stake in NVIDIA, acquiring 243,707 shares for approximately $53 million, signaling a bullish stance on the company's AI leadership.",
+      "outlook": "NVIDIA is considered a leading beneficiary of enterprise AI adoption, with strong data center demand and the continued expansion of AI infrastructure spending. Analysts have raised price targets following upbeat guidance, reinforcing expectations for sustained demand for its Blackwell and upcoming Rubin architectures.",
       "badge": "💡 AI Leader",
-      "badgeClass": "badge-hold"
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$470.77",
-      "change": "▼ 1.24%",
+      "price": "$465.58",
+      "change": "▼ 2.33%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> AMD is facing a new test as Cathie Wood's ARK Invest trimmed its position in the chipmaker following a significant rally this year. This move comes as investors reassess the AI semiconductor trade, with Nvidia's strong outlook putting additional focus on whether rivals like AMD can justify their sharply higher valuations. Additionally, Commerce Bank increased its stake in AMD by 55.5% in the second quarter.",
-      "outlook": "AMD anticipates strong growth for 2026, fueled by its strategic pivot into the AI space and expanding market share in data center GPUs and CPUs. The company expects significant revenue growth in its data center segment, with hyperscaler AI infrastructure demand accelerating.",
-      "badge": "🚀 AI Challenger",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> AMD's stock is down today, despite news of its Instinct GPUs and EPYC CPUs powering Europe's next-generation LUMI-AI supercomputer, set for deployment in the second half of 2027. Additionally, AMD, Cisco, and HUMAIN announced that AMD Instinct MI355X GPU-based AI infrastructure is now live in Saudi Arabia, with plans for significant expansion by 2030.",
+      "outlook": "AMD is expected to see strong growth in 2026, driven by its strategic pivot into the AI space and its emergence as a key challenger to Nvidia in the data center market. Analysts have recently upgraded AMD to 'Strong Buy' with increased price targets, citing strong AI demand and product roadmap.",
+      "badge": "🚀 AI Infrastructure",
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$515.06",
-      "change": "▲ 1.98%",
+      "price": "$513.53",
+      "change": "▲ 1.68%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Microsoft is making headlines with the launch of a 50MW AI compute deployment in North America, utilizing NVIDIA GB300 NVL72 infrastructure. This project underscores Microsoft's commitment to building high-density, liquid-cooled data centers for advanced AI workloads. Additionally, a Microsoft executive addressed employee concerns regarding the environmental impact of the company's data centers, emphasizing improvements in energy efficiency and water consumption.",
-      "outlook": "Analysts remain overwhelmingly bullish on Microsoft's 2026 outlook, with an average price target suggesting significant upside. Key catalysts include sustained growth in Azure and other cloud services, driven by robust AI demand, and a substantial commercial remaining performance obligation.",
-      "badge": "☁️ Cloud & AI",
+      "news": "<strong>🔑 Today:</strong> Microsoft's stock is up today, driven by two significant announcements. The company unveiled its Xbox Disc-to-Digital plan, allowing players to convert physical games into digital licenses. Furthermore, Microsoft landed a $1 billion AI chip financing agreement with Nvidia-backed Lambda to deploy Nvidia GPU infrastructure and entered a long-term partnership with HUMAIN for advanced Arabic-language AI models.",
+      "outlook": "Microsoft's strong Azure and cloud performance, coupled with significant investments in AI data centers, are expected to drive future growth. Analysts maintain a positive outlook, with a consensus price target suggesting an upside from current levels. However, some concerns exist regarding elevated capital expenditures.",
+      "badge": "☁️ Cloud & AI Growth",
       "badgeClass": "badge-buy"
     }
   ],
@@ -133,92 +133,92 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €128.21\nChange: ▲ 1.21%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Diversify",
+      "stats": "Price: €127.37\nChange: ▲ 0.19%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Diversified Global",
       "badgeClass": "badge-hold",
-      "desc": "EUNL.DE, an iShares Core MSCI World UCITS ETF, provides broad exposure to global developed markets. Today's slight gain reflects a mixed global market sentiment, with European indices trending higher while US markets show some caution.",
-      "verdict": "Given the current market volatility and rising interest rate expectations, EUNL.DE offers a diversified approach to global equities, potentially mitigating single-market risks."
+      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) aims to mirror the performance of the MSCI World Index, offering broad, diversified exposure to the global equity market. It primarily holds shares of leading large and mid-cap companies across North America, Europe, and Asia-Pacific. Today, the ETF is showing a slight positive movement amidst a generally down market.",
+      "verdict": "EUNL.DE provides a solid option for investors seeking long-term growth through global stock market participation and broad diversification. Its passive management and low expense ratio make it an attractive core holding."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €25.70\nChange: ▲ 0.78%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Growth Potential",
-      "badgeClass": "badge-watch",
-      "desc": "4MMR.DE, an iShares MSCI World Small Cap UCITS ETF, focuses on small-cap companies in developed markets. Its positive movement today suggests some investor appetite for growth-oriented smaller companies, even amidst broader market caution.",
-      "verdict": "While small-cap investments carry higher risk, 4MMR.DE could offer growth potential for investors seeking exposure beyond large-cap companies in a diversified portfolio."
+      "stats": "Price: €25.52\nChange: ▼ 0.93%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "N/A",
+      "badgeClass": "badge-hold",
+      "desc": "No specific news or detailed description for 4MMR.DE was found in the provided search results. Therefore, a general description and verdict cannot be generated at this time.",
+      "verdict": "Without specific information, a verdict for 4MMR.DE cannot be provided."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $232.29\nChange: ▼ 0.84%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Defense Focus",
+      "stats": "Price: $232.82\nChange: ▼ 0.61%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Defense Sector",
       "badgeClass": "badge-hold",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) is experiencing a slight decline today. This comes amidst news of Rheinmetall's joint venture with Lockheed Martin, highlighting ongoing developments in the defense sector. Separately, the International Testing Agency (ITA) reported an athlete's anti-doping rule violation.",
-      "verdict": "Despite today's dip, the aerospace and defense sector continues to be influenced by geopolitical factors and government spending. ITA remains a relevant option for targeted exposure to this industry."
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) provides targeted access to the U.S. aerospace and defense industry, tracking an index of U.S. equities in this sector. It focuses on large-cap leaders involved in manufacturing, development, and support of aircraft and defense systems.",
+      "verdict": "ITA is a compelling option for investors seeking long-term growth in the specialized aerospace and defense sector, benefiting from government contracts and commercial demand. However, investors should be aware of inherent geopolitical and budgetary risks."
     }
   ],
   "macro": [
     {
-      "theme": "🗣️ Fed's Hawkish Stance",
-      "what": "Federal Reserve Chair Kevin Warsh's speech at Jackson Hole has led to increased expectations for an interest rate hike as early as next month.",
-      "impact": "Higher interest rates could impact borrowing costs for businesses and consumers, potentially slowing economic growth and putting pressure on equity markets, particularly growth stocks."
+      "theme": "⚔️ Geopolitical Tensions",
+      "what": "Escalating conflict in the Middle East following a U.S. strike on Iranian rocket launchers.",
+      "impact": "Increased market uncertainty and a surge in oil prices."
     },
     {
-      "theme": "🤖 AI Infrastructure Boom",
-      "what": "Major tech companies like Microsoft and Amazon are significantly expanding their AI compute infrastructure, with massive investments in GPUs and data centers.",
-      "impact": "This sustained investment drives demand for semiconductor companies like NVIDIA and AMD, but also raises questions about capital expenditures and potential margin pressures for cloud providers."
+      "theme": "📈 Inflation Concerns",
+      "what": "Federal Reserve Chairman Kevin Warsh warned about sticky inflation rates.",
+      "impact": "Market participants are expecting at least one interest rate hike this year, influencing investor sentiment."
     },
     {
-      "theme": "🌍 Geopolitical Tensions",
-      "what": "Ongoing geopolitical tensions, particularly in Europe, continue to influence defense spending and the aerospace and defense sector.",
-      "impact": "Increased defense budgets can benefit companies like Rheinmetall, but also introduce risks related to government approvals and execution of large contracts."
+      "theme": "☁️ AI Infrastructure Spending",
+      "what": "Major hyperscalers like Microsoft, Amazon, and Meta are expected to invest significantly in AI-related capital expenditures in 2026.",
+      "impact": "Strong demand for AI-related hardware and services, benefiting companies like NVIDIA and AMD."
     },
     {
-      "theme": "📊 Mixed Market Signals",
-      "what": "While some indices like the Dow Jones show resilience, the S&P 500 and NASDAQ are down, indicating a cautious market mood. European markets are generally up.",
-      "impact": "This mixed sentiment suggests investors are carefully evaluating individual company news and macroeconomic factors, leading to varied performance across sectors and geographies."
+      "theme": "🎮 Gaming Industry Shift",
+      "what": "Microsoft's Xbox Disc-to-Digital plan and Sony's decision to stop making PlayStation game discs after January 2028.",
+      "impact": "Reshaping the relationship between physical and digital game ownership and distribution in the gaming industry."
     },
     {
-      "theme": "💧 Data Center Sustainability",
-      "what": "Microsoft is addressing concerns about the environmental impact of its data centers, highlighting efforts in energy efficiency and water consumption.",
-      "impact": "Increasing scrutiny on sustainability could lead to greater investment in green technologies and practices within the tech sector, potentially impacting operational costs and public perception for major cloud providers."
+      "theme": "🏭 European Rearmament",
+      "what": "Rheinmetall's expansion plans and significant order backlog, driven by Europe's rearmament cycle.",
+      "impact": "Continued growth opportunities for defense companies in Europe, despite some valuation concerns."
     }
   ],
   "calendar": [
     {
-      "date": "Sep 01",
+      "date": "Tue Sep 01",
       "event": "Construction Spending SA M/M",
       "why": "Provides insight into the health of the construction sector, a key economic indicator."
     },
     {
-      "date": "Sep 01",
+      "date": "Tue Sep 01",
       "event": "JOLTS Job Openings",
-      "why": "Measures job vacancies, offering a perspective on labor market demand and economic activity."
+      "why": "A crucial labor market indicator, reflecting job vacancies and labor demand."
     },
     {
-      "date": "Sep 04",
+      "date": "Thu Sep 03",
       "event": "Hourly Earnings SA M/M (Preliminary)",
-      "why": "An early indicator of wage growth, which can influence inflation and consumer spending."
+      "why": "Important for gauging wage inflation and consumer purchasing power."
     },
     {
-      "date": "Sep 10",
+      "date": "Thu Sep 10",
       "event": "PPI ex-Food & Energy NSA Y/Y",
-      "why": "Measures producer price inflation, excluding volatile food and energy components, indicating underlying price pressures."
+      "why": "Measures producer price inflation, excluding volatile components, offering a look at pipeline inflation."
     },
     {
-      "date": "Sep 16",
+      "date": "Fri Sep 11",
+      "event": "Hourly Earnings SA M/M (Final)",
+      "why": "The final reading of hourly earnings, confirming or revising preliminary data."
+    },
+    {
+      "date": "Wed Sep 16",
       "event": "Retail sales ControlGroup SA M/M",
-      "why": "A key measure of consumer spending, providing insight into economic strength."
-    },
-    {
-      "date": "Sep 30",
-      "event": "GDP SA Y/Y (Final)",
-      "why": "The final estimate of annual GDP growth, offering a comprehensive view of economic performance."
+      "why": "A key indicator of consumer spending, which drives a significant portion of economic activity."
     }
   ],
   "quote": {
-    "text": "AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable. Now, compute is revenue. And demand is accelerating.",
-    "source": "Jensen Huang, Founder and CEO of NVIDIA · August 28, 2026"
+    "text": "The rally is intact, but the momentum engine is no longer running at full speed.",
+    "source": "Matthew Jonathan, JournalArta · August 31, 2026"
   }
 };
