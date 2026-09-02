@@ -1,220 +1,220 @@
 window.SIGNAL_DATA = {
-  "date": "Tuesday · September 1, 2026",
+  "date": "Wednesday · September 2, 2026",
   "alert": {
     "type": "critical",
     "icon": "⚠️",
-    "title": "Geopolitical Tensions & Inflationary Pressures Weigh on Markets",
-    "body": "Global markets are experiencing a downturn today as escalating U.S.-Iran tensions drive oil prices higher, fueling inflation concerns and a broad bond sell-off. Investors are closely monitoring the situation for further developments."
+    "title": "Geopolitical Tensions Escalate",
+    "body": "The U.S. military has launched new strikes on Iranian targets near the Strait of Hormuz, escalating geopolitical tensions and contributing to market uncertainty."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,686.14",
+      "value": "7,631.47",
       "dir": "down",
-      "arrow": "▼ 0.33%"
+      "arrow": "▼ 0.71%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,370.89",
+      "value": "26,099.77",
       "dir": "down",
-      "arrow": "▼ 0.12%"
+      "arrow": "▼ 1.03%"
     },
     {
       "label": "Dow Jones",
-      "value": "53,185.90",
+      "value": "52,766.88",
       "dir": "down",
-      "arrow": "▼ 0.70%"
+      "arrow": "▼ 0.79%"
     },
     {
       "label": "DAX",
-      "value": "25,970.59",
+      "value": "25,767.69",
       "dir": "down",
-      "arrow": "▼ 1.09%"
+      "arrow": "▼ 0.78%"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,215.34",
+      "value": "64,325.64",
       "dir": "down",
-      "arrow": "▼ 0.15%"
+      "arrow": "▼ 2.85%"
     },
     {
       "label": "Hang Seng",
-      "value": "25,329.73",
+      "value": "25,311.21",
       "dir": "down",
-      "arrow": "▼ 0.93%"
+      "arrow": "▼ 0.07%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,686.14",
-      "change": "▼ 0.33%",
+      "value": "7,631.47",
+      "change": "▼ 0.71%",
       "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "26,370.89",
-      "change": "▼ 0.12%",
+      "value": "26,099.77",
+      "change": "▼ 1.03%",
       "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "53,185.90",
-      "change": "▼ 0.70%",
+      "value": "52,766.88",
+      "change": "▼ 0.79%",
       "dir": "down"
     },
     {
       "label": "DAX",
-      "value": "25,970.59",
-      "change": "▼ 1.09%",
+      "value": "25,767.69",
+      "change": "▼ 0.78%",
       "dir": "down"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,215.34",
-      "change": "▼ 0.15%",
+      "value": "64,325.64",
+      "change": "▼ 2.85%",
       "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "25,329.73",
-      "change": "▼ 0.93%",
+      "value": "25,311.21",
+      "change": "▼ 0.07%",
       "dir": "down"
     }
   ],
-  "marketSummary": "Global markets are broadly lower today, with major indices like the S&P 500, NASDAQ, and Dow Jones all in the red. This cautious mood is largely attributed to rising geopolitical tensions between the U.S. and Iran, which have pushed Brent crude above $92 a barrel. The increase in oil prices is reigniting inflation fears, leading to a significant sell-off in government bonds and increasing expectations for interest rate hikes. Asian and European markets also closed lower, reflecting the widespread apprehension among investors as September, historically a challenging month for stocks, begins.",
+  "marketSummary": "Global markets are experiencing a downturn today, with major indices like the S&P 500, NASDAQ, and Dow Jones all in the red. This broad market decline is largely attributed to escalating geopolitical tensions in the Middle East and a deepening global bond selloff. Investors are showing a clear preference for risk reduction amidst the uncertainty.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,079.80",
-      "change": "▼ 2.79%",
+      "price": "€1,074.00",
+      "change": "▼ 0.54%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall is seeing continued downward pressure on its stock today, despite announcing progress on its U.S. combat vehicle programs and a reconnaissance drone program in Germany. The defense group delivered the first of eight Lynx XM30 combat vehicle prototypes to the U.S. Army, which will now enter a testing phase. This comes after a joint venture with Lockheed Martin to produce missiles in Germany was announced earlier this week, aiming to strengthen European defense capabilities.",
-      "outlook": "Despite recent declines, analysts maintain a generally bullish outlook for Rheinmetall, with an average 12-month price target suggesting a significant upside. The company's substantial order backlog, which reached €73 billion in Q2 2026, and increased defense spending across Europe are expected to drive future growth.",
-      "badge": "🛡️ Defense Growth",
+      "news": "<strong>🔑 Today:</strong> Rheinmetall announced that its American subsidiary secured a $710,000 award from Kongsberg Defence & Aerospace to produce machined components for MCT-30 turrets, supporting the U.S. Marine Corps' ACV-30 program. This marks American Rheinmetall's first contract from Kongsberg for its Michigan operations, expanding its U.S. defense customer base. Additionally, Rheinmetall's LUNA NG unmanned reconnaissance system has received provisional airworthiness certification from the Bundeswehr Aviation Authority, a significant step towards full aeronautical certification allowing it to operate in regular, restricted airspace.",
+      "outlook": "Rheinmetall's 2026 outlook remains positive, driven by strong demand in the defense sector and strategic partnerships. Continued modernization efforts by global militaries are expected to fuel further growth.",
+      "badge": "⬆️ Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$220.78",
-      "change": "▲ 1.48%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> NVIDIA's stock is up today following news of a strategic $3.5 billion investment in MediaTek, expanding their partnership in data-center, edge-computing, and automotive AI. Additionally, reports indicate that Anthropic has signed a $35 billion cloud agreement backed by NVIDIA, further reinforcing demand for NVIDIA-powered AI infrastructure.",
-      "outlook": "NVIDIA is expected to continue benefiting from strong demand for AI infrastructure, with analysts anticipating robust revenue growth driven by sustained AI spending from cloud providers, enterprises, and governments. However, investors are also monitoring potential supply-chain bottlenecks and increasing competition in the custom AI chip market.",
-      "badge": "💡 AI Dominance",
+      "price": "$217.44",
+      "change": "▼ 1.51%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> NVIDIA is reportedly in advanced talks to acquire open-source AI platform Hugging Face for approximately $14 billion, including an employee retention pool. This comes as NVIDIA also invested $3.5 billion in convertible bonds issued by Taiwanese chipmaker MediaTek. Furthermore, GMI Cloud, an NVIDIA cloud partner, secured loan commitments for over double the amount it sought in Asia, signaling strong appetite for GPU-backed AI financing.",
+      "outlook": "NVIDIA's 2026 outlook is exceptionally bullish, with the company forecasting a 70% revenue increase in the fiscal year ending January 2028, partly due to an exclusive deal with SpaceX. The company is transitioning from a cyclical semiconductor stock to a steady cash cow with a broadening customer base.",
+      "badge": "⬆️ Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$470.72",
-      "change": "▲ 1.10%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD announced the launch of a sovereign AI infrastructure platform in Saudi Arabia, in partnership with Cisco and HUMAIN. This platform utilizes AMD Instinct GPUs and EPYC CPUs, with plans for significant expansion of local AI capacity through 2030. This move confirms commercial demand for AMD's data-center products and expands its international AI footprint.",
-      "outlook": "AMD's outlook is positive, driven by its expanding presence in the AI data center market and new collaborations. While competition with NVIDIA remains intense, AMD's focus on open software and sovereign control for AI infrastructure is a key differentiator.",
-      "badge": "🚀 AI Expansion",
-      "badgeClass": "badge-buy"
+      "price": "$459.61",
+      "change": "▼ 2.36%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> AMD, in partnership with Cisco and HUMAIN, has launched AMD Instinct MI355X-based AI infrastructure in Saudi Arabia, with plans for significant capacity expansion by 2030. This deployment provides tangible evidence of commercial AI demand for AMD's GPUs and CPUs. However, valuation concerns are intensifying, and some institutional investors are reportedly reallocating capital towards NVIDIA and Broadcom.",
+      "outlook": "AMD's outlook for 2026 remains strong, with analysts broadly constructive and expecting significant revenue and earnings growth. The company anticipates Data Center revenues to more than double in 2027.",
+      "badge": "➡️ Hold",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$507.29",
-      "change": "▼ 1.22%",
+      "price": "$501.02",
+      "change": "▼ 1.24%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft is making a significant shift in enterprise security, with passkeys now becoming the default authentication method for Entra ID, its cloud-based identity and access management service. This move aims to spur the adoption of passwordless technology, though a hybrid authentication approach is expected to persist for most enterprises. Separately, Microsoft and Saudi Arabia's HUMAIN expanded their strategic partnership, introducing enterprise AI offerings and an AI-enabled PC.",
-      "outlook": "Analysts maintain a generally bullish outlook for Microsoft, with a consensus \"Moderate Buy\" rating and an average price target of $560.27. The company's strong cloud revenue growth, particularly from Azure, and continued AI expansion are expected to drive its stock higher, potentially reaching new all-time highs by the end of 2026.",
-      "badge": "☁️ Cloud & AI",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> Microsoft has appointed Caroline Foo as Country General Manager for the Philippines, reinforcing its commitment to accelerating AI and cloud adoption in the region. In other news, Microsoft is investigating an issue where Defender for Office 365 is mistakenly flagging legitimate Google search links as malicious. Additionally, Microsoft will begin auto-enabling 'Memory Integrity' on eligible Windows 11 PCs starting October 2026 to enhance security.",
+      "outlook": "Microsoft's 2026 outlook is positive, driven by accelerating cloud growth, improving AI efficiency, and expanding international AI distribution. However, investors are monitoring risks such as high capital spending and potential pressure on margins.",
+      "badge": "⬆️ Buy",
+      "badgeClass": "badge-buy"
     }
   ],
   "etfs": [
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €126.47\nChange: ▼ 1.36%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Diversified Global",
+      "stats": "Price: €126.04\nChange: ▼ 1.70%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Hold",
       "badgeClass": "badge-hold",
-      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) tracks the MSCI World Index, offering broad, diversified exposure to over 1,500 large and mid-cap companies from 23 developed markets. Today, as global markets face downward pressure from geopolitical tensions and inflation concerns, this ETF provides a diversified approach to navigating volatility, though it will reflect the overall market sentiment.",
-      "verdict": "EUNL.DE remains a solid choice for long-term investors seeking diversified global equity exposure, especially during periods of market uncertainty. Its broad market cap weighting helps mitigate individual stock risks."
+      "desc": "The iShares Core MSCI World UCITS ETF USD (Acc) (EUNL.DE) tracks the MSCI World Index, offering broad, diversified exposure to over 1,500 large and mid-cap companies from 23 developed markets. It is the largest MSCI World ETF in Europe and is designed for investors seeking long-term growth through global stock market participation.",
+      "verdict": "Given the current market volatility and geopolitical concerns, EUNL.DE provides a diversified approach to global equities, mitigating single-market risks. It remains a solid core holding for long-term investors."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €25.15\nChange: ▼ 2.18%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "N/A",
+      "stats": "Price: €24.88\nChange: ▼ 1.54%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Watch",
       "badgeClass": "badge-watch",
-      "desc": "Information for 4MMR.DE was not available in the provided search results. Therefore, a description and verdict cannot be generated at this time.",
-      "verdict": "No specific news or outlook available today."
+      "desc": "The Global X Defence Tech UCITS ETF USD Accumulating (4MMR.DE) provides targeted exposure to companies advancing defense technology worldwide, tracking the Mirae Asset Defence Tech Index. This fund invests in innovations across cybersecurity, AI, robotics, and advanced military hardware, with top holdings including Palantir Technologies and Rheinmetall.",
+      "verdict": "With escalating global tensions, the defense technology sector is likely to see continued investment. 4MMR.DE offers a focused way to capitalize on this trend, though investors should be aware of sector-specific risks."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $228.35\nChange: ▼ 1.92%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "✈️ Defense Focus",
-      "badgeClass": "badge-hold",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) provides targeted exposure to the U.S. aerospace and defense industry, including companies involved in aircraft manufacturing and defense contracting. Given today's heightened geopolitical tensions, particularly between the U.S. and Iran, the defense sector could see increased attention, though the broader market downturn is currently weighing on the ETF.",
-      "verdict": "ITA offers a focused investment in a sector that may benefit from ongoing global security concerns, but investors should be mindful of geopolitical and budgetary risks inherent to the industry."
+      "stats": "Price: $225.46\nChange: ▼ 1.27%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Buy",
+      "badgeClass": "badge-buy",
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks a market-cap-weighted index of U.S. manufacturers, assemblers, and distributors of aircraft and defense equipment. This ETF offers targeted exposure to the U.S. aerospace and defense industry, characterized by high capital expenditures and long-term government contracts.",
+      "verdict": "ITA is a compelling option for investors seeking long-term growth in the specialized aerospace and defense sector, especially given the current geopolitical climate. However, investors should be mindful of inherent geopolitical and budgetary risks."
     }
   ],
   "macro": [
     {
-      "theme": "🛢️ Rising Oil Prices",
-      "what": "Brent crude has risen above $92 a barrel due to renewed fighting between the U.S. and Iran, including a tanker being hit in the Strait of Hormuz.",
-      "impact": "Higher oil prices are fueling inflation fears and contributing to a global bond sell-off, putting downward pressure on equity markets."
-    },
-    {
       "theme": "⚔️ Geopolitical Tensions",
-      "what": "Escalating conflict between the U.S. and Iran, with attacks on a tanker and military bases, is a major concern for global stability.",
-      "impact": "Increased uncertainty and potential disruptions to global oil supply are negatively impacting investor sentiment and driving a flight to safety."
+      "what": "The U.S. military has launched new strikes on Iranian targets near the Strait of Hormuz, following an alleged Iranian attempt to mine the strait and a missile attack on a U.S. military base in Jordan.",
+      "impact": "This escalation is fueling market uncertainty and contributing to a risk-off sentiment, leading to declines in global equity markets and a spike in crude oil prices."
     },
     {
-      "theme": "📉 Bond Market Sell-off",
-      "what": "Government bond yields are surging globally, with the U.S. 10-year Treasury yield reaching 4.78% and Japan's 10-year benchmark hitting 3%.",
-      "impact": "The bond rout reflects heightened inflation expectations and increased likelihood of further interest rate hikes by central banks."
+      "theme": "⛽ Oil Market Dynamics",
+      "what": "Despite President Trump's discussions with oil and gas executives to bring down gas prices, crude prices spiked again on Tuesday amid the escalating conflict in the Middle East.",
+      "impact": "Rising oil prices could lead to increased inflationary pressures, potentially impacting consumer spending and corporate profits across various sectors."
     },
     {
-      "theme": "🏭 Manufacturing Activity",
-      "what": "The ISM Manufacturing PMI for August is due today, providing an early indication of the factory sector's health.",
-      "impact": "A strong reading could signal economic resilience, but a weaker-than-expected report could exacerbate recession fears amidst current market anxieties."
+      "theme": "🏦 Global Bond Selloff",
+      "what": "A global bond selloff has deepened, pushing long-term yields higher.",
+      "impact": "Higher bond yields generally pressure high-multiple technology and semiconductor stocks, as investors may shift towards less risky fixed-income assets. This contributes to the broader market's negative sentiment."
     },
     {
-      "theme": "☁️ AI Infrastructure Boom",
-      "what": "Major tech companies like NVIDIA, AMD, and Microsoft are continuing to announce significant investments and partnerships in AI infrastructure and cloud services.",
-      "impact": "This sustained demand for AI computing power is a key growth driver for the semiconductor and cloud sectors, offering a counter-narrative to broader market concerns."
+      "theme": "☁️ AI and Cloud Expansion",
+      "what": "Major tech companies like NVIDIA, AMD, and Microsoft continue to announce significant investments and partnerships in AI infrastructure and cloud services globally.",
+      "impact": "This sustained investment indicates strong underlying demand for AI and cloud technologies, which could drive long-term growth for companies in this sector despite broader market headwinds."
+    },
+    {
+      "theme": "💻 Cybersecurity Concerns",
+      "what": "Microsoft is investigating an issue where its Defender for Office 365 is incorrectly flagging legitimate Google search links as malicious.",
+      "impact": "Such cybersecurity incidents, even if temporary, can erode user trust and highlight the ongoing challenges in maintaining digital security, potentially impacting enterprise software adoption or leading to increased security spending."
     }
   ],
   "calendar": [
     {
-      "date": "Tue Sep 01",
-      "event": "Construction Spending SA M/M",
-      "why": "Provides insight into the health of the construction sector, a key component of economic growth."
-    },
-    {
-      "date": "Tue Sep 01",
-      "event": "JOLTS Job Openings",
-      "why": "A crucial indicator of labor market demand and potential inflationary pressures."
-    },
-    {
-      "date": "Tue Sep 01",
-      "event": "ISM Manufacturing PMI",
-      "why": "A leading indicator of economic health, reflecting the manufacturing sector's activity."
+      "date": "Wed Sep 02",
+      "event": "ADP National Employment Report",
+      "why": "This report provides an early look at private-sector employment, offering insights into the health of the labor market ahead of the official Nonfarm Payrolls report."
     },
     {
       "date": "Thu Sep 03",
       "event": "Hourly Earnings SA M/M (Preliminary)",
-      "why": "Important for gauging wage inflation and consumer spending power."
+      "why": "Wage growth is a key indicator of inflation and consumer spending power, influencing monetary policy decisions."
     },
     {
-      "date": "Fri Sep 04",
-      "event": "US Employment Situation (Jobs Report)",
-      "why": "A highly anticipated report that significantly influences Federal Reserve policy and market sentiment."
+      "date": "Tue Sep 08",
+      "event": "JOLTS Job Openings",
+      "why": "The Job Openings and Labor Turnover Survey (JOLTS) provides data on job vacancies, hiring, and separations, offering insights into labor demand."
     },
     {
       "date": "Thu Sep 10",
       "event": "PPI ex-Food & Energy NSA Y/Y",
-      "why": "Measures wholesale inflation, which can be a precursor to consumer price changes."
+      "why": "The Producer Price Index (PPI) measures inflation at the wholesale level, excluding volatile food and energy prices, providing an indication of future consumer price trends."
+    },
+    {
+      "date": "Wed Sep 16",
+      "event": "Retail Sales Control Group SA M/M",
+      "why": "Retail sales data is a crucial indicator of consumer spending, which is a major driver of economic growth."
+    },
+    {
+      "date": "Wed Sep 30",
+      "event": "GDP SA Y/Y (Final)",
+      "why": "The final reading of the Gross Domestic Product (GDP) provides a comprehensive measure of economic activity and growth."
     }
   ],
   "quote": {
