@@ -1,131 +1,131 @@
 window.SIGNAL_DATA = {
-  "date": "Thursday · September 3, 2026",
+  "date": "Friday · September 4, 2026",
   "alert": {
     "type": "positive",
     "icon": "📈",
-    "title": "Market Sees Broad Gains",
-    "body": "U.S. indices are up across the board today, with the S&P 500, NASDAQ, and Dow Jones all showing positive movement."
+    "title": "Market Rally Continues",
+    "body": "Global markets are showing strong gains today, with major indices like the S&P 500 and NASDAQ up over 1%, signaling continued investor confidence."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,666.60",
+      "value": "7,747.71",
       "dir": "up",
-      "arrow": "▲ 0.46%"
+      "arrow": "▲ 1.06%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,217.83",
+      "value": "26,584.06",
       "dir": "up",
-      "arrow": "▲ 0.45%"
+      "arrow": "▲ 1.40%"
     },
     {
       "label": "Dow Jones",
-      "value": "53,061.95",
+      "value": "53,686.11",
       "dir": "up",
-      "arrow": "▲ 0.56%"
+      "arrow": "▲ 1.18%"
     },
     {
       "label": "DAX",
-      "value": "25,792.56",
-      "dir": "down",
-      "arrow": "▼ 0.18%"
+      "value": "26,066.93",
+      "dir": "up",
+      "arrow": "▲ 0.24%"
     },
     {
       "label": "Nikkei 225",
-      "value": "64,214.48",
-      "dir": "down",
-      "arrow": "▼ 0.17%"
+      "value": "65,020.94",
+      "dir": "up",
+      "arrow": "▲ 1.26%"
     },
     {
       "label": "Hang Seng",
-      "value": "25,213.31",
-      "dir": "down",
-      "arrow": "▼ 0.39%"
+      "value": "25,650.87",
+      "dir": "up",
+      "arrow": "▲ 1.74%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,666.60",
-      "change": "▲ 0.46%",
+      "value": "7,747.71",
+      "change": "▲ 1.06%",
       "dir": "up"
     },
     {
       "label": "NASDAQ",
-      "value": "26,217.83",
-      "change": "▲ 0.45%",
+      "value": "26,584.06",
+      "change": "▲ 1.40%",
       "dir": "up"
     },
     {
       "label": "Dow Jones",
-      "value": "53,061.95",
-      "change": "▲ 0.56%",
+      "value": "53,686.11",
+      "change": "▲ 1.18%",
       "dir": "up"
     },
     {
       "label": "DAX",
-      "value": "25,792.56",
-      "change": "▼ 0.18%",
-      "dir": "down"
+      "value": "26,066.93",
+      "change": "▲ 0.24%",
+      "dir": "up"
     },
     {
       "label": "Nikkei 225",
-      "value": "64,214.48",
-      "change": "▼ 0.17%",
-      "dir": "down"
+      "value": "65,020.94",
+      "change": "▲ 1.26%",
+      "dir": "up"
     },
     {
       "label": "Hang Seng",
-      "value": "25,213.31",
-      "change": "▼ 0.39%",
-      "dir": "down"
+      "value": "25,650.87",
+      "change": "▲ 1.74%",
+      "dir": "up"
     }
   ],
-  "marketSummary": "U.S. markets are experiencing a positive day, with all major indices in the green. The S&P 500, NASDAQ, and Dow Jones are all up, indicating a generally optimistic mood among investors. European and Asian markets, however, are showing mixed to slightly negative performance, with the DAX, Nikkei 225, and Hang Seng all down. This divergence suggests that while domestic sentiment is strong, global economic concerns may still be weighing on international markets.",
+  "marketSummary": "Today's market mood is overwhelmingly positive, with all major global indices closing significantly higher. The ongoing enthusiasm for AI and robust corporate earnings continue to fuel this bull run, despite some underlying concerns about market concentration. Investors are shrugging off geopolitical tensions, focusing instead on technological advancements and strong financial performances.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,061.20",
-      "change": "▼ 2.68%",
+      "price": "€1,054.00",
+      "change": "▼ 3.34%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall's stock is down today, continuing a trend seen since early August when the company lowered its 2026 financial forecasts. This revision was largely due to the German government's termination of the F126 super-frigate project, which was expected to contribute significantly to Rheinmetall's naval division. Despite securing over 1 billion euros in new contracts since the acquisition of Naval Vessels Lürssen (NVL) in March 2026, the loss of the F126 project has impacted investor confidence.",
-      "outlook": "Rheinmetall's 2026 outlook was revised downwards in August due to the cancellation of the F126 frigate project, with expected revenue now between 13.7 billion and 14.2 billion euros. However, the company had reaffirmed its full-year 2026 guidance in May, anticipating consolidated sales between €14.0 billion and €14.5 billion, driven by an expected acceleration in growth in the second quarter.",
-      "badge": "⚠️ Watch",
-      "badgeClass": "badge-watch"
+      "news": "<strong>🔑 Today:</strong> Rheinmetall's stock saw a notable decline today, likely influenced by the recent downward revision of its 2026 financial outlook. This adjustment came after Germany's cancellation of the F126 frigate program, a contract the company was widely expected to secure. While management emphasizes the impact is largely from this single naval opportunity, analysts are considering potential slower growth beyond 2026 if replacement contracts are delayed.",
+      "outlook": "Rheinmetall's 2026 outlook has been lowered due to the canceled F126 frigate project, with expected revenue now between €13.7 billion and €14.2 billion. Despite this, the company is actively pursuing new international naval contracts and aims for €50 billion in annual revenue by 2030, driven by increased European defense spending.",
+      "badge": "⚠️ Hold",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$224.41",
-      "change": "▲ 3.21%",
+      "price": "$228.45",
+      "change": "▲ 1.80%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> NVIDIA is up today, continuing its strong performance driven by the accelerating demand for AI infrastructure. The company recently announced a deepening partnership with MediaTek to build AI edge-to-cloud computing platforms and is deploying its Vera CPUs to accelerate agentic AI applications. Wall Street analysts remain bullish on NVIDIA, with several reaffirming 'Buy' ratings and setting higher price targets for the next 12 months.",
-      "outlook": "NVIDIA's outlook for 2026 remains fundamentally bullish, with strong demand for its AI-focused GPUs and software platform. The company expects significant revenue growth, with a forecast of $108.0 billion for the third quarter of fiscal 2027. Analysts predict the stock could reach $220.60 by the end of 2026 and potentially $982.63 by the end of 2030.",
+      "news": "<strong>🔑 Today:</strong> NVIDIA announced a significant increase in its AI industry investments, with equity investments soaring to $99 billion over the past year, solidifying its position as a major strategic investor in technology. JPMorgan also reported that NVIDIA's primary challenge is not a lack of demand, but rather supply limitations hindering its growth potential.",
+      "outlook": "NVIDIA's stock is forecasted to reach $234.47 by the end of 2026, representing a 4.49% gain from current rates. Analysts remain bullish, with some predicting the stock could hit $350 by 2027, driven by strong AI-driven growth and new product ramps.",
       "badge": "🚀 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$457.06",
-      "change": "▼ 0.55%",
+      "price": "$456.16",
+      "change": "▼ 0.20%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> AMD is slightly down today, even as the company continues to make strides in the AI sector. Recent news highlights AMD's expansion of Saudi Arabia's AI infrastructure with Cisco and HUMAIN, and its Instinct GPUs and EPYC CPUs powering Europe's next-generation LUMI-AI Supercomputer. Despite today's dip, analysts remain largely bullish on AMD's long-term prospects due to its growing influence in the data center graphics card market and server CPU market share gains.",
-      "outlook": "AMD expects strong growth for 2026, driven by accelerating adoption of its high-performance EPYC and Ryzen CPUs and the rapid scaling of its data center AI franchise. The company anticipates server growth to accelerate meaningfully and expects the total addressable market for server CPUs to reach $220 billion in 2030. Analysts are forecasting an 81% increase in AMD's earnings per share in 2026.",
-      "badge": "💡 Hold",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> AMD saw a slight dip today, even as the broader market rallied. This comes after a period of significant gains for the chipmaker, driven by its strong performance in the AI sector and partnerships with major tech companies.",
+      "outlook": "AMD expects strong growth for 2026, with revenue potentially reaching $50 billion, nearly double its 2024 figures. Analysts are robustly optimistic, projecting significant EPS growth for fiscal 2026 and 2027, fueled by accelerating adoption of its high-performance CPUs and data center AI franchise.",
+      "badge": "📈 Buy",
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$496.82",
-      "change": "▼ 0.84%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft is down today, following news of a significant overhaul to its financial reporting structure. The company announced it will transition to two new reporting segments for fiscal year 2027: 'Agents and Infra' and 'Devices and Consumer,' which will now include Azure cloud sales. This change aims to provide more transparency as AI reshapes its business.",
-      "outlook": "Microsoft is actively integrating AI across its products and services, with new AI tools for diagnosing patients and an AI assistant called Scout. The company is also pushing forward with a new, updated Outlook for Windows, which will become the default experience in January 2026. Microsoft's focus on AI and cloud services is expected to drive future growth.",
-      "badge": "⭐ Buy",
+      "price": "$510.12",
+      "change": "▲ 2.68%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> Microsoft announced a significant restructuring of its financial reporting, transitioning from three segments to two: \"Agents and Infra\" and \"Devices and Consumer.\" This move aims to enhance transparency regarding its AI initiatives and provide clearer visibility into the performance of its Azure cloud business.",
+      "outlook": "Microsoft is currently considered undervalued by GuruFocus, with a GF Value™ of $581.70 compared to its current price of $510.12. The company is also set to transition the Outlook desktop application on Windows devices to a new, updated interface in January 2026.",
+      "badge": "✅ Buy",
       "badgeClass": "badge-buy"
     }
   ],
@@ -133,92 +133,92 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €126.75\nChange: ▲ 0.13%\nTER: 0.20%\nExchange: XETRA",
+      "stats": "Price: €127.94\nChange: ▲ 0.89%\nTER: 0.20%\nExchange: XETRA",
       "badge": "Buy",
       "badgeClass": "badge-buy",
-      "desc": "EUNL.DE, an iShares Core MSCI World UCITS ETF, is designed to track the performance of the MSCI World Index, offering broad exposure to large and mid-cap companies across developed markets globally. Its slight positive movement today suggests a resilient performance despite some international market downturns, reflecting the diversified nature of its holdings.",
-      "verdict": "This ETF remains a solid choice for investors seeking diversified global equity exposure, offering stability through its broad market tracking. Its consistent performance makes it a good long-term holding."
+      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) provides broad exposure to global developed markets. Today's positive market sentiment, with major indices showing strong gains, aligns well with EUNL.DE's objective of tracking a diversified global equity index. The ETF's performance today reflects the overall bullish trend in international markets.",
+      "verdict": "Given the continued global market optimism and the ETF's diversified nature, EUNL.DE remains a solid choice for long-term growth. It offers a balanced approach to capturing worldwide economic expansion."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €24.42\nChange: ▼ 2.59%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Hold",
-      "badgeClass": "badge-hold",
-      "desc": "4MMR.DE, a gold-backed ETC, is down today, mirroring the slight dip in gold prices. This ETC provides investors with exposure to the performance of gold, acting as a potential hedge against inflation and market volatility. Its performance is directly tied to the price fluctuations of the underlying commodity.",
-      "verdict": "Given the current economic climate and ongoing inflation concerns, 4MMR.DE could still serve as a valuable portfolio diversifier. Investors should monitor gold price trends and broader economic indicators."
+      "stats": "Price: €24.65\nChange: ▲ 0.51%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Buy",
+      "badgeClass": "badge-buy",
+      "desc": "The Xtrackers MSCI World UCITS ETF (4MMR.DE) also offers diversified exposure to global equities. Today's upward movement in the ETF mirrors the strong performance seen across international stock markets, driven by positive economic news and investor confidence in AI-related growth. This ETF is well-positioned to benefit from a broad market rally.",
+      "verdict": "With the current positive global market outlook and its diversified portfolio, 4MMR.DE is an attractive option for investors seeking broad international equity exposure. It's a good way to participate in the ongoing bull market."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $223.37\nChange: ▼ 0.93%\nTER: 0.42%\nExchange: NYSE Arca",
+      "stats": "Price: $225.98\nChange: ▲ 1.17%\nTER: 0.42%\nExchange: NYSE Arca",
       "badge": "Watch",
       "badgeClass": "badge-watch",
-      "desc": "ITA, the iShares U.S. Aerospace & Defense ETF, tracks a market-cap-weighted index of U.S. companies involved in manufacturing and distributing aircraft and defense equipment. Despite a slight downturn today, the sector is characterized by long-term government contracts and innovation.",
-      "verdict": "ITA offers targeted exposure to a specialized sector with long-term growth potential due to national security and global transportation demands. However, investors should be aware of concentration risk within the industry."
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks U.S. equities in the aerospace and defense sector, including manufacturers of commercial and military aircraft. Today's positive performance suggests continued strength in this sector, potentially driven by ongoing defense spending and a robust aerospace industry. The ETF provides targeted exposure to this specific segment of the U.S. market.",
+      "verdict": "ITA offers a focused investment in the aerospace and defense sector, which appears to be experiencing sustained growth. It's a strategic choice for investors looking to capitalize on the resilience and expansion of this industry."
     }
   ],
   "macro": [
     {
-      "theme": "🤖 AI Dominance",
-      "what": "The artificial intelligence sector continues to drive significant market activity, with major tech companies like NVIDIA and AMD reporting strong demand for AI-related hardware and software.",
-      "impact": "Continued investment and innovation in AI are fueling growth in the technology sector, particularly for semiconductor companies, but also raising questions about market concentration and potential bubbles."
+      "theme": "🤖 AI Investment Boom",
+      "what": "NVIDIA's equity investments in the AI industry have surged to $99 billion over the past year, solidifying its position as a leading strategic investor. This highlights the continued massive capital flow into artificial intelligence.",
+      "impact": "Continued strong performance in tech and semiconductor stocks, driving overall market indices higher. However, it also raises concerns about market concentration in a few mega-cap tech companies."
     },
     {
-      "theme": "🛡️ Defense Spending",
-      "what": "Global defense spending remains a key theme, influenced by geopolitical events and national security priorities. Companies like Rheinmetall are navigating both new contract opportunities and project cancellations.",
-      "impact": "Increased defense budgets can provide stability and growth for defense contractors, but project volatility and government policy changes can introduce significant risks."
+      "theme": "🌍 Geopolitical Tensions",
+      "what": "Iran has expanded its strikes on US-linked targets in the Gulf, coinciding with efforts by Washington to tighten economic pressure on Tehran. This escalation increases risks for Gulf states.",
+      "impact": "Potential for increased volatility in oil prices and defense sector stocks. Investors may seek safe-haven assets amidst rising global uncertainty."
     },
     {
-      "theme": "☁️ Cloud Computing Evolution",
-      "what": "Microsoft's restructuring of its financial reporting to highlight Azure cloud sales underscores the ongoing importance and evolution of cloud computing as a core business driver.",
-      "impact": "The shift towards cloud-centric business models continues to reshape the tech landscape, driving demand for cloud infrastructure and services, and influencing how major tech companies are valued."
+      "theme": "📊 Corporate Earnings Strength",
+      "what": "Analysts are projecting 14% to 16% annual earnings-per-share (EPS) growth in 2026 for the S&P 500, with some forecasting even higher. This strong earnings outlook is a key driver of the current bull market.",
+      "impact": "Sustained upward pressure on equity markets, particularly for companies demonstrating strong earnings beats. However, high expectations leave little room for error."
     },
     {
-      "theme": "🌍 Global Market Divergence",
-      "what": "While U.S. indices show positive movement, European and Asian markets are experiencing slight declines, indicating a divergence in regional market sentiment.",
-      "impact": "This divergence suggests that investors are weighing different regional economic factors, with U.S. markets potentially benefiting from stronger domestic indicators while international markets face headwinds."
+      "theme": "☁️ Cloud and AI Restructuring",
+      "what": "Microsoft is reorganizing its financial reporting into two AI-focused categories: \"Agents and Infra\" and \"Devices and Consumer.\" This aims to provide greater transparency into its Azure cloud business and AI initiatives.",
+      "impact": "Increased investor confidence in Microsoft's AI strategy and clearer insights into the growth of its cloud services. This could set a precedent for other tech giants to follow suit."
     },
     {
-      "theme": "📊 Inflationary Pressures",
-      "what": "Persistent inflation worries and expanding sovereign debt levels continue to influence global government bond yields.",
-      "impact": "Inflationary pressures can lead to higher interest rates, impacting borrowing costs for businesses and consumers, and potentially dampening economic growth."
+      "theme": "🇩🇪 German Defense Spending Shifts",
+      "what": "Germany's cancellation of the F126 frigate program has led Rheinmetall to cut its 2026 financial outlook. This highlights the impact of government contract decisions on defense contractors.",
+      "impact": "Negative impact on specific defense contractors, but potentially a broader reassessment of European defense spending priorities and contract stability."
     }
   ],
   "calendar": [
     {
-      "date": "Sep 03",
+      "date": "Mon Sep 01",
+      "event": "JOLTS Job Openings",
+      "why": "Provides insights into labor market demand and potential wage pressures, influencing monetary policy decisions."
+    },
+    {
+      "date": "Thu Sep 04",
       "event": "Hourly Earnings SA M/M (Preliminary)",
-      "why": "This preliminary report on hourly earnings provides an early look at wage growth, a key indicator for inflation and consumer spending."
+      "why": "A key indicator of inflation and consumer spending power, closely watched by the Federal Reserve."
     },
     {
-      "date": "Sep 04",
+      "date": "Thu Sep 04",
+      "event": "Nigeria 2026 Budget Presentation",
+      "why": "President Bola Tinubu is scheduled to present the N54.46 trillion 2026 Appropriation Bill, which could impact Nigeria's economic outlook and investment opportunities."
+    },
+    {
+      "date": "Thu Sep 10",
       "event": "PPI ex-Food & Energy NSA Y/Y",
-      "why": "The Producer Price Index (PPI) excluding food and energy offers insight into inflationary pressures at the wholesale level, which can eventually impact consumer prices."
+      "why": "Measures producer-level inflation, excluding volatile food and energy components, offering a forward look at consumer price trends."
     },
     {
-      "date": "Sep 10",
-      "event": "Hourly Earnings SA M/M (Final)",
-      "why": "The final hourly earnings report confirms wage growth trends, providing a more complete picture of labor market health and its implications for inflation."
-    },
-    {
-      "date": "Sep 11",
+      "date": "Tue Sep 16",
       "event": "Retail sales ControlGroup SA M/M",
-      "why": "Retail sales data is a crucial indicator of consumer spending, which drives a significant portion of economic activity."
+      "why": "A crucial measure of consumer spending, providing insights into economic growth and inflationary pressures."
     },
     {
-      "date": "Sep 12",
-      "event": "FOMC Meeting",
-      "why": "Federal Open Market Committee (FOMC) meetings are highly anticipated as the Fed's decisions on interest rates and monetary policy significantly impact the entire U.S. economy."
-    },
-    {
-      "date": "Sep 16",
-      "event": "New Home Sales",
-      "why": "New Home Sales data is a forward-looking indicator for the housing market and broader economic health, reflecting consumer confidence and investment."
+      "date": "Tue Sep 29",
+      "event": "Richmond Fed Index",
+      "why": "Offers a regional perspective on manufacturing and service sector activity, contributing to the broader economic picture."
     }
   ],
   "quote": {
-    "text": "The stock market is a device for transferring money from the impatient to the patient.",
-    "source": "Warren Buffett"
+    "text": "AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable. Now, compute is revenue. And demand is accelerating.",
+    "source": "Jensen Huang, Founder and CEO of NVIDIA · August 26, 2026"
   }
 };
