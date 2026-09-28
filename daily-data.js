@@ -1,224 +1,224 @@
 window.SIGNAL_DATA = {
-  "date": "Friday · September 25, 2026",
+  "date": "Monday · September 28, 2026",
   "alert": {
-    "type": "warning",
-    "icon": "⚠️",
-    "title": "AI Investment Concerns",
-    "body": "Michael Burry has raised alarms about the massive capital investments in AI infrastructure by leading tech companies, cautioning about potential write-offs by 2028 or 2029."
+    "type": "critical",
+    "icon": "🚨",
+    "title": "Geopolitical Tensions Rise, Oil Prices Spike",
+    "body": "Renewed tensions between the U.S. and Iran are driving oil prices higher, creating uncertainty in the global markets."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,704.13",
-      "dir": "flat",
-      "arrow": "▼ 0.02%"
+      "value": "7,743.41",
+      "dir": "up",
+      "arrow": "▲ 0.51%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,939.37",
-      "dir": "flat",
-      "arrow": "▲ 0.01%"
+      "value": "27,068.72",
+      "dir": "up",
+      "arrow": "▲ 0.48%"
     },
     {
       "label": "Dow Jones",
-      "value": "51,349.98",
-      "dir": "down",
-      "arrow": "▼ 0.31%"
+      "value": "51,828.62",
+      "dir": "up",
+      "arrow": "▲ 0.93%"
     },
     {
       "label": "DAX",
-      "value": "25,427.16",
+      "value": "25,472.92",
       "dir": "up",
-      "arrow": "▲ 0.64%"
+      "arrow": "▲ 0.25%"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,364.20",
-      "dir": "up",
-      "arrow": "▲ 1.30%"
+      "value": "65,877.62",
+      "dir": "down",
+      "arrow": "▼ 0.73%"
     },
     {
       "label": "Hang Seng",
-      "value": "24,510.09",
-      "dir": "down",
-      "arrow": "▼ 1.01%"
+      "value": "24,642.51",
+      "dir": "up",
+      "arrow": "▲ 0.54%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,704.13",
-      "change": "▼ 0.02%",
-      "dir": "flat"
+      "value": "7,743.41",
+      "change": "▲ 0.51%",
+      "dir": "up"
     },
     {
       "label": "NASDAQ",
-      "value": "26,939.37",
-      "change": "▲ 0.01%",
-      "dir": "flat"
+      "value": "27,068.72",
+      "change": "▲ 0.48%",
+      "dir": "up"
     },
     {
       "label": "Dow Jones",
-      "value": "51,349.98",
-      "change": "▼ 0.31%",
-      "dir": "down"
+      "value": "51,828.62",
+      "change": "▲ 0.93%",
+      "dir": "up"
     },
     {
       "label": "DAX",
-      "value": "25,427.16",
-      "change": "▲ 0.64%",
+      "value": "25,472.92",
+      "change": "▲ 0.25%",
       "dir": "up"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,364.20",
-      "change": "▲ 1.30%",
-      "dir": "up"
+      "value": "65,877.62",
+      "change": "▼ 0.73%",
+      "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "24,510.09",
-      "change": "▼ 1.01%",
-      "dir": "down"
+      "value": "24,642.51",
+      "change": "▲ 0.54%",
+      "dir": "up"
     }
   ],
-  "marketSummary": "Today's market shows a mixed bag, with the S&P 500 and Dow Jones experiencing slight dips, while the NASDAQ, DAX, and Nikkei 225 are seeing modest gains. The tech sector remains a focal point, with significant news surrounding AI infrastructure investments and their potential long-term impact. Oil prices are easing after a sharp rise yesterday, offering some relief to inflation concerns.",
+  "marketSummary": "Global markets are trading mixed today, with U.S. futures indicating a slightly lower open. Investors are closely monitoring geopolitical developments in the Middle East, particularly the renewed tensions between the U.S. and Iran, which have sent oil prices climbing. Despite this, last week saw a positive close for U.S. stocks, marking their first winning week in three, buoyed by a cooldown in oil prices and easing Treasury yields. The tech sector continues to show resilience, supported by strong corporate fundamentals and ongoing AI investment.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€979.00",
-      "change": "▼ 1.11%",
+      "price": "€974.50",
+      "change": "▼ 0.80%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> No specific news for RHM.DE was found for today, September 25, 2026.",
-      "outlook": "The general market sentiment and broader economic trends will likely influence RHM.DE's performance for the remainder of 2026.",
-      "badge": " neutral",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> Rheinmetall AG's stock is trading flat, with recent news highlighting its role as a partner in Ukraine and its ongoing maintenance contracts for naval vessels. Analysts maintain a positive outlook, citing a robust order book and long-term defense spending tailwinds.",
+      "outlook": "The company's strong order book and its position in the defense sector provide a solid foundation for continued growth, despite potential risks associated with geopolitical shifts.",
+      "badge": "🛡️ Defense Strength",
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$224.58",
-      "change": "▼ 0.41%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> NVIDIA is experiencing strong demand for its AI systems, with Elon Musk announcing ambitious expansion plans for his xAI company's Colossus 2 AI computing cluster, which is heavily outfitted with NVIDIA's GB200 and GB300 chips. The cluster is set to double its NVIDIA GPU count by the end of the year.",
-      "outlook": "NVIDIA's outlook for 2026 remains strong, driven by the insatiable demand for AI infrastructure. The company's leadership in AI chips and its expanding ecosystem are key catalysts for continued growth, though rising Treasury yields could pose a valuation risk.",
-      "badge": "🚀 Buy",
+      "price": "$225.07",
+      "change": "▲ 0.22%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> NVIDIA announced a historic $150 billion increase to its share repurchase program, bringing the total authorization to $235 billion. This move underscores the company's confidence in its AI-driven growth and its strong cash generation capabilities.",
+      "outlook": "NVIDIA is poised to continue its dominance in the AI and accelerated computing space, with its massive share buyback program signaling strong shareholder returns and confidence in future growth.",
+      "badge": "🚀 AI Leader",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$629.26",
-      "change": "▲ 2.38%",
+      "price": "$630.63",
+      "change": "▲ 0.22%",
       "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD stock is gaining as investors continue to focus on AI infrastructure demand. The company recently crossed the $1 trillion market-cap mark and is building on its recent momentum. There are reports of roughly 10% price increases across AMD's AI chips, graphics cards, and chipsets due to strong demand for its CPU and GPU server products.",
-      "outlook": "AMD's 2026 outlook is positive, with analysts optimistic about its AI ambitions and data center growth. The company's CPU server revenue is projected to jump 70% in 2027, and its data center sales increased 107% in the second quarter. However, elevated valuations and overheating risk indicators suggest a potential for consolidation.",
-      "badge": "📈 Buy",
+      "news": "<strong>🔑 Today:</strong> AMD shares are trading higher, continuing their strong momentum after recently crossing the $1 trillion market cap milestone. The company's AI accelerator performance and its growing market share are key drivers.",
+      "outlook": "AMD is well-positioned to capture a larger share of the AI market, with ongoing product development and strategic partnerships expected to fuel sustained growth.",
+      "badge": "💡 AI Momentum",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$497.93",
-      "change": "▼ 0.53%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft is facing scrutiny over its massive AI infrastructure investments, with Michael Burry raising concerns about potential write-offs by 2028 or 2029. Despite this, analyst optimism is increasing, with upgrades and reaffirmed 'Buy' ratings citing Azure and Copilot growth, durable margins, and a clear path for AI spending to generate stronger revenue.",
-      "outlook": "Microsoft's 2026 outlook remains bullish, with strong growth expected from its Azure cloud services and AI monetization efforts. Analysts project sustained mid-teens top-line growth, with revenue estimates for full-year 2026 ranging between $324 billion to $327 billion. However, the substantial capital expenditures on AI infrastructure and potential antitrust scrutiny are key risks.",
-      "badge": "⭐ Hold",
-      "badgeClass": "badge-hold"
+      "price": "$516.17",
+      "change": "▲ 3.66%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> Microsoft's stock is up, driven by the launch of its refreshed Copilot app, which integrates coding tools and AI agents. Analysts are reiterating positive ratings, highlighting Microsoft's strategic positioning in the AI ecosystem.",
+      "outlook": "Microsoft's continued innovation in AI, particularly with its Copilot super app and Azure cloud services, positions it for sustained growth and market leadership.",
+      "badge": "☁️ Cloud & AI Powerhouse",
+      "badgeClass": "badge-buy"
     }
   ],
   "etfs": [
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €129.05\nChange: ▼ 0.05%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Buy",
-      "badgeClass": "badge-buy",
-      "desc": "EUNL.DE, the iShares Core MSCI World UCITS ETF, aims to mirror the performance of the MSCI World Index by investing in a portfolio of equities that closely track the index. It provides exposure to approximately 1,320 large- and mid-cap stocks from 23 developed countries, with the US dominating at roughly 72% of total weight. The fund is known for its liquidity and low expense ratio.",
-      "verdict": "EUNL.DE remains a solid choice for investors seeking broad exposure to developed global equity markets, offering a diversified and cost-effective investment."
+      "stats": "Price: €129.15\nChange: ▲ 0.21%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Global Diversification",
+      "badgeClass": "badge-hold",
+      "desc": "The iShares Core MSCI World UCITS ETF offers broad diversification across global equities. Recent trading shows a mixed signal, with short-term buy indicators countered by long-term sell signals, suggesting a period of consolidation.",
+      "verdict": "While short-term indicators are positive, the long-term sell signal warrants a cautious approach. Investors may want to monitor for a clearer trend before increasing exposure."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €24.25\nChange: ▼ 1.90%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Watch",
+      "stats": "Price: €24.18\nChange: ▼ 0.06%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Defense Tech Exposure",
       "badgeClass": "badge-watch",
-      "desc": "4MMR.DE, the Global X Defence Tech UCITS ETF USD Accumulating, seeks to track the Mirae Asset Defence Tech Index. This ETF provides exposure to companies involved in the defense technology sector. It was launched on September 10, 2024, and has a market capitalization of $0.57 billion USD as of September 2026.",
-      "verdict": "Given the current geopolitical landscape and ongoing advancements in defense technology, 4MMR.DE could be an interesting option for investors looking for thematic exposure to this specialized sector. However, investors should be mindful of geopolitical and budgetary risks inherent to the industry."
+      "desc": "The Global X Defence Tech UCITS ETF focuses on companies involved in defense technology. Its market capitalization stands at $0.57 billion as of September 2026.",
+      "verdict": "With a focus on a specialized sector, this ETF could offer targeted exposure to defense innovation. Investors should consider the geopolitical landscape and technological advancements in this space."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $212.76\nChange: ▼ 0.54%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Buy",
-      "badgeClass": "badge-buy",
-      "desc": "ITA, the iShares U.S. Aerospace & Defense ETF, provides targeted access to the U.S. aerospace and defense industry. It tracks a market-cap-weighted index of US manufacturers, assemblers, and distributors of airplane and defense equipment. The ETF is designed for those looking to invest in a sector that plays a critical role in national security and global transportation.",
-      "verdict": "ITA offers a compelling option for investors seeking long-term growth in the specialized aerospace and defense sector, benefiting from stable government contracts and innovation."
+      "stats": "Price: $213.81\nChange: ▲ 0.49%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Travel & Connectivity",
+      "badgeClass": "badge-hold",
+      "desc": "ITA Airways is expanding its service between Italy and Israel, resuming a third daily flight between Rome and Tel Aviv. This move enhances connectivity and offers more travel options.",
+      "verdict": "While this news is specific to the airline industry, it reflects increased economic activity and travel between regions, which can be a positive indicator for broader market sentiment."
     }
   ],
   "macro": [
     {
-      "theme": "🤖 AI Infrastructure Boom",
-      "what": "Major tech companies are making massive capital investments in AI infrastructure, with some estimates suggesting trillions of dollars across firms like Microsoft and Amazon.",
-      "impact": "This surge in spending signals a strong belief in AI's transformative power but also raises concerns about sustainability and potential write-offs in the coming years."
+      "theme": "🛡️ Geopolitical Tensions & Oil Prices",
+      "what": "Renewed tensions between the U.S. and Iran are driving oil prices higher, creating uncertainty in the global markets.",
+      "impact": "Higher energy costs can impact inflation, consumer spending, and corporate profitability across various sectors."
     },
     {
-      "theme": "🌍 Geopolitical Tensions",
-      "what": "Ongoing geopolitical events, such as discussions at the UN General Assembly regarding Iran and the Israeli-Palestinian conflict, continue to create global uncertainty.",
-      "impact": "Geopolitical tensions can lead to market volatility, particularly impacting oil prices and defense-related stocks."
+      "theme": "🚀 AI Investment Boom",
+      "what": "Continued robust investment in Artificial Intelligence is a primary driver of business spending and economic growth.",
+      "impact": "This trend supports tech stocks and related industries, while also boosting productivity and innovation across the economy."
     },
     {
-      "theme": "⛽ Energy Market Volatility",
-      "what": "Oil prices have seen fluctuations, with Brent crude easing today after a sharp rise yesterday.",
-      "impact": "Energy price movements directly influence inflation risks and can impact various sectors of the economy, from transportation to manufacturing."
+      "theme": "📈 Inflationary Pressures & Monetary Policy",
+      "what": "Inflation remains elevated above central bank targets, leading to ongoing scrutiny of monetary policy and potential interest rate adjustments.",
+      "impact": "Interest rate decisions by central banks can significantly influence borrowing costs, investment decisions, and overall market liquidity."
     },
     {
-      "theme": "🇨🇭 Swiss Innovation",
-      "what": "Microsoft Switzerland has once again been named the most innovative international company in Switzerland, recognized for its product, process, and innovation culture.",
-      "impact": "This highlights the continued importance of technological innovation and digital transformation in driving economic growth and creating new opportunities."
+      "theme": "🌐 Global Economic Resilience",
+      "what": "Despite various headwinds, the global economy is showing resilience, supported by discretionary government measures and strong AI-related activity.",
+      "impact": "This resilience provides a stable backdrop for markets, though risks from supply chain disruptions and energy shocks remain."
     },
     {
-      "theme": "📈 Treasury Yields",
-      "what": "Elevated Treasury yields are a continuing factor in the market.",
-      "impact": "Higher Treasury yields can make expensive technology stocks less attractive, increasing the risk of valuation compression."
+      "theme": "💼 Business Fixed Investment",
+      "what": "Robust business fixed investment, particularly in data centers and AI infrastructure, is a key driver of economic expansion.",
+      "impact": "This investment trend is crucial for long-term growth and technological advancement, supporting sectors involved in infrastructure development."
     }
   ],
   "calendar": [
     {
-      "date": "Fri Sep 25",
-      "event": "US Durable Goods Orders (Aug P)",
-      "why": "This report provides insight into new orders placed with domestic manufacturers for durable goods, offering a look into manufacturing sector health."
+      "date": "Mon Sep 28",
+      "event": "China Industrial Profits (YTD) YoY",
+      "why": "Provides insight into the health of China's industrial sector and its contribution to economic growth."
+    },
+    {
+      "date": "Mon Sep 28",
+      "event": "Japan Economic Confidence Index",
+      "why": "A key indicator of consumer and business sentiment in Japan, reflecting overall economic outlook."
+    },
+    {
+      "date": "Mon Sep 28",
+      "event": "Italy Industrial Sales MoM & YoY",
+      "why": "Measures changes in sales volume for Italian industrial companies, indicating manufacturing activity and demand."
+    },
+    {
+      "date": "Mon Sep 28",
+      "event": "Fed's Governor Cook Testifies",
+      "why": "Testimony from a Federal Reserve governor can offer insights into monetary policy direction and economic outlook."
+    },
+    {
+      "date": "Mon Sep 28",
+      "event": "GBR BRC Shop Price Index (YoY)",
+      "why": "Tracks retail price inflation in the UK, offering a gauge of consumer price pressures."
     },
     {
       "date": "Tue Sep 29",
-      "event": "US S&P/Case-Shiller Home Price Index (Jul)",
-      "why": "This index tracks changes in residential home prices, providing an indicator of the health of the housing market."
-    },
-    {
-      "date": "Tue Sep 29",
-      "event": "US Consumer Confidence (Sep)",
-      "why": "This report measures the level of consumer optimism regarding the economy, which can influence spending and economic growth."
-    },
-    {
-      "date": "Wed Sep 30",
-      "event": "US ADP Employment Report (Sep)",
-      "why": "This report offers a preview of private sector employment changes, often seen as a precursor to the official Non-Farm Payrolls report."
-    },
-    {
-      "date": "Wed Sep 30",
-      "event": "US Personal Income & Spending (Aug)",
-      "why": "These figures provide insight into consumer financial health and spending habits, key drivers of economic activity."
-    },
-    {
-      "date": "Wed Sep 30",
-      "event": "US GDP Chain Price SA Y/Y (Final)",
-      "why": "The final GDP figures offer a comprehensive look at the nation's economic output and inflation."
+      "event": "RBA Interest Rate Decision",
+      "why": "The Reserve Bank of Australia's decision on interest rates is a major driver of currency and market sentiment in Australia."
     }
   ],
   "quote": {
-    "text": "The only way to do great work is to love what you do.",
-    "source": "Steve Jobs, Co-founder of Apple Inc. · Undated"
+    "text": "NVIDIA's growth is being driven by a once-in-a-generation platform shift to AI and accelerated computing. Our cash generation gives us the capacity to invest in the technologies that advance this transformation and return capital to shareholders.",
+    "source": "Jensen Huang, CEO of NVIDIA · September 28, 2026"
   }
 };
