@@ -1,41 +1,41 @@
 window.SIGNAL_DATA = {
-  "date": "Wednesday · September 30, 2026",
+  "date": "Thursday · October 1, 2026",
   "alert": {
-    "type": "warning",
-    "icon": "⚠️",
-    "title": "Market Mixed Amid Geopolitical Tensions and Tech News",
-    "body": "Global markets are showing a mixed performance today, influenced by ongoing geopolitical developments and significant news from the tech sector. Investors are navigating a complex landscape with caution."
+    "type": "positive",
+    "icon": "✅",
+    "title": "AI Sector Continues Strong Growth",
+    "body": "Today's market saw significant positive movement in the AI sector, driven by major acquisitions and share repurchase announcements from key players like AMD and NVIDIA."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,670.84",
+      "value": "7,651.54",
       "dir": "down",
-      "arrow": "▼ 0.17%"
+      "arrow": "▼ 0.25%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,797.54",
-      "dir": "down",
-      "arrow": "▼ 0.09%"
+      "value": "26,861.06",
+      "dir": "up",
+      "arrow": "▲ 0.24%"
     },
     {
       "label": "Dow Jones",
-      "value": "51,349.92",
+      "value": "50,906.05",
       "dir": "down",
-      "arrow": "▼ 0.26%"
+      "arrow": "▼ 0.86%"
     },
     {
       "label": "DAX",
-      "value": "25,337.01",
-      "dir": "down",
-      "arrow": "▼ 0.24%"
+      "value": "25,194.67",
+      "dir": "flat",
+      "arrow": "▼ 0.02%"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,753.72",
+      "value": "68,956.72",
       "dir": "up",
-      "arrow": "▲ 1.94%"
+      "arrow": "▲ 3.30%"
     },
     {
       "label": "Hang Seng",
@@ -47,32 +47,32 @@ window.SIGNAL_DATA = {
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,670.84",
-      "change": "▼ 0.17%",
+      "value": "7,651.54",
+      "change": "▼ 0.25%",
       "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "26,797.54",
-      "change": "▼ 0.09%",
-      "dir": "down"
+      "value": "26,861.06",
+      "change": "▲ 0.24%",
+      "dir": "up"
     },
     {
       "label": "Dow Jones",
-      "value": "51,349.92",
-      "change": "▼ 0.26%",
+      "value": "50,906.05",
+      "change": "▼ 0.86%",
       "dir": "down"
     },
     {
       "label": "DAX",
-      "value": "25,337.01",
-      "change": "▼ 0.24%",
-      "dir": "down"
+      "value": "25,194.67",
+      "change": "▼ 0.02%",
+      "dir": "flat"
     },
     {
       "label": "Nikkei 225",
-      "value": "66,753.72",
-      "change": "▲ 1.94%",
+      "value": "68,956.72",
+      "change": "▲ 3.30%",
       "dir": "up"
     },
     {
@@ -82,50 +82,50 @@ window.SIGNAL_DATA = {
       "dir": "up"
     }
   ],
-  "marketSummary": "Today's market mood is a blend of apprehension and targeted optimism. Major indices like the S&P 500, NASDAQ, and Dow Jones are slightly down, reflecting broader economic concerns and geopolitical uncertainties. However, the Nikkei 225 and Hang Seng show positive movement, indicating regional strengths. The tech sector is particularly active with major acquisition news and strategic developments, while ongoing strikes in Italy are impacting travel and related sectors.",
+  "marketSummary": "Global markets presented a mixed picture today. While Asian indices like the Nikkei 225 and Hang Seng showed gains, European and US indices experienced slight declines. The underlying sentiment, however, remains cautiously optimistic, with a strong focus on the technology sector's continued innovation and expansion. Investors are closely watching upcoming economic data for further direction.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€960.20",
-      "change": "▼ 0.02%",
-      "dir": "flat",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall continues to experience a decline in its stock, down nearly 33% since the start of the year, despite recent announcements of progress in its U.S. combat vehicle programs and German reconnaissance drone initiatives. This follows a cut in its 2026 outlook in August after Germany canceled a frigate program. However, Deutsche Bank maintains a bullish stance with an €1,800 target, citing the draft German budget for 2027 as a strengthening investment case.",
-      "outlook": "Rheinmetall's 2026 outlook was cut in August due to the cancellation of a German frigate program, impacting its naval business. Despite this, the company aims for strong revenue and margin levels, driven by Europe's rearmament cycle.",
-      "badge": "🛡️ Hold",
+      "price": "€958.50",
+      "change": "▲ 0.22%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> Rheinmetall announced a revised 2026 sales outlook, lowering projections to €13.7 billion to €14.2 billion from the previous €14.0 billion to €14.5 billion. This adjustment follows the German government's cancellation of a significant frigate program, impacting the company's naval business by an estimated €300 million.",
+      "outlook": "Despite the revised outlook, Rheinmetall maintains its long-term naval ambitions and expects to deliver record growth, fueled by increased European defense spending.",
+      "badge": "⚠️ Hold",
       "badgeClass": "badge-hold"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$227.21",
-      "change": "▼ 0.72%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> NVIDIA announced a significant expansion of its share repurchase program, authorizing an additional $150 billion, bringing the total remaining authorization to $235 billion through fiscal 2028. This move, the largest increase in share repurchase authorization in history, signals management's confidence in future cash flow and is expected to support earnings per share.",
-      "outlook": "NVIDIA's growth is primarily driven by the ongoing shift towards AI and accelerated computing, with strong demand for its AI processors and networking products. While AI models predict limited short-term movement, the company's fundamentals remain strong with triple-digit revenue growth.",
+      "price": "$228.38",
+      "change": "▲ 0.51%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> NVIDIA's Board of Directors authorized a substantial $150 billion increase to its share repurchase program, bringing the total remaining authorization to $235 billion. This move, the largest share repurchase authorization increase in history, is expected to be executed through fiscal year 2028.",
+      "outlook": "NVIDIA's growth is being driven by a 'once-in-a-generation platform shift to AI and accelerated computing,' and the company's strong cash generation allows for continued investment in these transformative technologies while returning capital to shareholders.",
       "badge": "🚀 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$607.57",
-      "change": "▼ 0.05%",
-      "dir": "flat",
-      "news": "<strong>🔑 Today:</strong> AMD has announced the acquisition of AI model research firm World Labs for approximately $8.2 billion in an all-stock purchase. Fei-Fei Li, co-founder of World Labs and a prominent AI researcher, will join AMD as Executive Vice President and Chief Scientist. This strategic move aims to enhance AMD's capabilities in developing AI hardware, software, and systems.",
-      "outlook": "AMD's strategic acquisitions and partnerships, including its collaboration with Samsung Electronics for HBM3E high-bandwidth memory chips, are expected to drive substantial future earnings growth in the AI sector. CEO Lisa Su is also set to visit South Korea next month to deepen ties within the semiconductor industry.",
-      "badge": "💡 Buy",
+      "price": "$611.76",
+      "change": "▲ 0.69%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> AMD announced a definitive agreement to acquire World Labs, an AI model and research lab led by Dr. Fei-Fei Li, in an all-stock transaction valued at approximately $8.2 billion. This acquisition aims to strengthen AMD's ability to develop AI hardware, software, and systems by gaining deeper insight into evolving AI workloads.",
+      "outlook": "AMD anticipates strong growth through 2026, particularly in its data center business, driven by increasing demand for AI compute capacity and new product releases. Analysts are bullish, with some expecting the stock to reach $1,000 within the next 18 months.",
+      "badge": "🌟 Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$508.96",
-      "change": "▼ 0.05%",
-      "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft released its Windows 11 26H2 update, which includes a smarter File Explorer with AI productivity enhancements and new customization options for the Start menu and Taskbar. Additionally, analysts continue to view Copilot as a primary catalyst, with Jefferies reiterating a bullish view due to redesigned Copilot features and new usage-based revenue opportunities.",
-      "outlook": "Microsoft is expected to be a net beneficiary of increased AI spending, both for compute used by developers and software used by enterprises, leading to sustained earnings growth around a 20% target rate. Azure cloud revenue growth has accelerated, crossing $100 billion annually, reinforcing strong fundamentals despite significant capital expenditures.",
-      "badge": "☁️ Buy",
+      "price": "$512.90",
+      "change": "▲ 0.77%",
+      "dir": "up",
+      "news": "<strong>🔑 Today:</strong> Microsoft closed its best quarter since 1998, with shares rallying 37.5% in Q3, adding approximately $1 trillion in market value. This surge is attributed to strong Azure growth and increasing adoption of its Copilot AI offerings, easing investor concerns about heavy AI spending.",
+      "outlook": "Analysts remain broadly bullish on Microsoft, with expectations of continued revenue growth in fiscal years 2027 and 2029. The company's strategic focus on integrating AI into its enterprise security and governance frameworks, along with expanding Copilot demand, is seen as a strong catalyst.",
+      "badge": "👍 Buy",
       "badgeClass": "badge-buy"
     }
   ],
@@ -133,92 +133,92 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €128.75\nChange: ▲ 0.15%\nTER: 0.20%\nExchange: XETRA",
+      "stats": "Price: €129.21\nChange: ▲ 0.39%\nTER: 0.20%\nExchange: XETRA",
       "badge": "Hold",
       "badgeClass": "badge-hold",
-      "desc": "The iShares Core MSCI World UCITS USD ETF (EUNL.DE) tracks companies worldwide active in various sectors. It currently holds a buy signal from its short-term Moving Average, though the long-term average shows a general sell signal. The ETF has seen a slight decrease over the last day and the past 10 days.",
-      "verdict": "Given the mixed signals from moving averages, EUNL.DE is a hold for now, awaiting clearer market direction. Investors should monitor for a consistent trend."
+      "desc": "The iShares Core MSCI World UCITS ETF (EUNL.DE) aims to track the performance of the MSCI World Index, offering broad exposure to developed market equities. Today's slight gain reflects the mixed global market sentiment, with some regions showing stronger performance than others.",
+      "verdict": "This ETF remains a solid choice for long-term investors seeking diversified exposure to global developed markets. Its low expense ratio and broad market coverage make it a core portfolio holding."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €23.92\nChange: ▼ 0.37%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Watch",
-      "badgeClass": "badge-watch",
-      "desc": "The Global X Defence Tech UCITS ETF USD Accumulating (4MMR.DE) focuses on companies involved in military and defense technology. Its price has fallen over the last month and year, and technical analysis currently indicates a strong sell rating. Top holdings include Lockheed Martin Corp, BAE Systems PLC, and Northrop Grumman Corp.",
-      "verdict": "With a strong sell rating from technical analysis and recent price declines, 4MMR.DE is currently a watch. Investors should exercise caution and await signs of a turnaround."
+      "stats": "Price: €24.00\nChange: ▲ 0.40%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Hold",
+      "badgeClass": "badge-hold",
+      "desc": "The Xtrackers MSCI World UCITS ETF (4MMR.DE) also tracks the MSCI World Index, providing similar broad exposure to global developed market equities. Its performance today aligns with the overall mixed market, benefiting from positive movements in certain international markets.",
+      "verdict": "Similar to EUNL.DE, 4MMR.DE is a strong option for diversified global equity exposure. Investors should consider it for its broad market access and cost-effectiveness."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $209.30\nChange: ▲ 0.02%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Warning",
-      "badgeClass": "badge-warning",
-      "desc": "The ITA (Interim Trade Agreement) between the EU and Mercosur countries has been a subject of legal challenge, with Poland's application to suspend its provisional application rejected by the EU's highest court. Separately, ITA Airways has canceled approximately 29% of its scheduled flights today due to a nationwide air traffic control strike in Italy, causing significant travel disruptions.",
-      "verdict": "The ETF's performance is currently overshadowed by the significant disruptions caused by the Italian air traffic control strike. This creates short-term uncertainty for any related holdings."
+      "stats": "Price: $207.18\nChange: ▼ 1.01%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Watch",
+      "badgeClass": "badge-watch",
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) seeks to track an index of U.S. equities in the aerospace and defense sector, including manufacturers of commercial and military aircraft. Today's slight decline could be influenced by various factors within the defense industry, though the sector generally remains robust due to ongoing global demand.",
+      "verdict": "ITA offers targeted exposure to the U.S. aerospace and defense industry. While subject to sector-specific news, the long-term outlook for defense spending suggests continued relevance for this ETF."
     }
   ],
   "macro": [
     {
       "theme": "🤖 AI Dominance",
-      "what": "Artificial Intelligence continues to be a dominant narrative in the market, with significant investments and advancements driving growth across various sectors.",
-      "impact": "The 'AI capex boom' is a rallying cry on Wall Street, with investors viewing GenAI investments and productivity gains as key engines of growth."
+      "what": "Major tech companies like NVIDIA, AMD, and Microsoft are making significant strategic moves in the AI space, including large share repurchases and key acquisitions.",
+      "impact": "Continued strong performance and investment in the technology sector, particularly in AI, driving market enthusiasm and potentially higher valuations for companies at the forefront of AI innovation."
     },
     {
-      "theme": "🌍 Geopolitical Fragmentation",
-      "what": "Global fragmentation and geopolitical conflicts, such as the ongoing war between the US and Iran, continue to influence market dynamics and investor sentiment.",
-      "impact": "Fast-moving headlines and disruptive forces from geopolitics are creating an unsettled market environment, leading to increased volatility."
+      "theme": "🛡️ Defense Spending Shifts",
+      "what": "Germany's cancellation of a frigate program has led to a revised sales outlook for defense contractor Rheinmetall, highlighting the impact of government contract decisions on the sector.",
+      "impact": "While overall defense spending remains high globally, specific project cancellations can create short-term headwinds for individual companies. Investors should monitor government procurement news closely."
     },
     {
-      "theme": "🏛️ Policy & Regulation",
-      "what": "Policy decisions, including Fed rate cuts and government initiatives, are playing a crucial role in shaping market direction. The White House has also secured commitments from top tech companies to self-police AI development.",
-      "impact": "Monetary, fiscal, and regulatory support have reinforced the AI growth narrative, while policy risks loom and add uncertainty."
+      "theme": "📊 Q3 Earnings Season",
+      "what": "The Q3 earnings season is showing broad-based growth, with many sectors expecting higher earnings. Microsoft, for example, reported its best quarter since 1998.",
+      "impact": "Strong corporate earnings are providing a constructive backdrop for equities, suggesting underlying economic resilience despite other market uncertainties."
     },
     {
-      "theme": "✈️ Travel Disruptions",
-      "what": "A nationwide air traffic control strike in Italy has led to significant flight cancellations and disruptions, impacting travel and related industries.",
-      "impact": "This industrial action is causing immediate operational challenges for airlines and travel companies, with potential ripple effects across the European travel sector."
+      "theme": "🌍 Global Economic Data",
+      "what": "Today's economic calendar includes the U.S. ISM Manufacturing Index and Construction Spending, Japan's Unemployment Rate, and the Eurozone Unemployment Rate.",
+      "impact": "These releases provide crucial insights into manufacturing activity, labor market health, and overall economic momentum, influencing central bank policies and investor sentiment."
     },
     {
-      "theme": "📈 Inflation & Interest Rates",
-      "what": "Sticky inflation and resilient growth are expected to keep the Federal Reserve on pause regarding interest rate changes.",
-      "impact": "This environment is likely to keep Treasury yields range-bound, influencing borrowing costs and investment decisions across the economy."
+      "theme": "⛽ Energy Market Volatility",
+      "what": "Brent Oil prices saw a significant decline today.",
+      "impact": "Fluctuations in commodity prices, particularly oil, can impact inflation expectations, corporate costs, and consumer spending, potentially leading to broader market volatility."
     }
   ],
   "calendar": [
     {
-      "date": "Oct 01",
-      "event": "Discussion - Governor Lisa D. Cook",
-      "why": "Insights into global central banking and monetary policy."
+      "date": "Thu Oct 01",
+      "event": "U.S. ISM Manufacturing Index (Sep)",
+      "why": "A key indicator of the health of the manufacturing sector, providing insights into economic expansion or contraction."
     },
     {
-      "date": "Oct 01",
-      "event": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-      "why": "Observations on modernizing financial regulation."
+      "date": "Thu Oct 01",
+      "event": "U.S. Construction Spending (Aug)",
+      "why": "Reflects investment in infrastructure and real estate, offering clues about economic growth and future housing market trends."
     },
     {
-      "date": "Oct 07",
-      "event": "FOMC Minutes (September 15-16 Meeting)",
-      "why": "Detailed insights into the Federal Open Market Committee's discussions and rationale behind their latest monetary policy decisions."
+      "date": "Fri Oct 02",
+      "event": "U.S. Employment Report (Sep)",
+      "why": "A highly anticipated report on job creation, unemployment rates, and wage growth, significantly influencing Federal Reserve policy."
     },
     {
-      "date": "Oct 08",
-      "event": "AI Industry Conference in Seoul",
-      "why": "AMD CEO Lisa Su will engage with local semiconductor executives and government officials, highlighting advancements in AI technologies."
+      "date": "Mon Oct 05",
+      "event": "U.S. ISM Non-Manufacturing Composite (Sep)",
+      "why": "Provides insight into the services sector, which is a major component of the U.S. economy."
     },
     {
-      "date": "Oct 14",
-      "event": "Beige Book Release",
-      "why": "Provides anecdotal information on current economic conditions by Federal Reserve District, offering a qualitative assessment of the economy."
+      "date": "Wed Oct 07",
+      "event": "FOMC Minutes",
+      "why": "Detailed record of the Federal Open Market Committee's most recent meeting, offering insights into their economic outlook and monetary policy considerations."
     },
     {
-      "date": "Oct 27-28",
-      "event": "FOMC Meeting",
-      "why": "A key two-day meeting of the Federal Open Market Committee, where interest rate decisions and future monetary policy will be discussed."
+      "date": "Wed Oct 14",
+      "event": "U.S. CPI (Sep)",
+      "why": "The Consumer Price Index is a crucial measure of inflation, directly impacting purchasing power and central bank interest rate decisions."
     }
   ],
   "quote": {
-    "text": "Today's market environment is unsettled. Investors are navigating fast-moving headlines and disruptive forces from geopolitics to technology.",
-    "source": "J.P. Morgan, Mid-Year Outlook 2026 · September 30, 2026"
+    "text": "The key question as we enter the fourth quarter may be less about whether equities can rise and more about where to look for the next leg of returns. Strong earnings and an opportunity set that is broadening beyond AI provide a constructive setup, in our view.",
+    "source": "BlackRock Equity Market Outlook · Q4 2026"
   }
 };
