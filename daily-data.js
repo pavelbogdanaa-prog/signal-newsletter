@@ -1,131 +1,131 @@
 window.SIGNAL_DATA = {
-  "date": "Tuesday · October 20, 2026",
+  "date": "Wednesday · October 21, 2026",
   "alert": {
-    "type": "warning",
-    "icon": "⚠️",
-    "title": "AI Stocks Rebound Amidst Broader Market Caution",
-    "body": "While AI-related stocks saw a rebound on Wall Street, global markets largely declined today due to elevated oil prices and ongoing Middle East supply concerns. Investors are closely watching upcoming earnings reports for further market direction."
+    "type": "positive",
+    "icon": "🚀",
+    "title": "AI Sector Surges Amidst Broader Market Gains",
+    "body": "Global markets show a mixed but generally positive trend today, with AI and tech stocks leading the charge following strong corporate earnings and significant industry developments."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,690.73",
+      "value": "7,712.57",
       "dir": "up",
-      "arrow": "▲ 0.41%"
+      "arrow": "▲ 0.28%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,430.89",
-      "dir": "up",
-      "arrow": "▲ 1.11%"
+      "value": "26,424.82",
+      "dir": "flat",
+      "arrow": "▼ 0.02%"
     },
     {
       "label": "Dow Jones",
-      "value": "51,966.03",
-      "dir": "down",
-      "arrow": "▼ 0.07%"
+      "value": "52,495.88",
+      "dir": "up",
+      "arrow": "▲ 1.02%"
     },
     {
       "label": "DAX",
-      "value": "25,099.14",
-      "dir": "down",
-      "arrow": "▼ 0.87%"
+      "value": "25,478.98",
+      "dir": "up",
+      "arrow": "▲ 0.69%"
     },
     {
       "label": "Nikkei 225",
-      "value": "64,075.42",
-      "dir": "down",
-      "arrow": "▼ 1.30%"
+      "value": "64,621.24",
+      "dir": "up",
+      "arrow": "▲ 0.85%"
     },
     {
       "label": "Hang Seng",
-      "value": "23,867.74",
+      "value": "23,651.87",
       "dir": "down",
-      "arrow": "▼ 1.32%"
+      "arrow": "▼ 0.90%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,690.73",
-      "change": "▲ 0.41%",
+      "value": "7,712.57",
+      "change": "▲ 0.28%",
       "dir": "up"
     },
     {
       "label": "NASDAQ",
-      "value": "26,430.89",
-      "change": "▲ 1.11%",
-      "dir": "up"
+      "value": "26,424.82",
+      "change": "▼ 0.02%",
+      "dir": "flat"
     },
     {
       "label": "Dow Jones",
-      "value": "51,966.03",
-      "change": "▼ 0.07%",
-      "dir": "down"
+      "value": "52,495.88",
+      "change": "▲ 1.02%",
+      "dir": "up"
     },
     {
       "label": "DAX",
-      "value": "25,099.14",
-      "change": "▼ 0.87%",
-      "dir": "down"
+      "value": "25,478.98",
+      "change": "▲ 0.69%",
+      "dir": "up"
     },
     {
       "label": "Nikkei 225",
-      "value": "64,075.42",
-      "change": "▼ 1.30%",
-      "dir": "down"
+      "value": "64,621.24",
+      "change": "▲ 0.85%",
+      "dir": "up"
     },
     {
       "label": "Hang Seng",
-      "value": "23,867.74",
-      "change": "▼ 1.32%",
+      "value": "23,651.87",
+      "change": "▼ 0.90%",
       "dir": "down"
     }
   ],
-  "marketSummary": "Global shares were mostly lower in cautious trading today, despite a rebound in artificial intelligence-related stocks on Wall Street. Elevated oil prices, driven by uncertainty in the Middle East, continue to weigh on investor sentiment, raising concerns about inflation and business costs. Asian markets, in particular, saw significant declines, with South Korea's Kospi falling sharply. The uneven nature of the market rebound highlights investor caution ahead of a busy corporate earnings season.",
+  "marketSummary": "Today, global markets are experiencing a mixed but generally upward trend. The S&P 500 and Dow Jones are up, while the NASDAQ saw a slight dip. Asian markets showed a strong recovery in technology shares, particularly in South Korea and Japan, despite concerns over rising oil prices and Middle East energy supplies. Strong corporate earnings from companies like Equifax and Hasbro contributed to a positive sentiment on Wall Street.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,045.00",
-      "change": "▼ 1.40%",
+      "price": "€1,044.20",
+      "change": "▼ 0.93%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall is expected to see accelerated growth in its second quarter, driven by delayed deliveries of trucks and ammunition, increased production volumes, and the initial full contribution from Naval Systems. Analysts anticipate margin expansion across core defense businesses as volumes rise.",
-      "outlook": "Analysts have a consensus 'Buy' rating for RHM.DE, with an average price target indicating significant upside potential.",
-      "badge": "⬆️ Buy",
-      "badgeClass": "badge-buy"
+      "news": "<strong>🔑 Today:</strong> No specific major news catalyst was identified for RHM.DE today. The stock experienced a slight downturn, moving against the broader positive trend seen in some European indices.",
+      "outlook": "The 2026 outlook for RHM.DE remains subject to broader market conditions and company-specific developments, which were not immediately available.",
+      "badge": " neutral",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$217.09",
-      "change": "▲ 1.38%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> NVIDIA is significantly increasing its investment in Europe's AI sector, backing four German AI startups as part of a nearly $10 billion commitment across the continent. This move aligns with German Chancellor Friedrich Merz's call for businesses to embrace AI. Additionally, NVIDIA is forecasting fiscal Q3 sales of $108 billion, excluding China Data Center compute, and is directing suppliers to use TSMC's 3nm process for NVHBM base dies.",
-      "outlook": "NVIDIA maintains a consensus 'Buy' rating from analysts, with many recommending a 'Strong Buy'. Despite concerns raised by Steve Eisman regarding customer concentration risks, the stock is considered undervalued by GuruFocus.",
-      "badge": "⬆️ Strong Buy",
+      "price": "$216.47",
+      "change": "▼ 0.29%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> Nvidia announced its DSX AI Factory Platform is gaining traction in Europe, focusing on energy and water efficiency for AI infrastructure. Additionally, Nvidia, Nokia, and leading telecom operators are transforming cell towers into AI servers, with T-Mobile completing the world's first AI-RAN call on a live commercial network. Nvidia also revealed plans with supply chain partners to significantly expand global manufacturing capacity to meet the surging demand for its AI and accelerated computing platforms.",
+      "outlook": "Nvidia is expected to continue its strong growth trajectory in 2026, driven by the accelerating adoption of AI and its leadership in AI hardware and software solutions. Analysts anticipate a potential return on investment of around 2.47% for 2026.",
+      "badge": " bullish",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$538.05",
-      "change": "▲ 1.76%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD is reportedly preparing a new 'Gorgon Point' laptop chip, the Ryzen AI 7 HX 455, which features eight CPU cores and a full 16-CU integrated GPU. This leak suggests AMD is aiming to offer competitive performance in the mobile processor market. Furthermore, AMD is rumored to be bringing its Arm-based 'Soundwave' APUs to Microsoft's Surface laptops, potentially challenging Apple's MacBook Neo with competitive pricing.",
-      "outlook": "Analysts have a 'Moderate Buy' consensus rating for AMD, with a significant number recommending a 'Buy' or 'Strong Buy'. The company's elevated valuation, however, makes it sensitive to execution and earnings growth.",
-      "badge": "⬆️ Moderate Buy",
+      "price": "$534.74",
+      "change": "▼ 0.62%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> AMD confirmed that its FSR Upscaling 4.1 technology is expanding to older Radeon RX 6000 Series GPUs, select Ryzen processor families, and Xbox Series X|S consoles via a new driver update. This strategic move aims to bring the latest machine-learning upscaling to a wider range of hardware.",
+      "outlook": "AMD anticipates strong growth for 2026, fueled by the AI boom and increasing demand for its data center GPUs. Analysts have set a price target of $583.95, indicating potential for growth.",
+      "badge": " bullish",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$533.52",
-      "change": "▲ 0.84%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Microsoft's Q4 commercial remaining performance obligations reached $678 billion, with cloud revenue at $59.3 billion and Azure and cloud services revenue growing by 43% year-over-year. The company is also focusing on AI security, introducing 'Guardian Agents' as an extension of its Project Perception system to assess and manage risks across its ecosystem. Bernstein has maintained an 'Outperform' rating for Microsoft, raising its price target to $662.",
-      "outlook": "Microsoft holds a strong 'Buy' consensus rating from analysts, with a high percentage recommending a 'Strong Buy'. The company's continued growth in Azure and its substantial commercial backlog are key drivers for its positive outlook, though the returns on its significant AI spending are a point of focus.",
-      "badge": "⬆️ Strong Buy",
+      "price": "$531.87",
+      "change": "▼ 0.31%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> Microsoft is projected to announce its Q1 2027 earnings on October 28th, with analysts expecting strong results driven by Azure demand and expanding enterprise AI adoption. The company also reiterated its commitment to a $30 billion UK investment despite pulling out of a specific data center project. Microsoft is also expanding its sovereign cloud offerings due to growing data control concerns.",
+      "outlook": "Microsoft's 2026 outlook remains bullish, with its Azure cloud platform and Copilot virtual assistant central to its AI strategy. Analysts have a consensus 'Strong Buy' rating with a median 12-month price target of $555.",
+      "badge": " bullish",
       "badgeClass": "badge-buy"
     }
   ],
@@ -133,92 +133,92 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €129.98\nChange: ▼ 0.57%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Hold",
-      "badgeClass": "badge-hold",
-      "desc": "EUNL.DE, an iShares Core MSCI World UCITS ETF, provides broad exposure to global developed markets. Today's slight decline reflects the broader cautious sentiment in international markets, particularly outside of the rebounding AI sector. Investors are balancing global growth prospects against ongoing macroeconomic concerns.",
-      "verdict": "Given its diversified nature, EUNL.DE remains a solid long-term holding for investors seeking global market exposure, despite short-term fluctuations."
+      "stats": "Price: €130.73\nChange: ▲ 0.23%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Buy",
+      "badgeClass": "badge-buy",
+      "desc": "EUNL.DE, the iShares Core MSCI World UCITS ETF, aims to track the performance of the MSCI World Index, providing broad exposure to large- and mid-cap stocks from 23 developed countries. It is the largest MSCI World ETF in Europe and is known for its cost-effectiveness and reliability.",
+      "verdict": "This ETF remains a solid choice for investors seeking diversified exposure to developed global equity markets, offering a robust foundation for any portfolio."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €24.50\nChange: ▼ 1.09%\nTER: 0.50%\nExchange: XETRA",
+      "stats": "Price: €24.72\nChange: ▲ 0.24%\nTER: 0.50%\nExchange: XETRA",
       "badge": "Hold",
       "badgeClass": "badge-hold",
-      "desc": "4MMR.DE, a global aggregate bond ETF, experienced a slight downturn today. This movement is likely influenced by the rise in the 10Y Treasury yield, indicating a shift in investor preference towards higher-yielding government bonds amidst market uncertainty.",
-      "verdict": "While bond markets are reacting to interest rate movements, 4MMR.DE can still serve as a portfolio stabilizer, offering diversification against equity volatility."
+      "desc": "No specific news or detailed description for 4MMR.DE was found today. This ETF's performance generally reflects broader market trends or specific sector movements it tracks.",
+      "verdict": "Without further information, a neutral stance is advised, pending more details on its underlying holdings and recent performance drivers."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $207.76\nChange: ▼ 0.63%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "⬆️ Buy",
-      "badgeClass": "badge-buy",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) saw a slight decline today. This comes despite a generally positive outlook for the aerospace and defense industry, driven by robust secular growth and record-breaking backlogs. Analyst price targets for ITA holdings suggest potential upside.",
-      "verdict": "ITA continues to be a strong buy, supported by solid industry fundamentals and positive analyst sentiment, even with today's minor dip."
+      "stats": "Price: $206.15\nChange: ▼ 0.77%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "Watch",
+      "badgeClass": "badge-watch",
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks a market-cap-weighted index of US equities in the aerospace and defense sector. It offers targeted exposure to manufacturers of commercial and military aircraft and defense equipment.",
+      "verdict": "ITA provides a focused investment in a sector critical for national security and global transportation, making it a relevant option for those seeking industry-specific exposure."
     }
   ],
   "macro": [
     {
-      "theme": "⛽ Oil Price Volatility",
-      "what": "Brent Oil prices continue to trade above $110 a barrel, fueled by ongoing supply concerns from the Middle East.",
-      "impact": "Elevated oil prices are raising concerns about inflation and business costs globally, particularly for import-dependent economies."
+      "theme": "🤖 AI Infrastructure Boom",
+      "what": "Significant investments and advancements in AI infrastructure continue to drive growth across the tech sector, with companies like Nvidia expanding capacity and developing new platforms.",
+      "impact": "Positive for technology stocks, particularly semiconductor manufacturers and cloud service providers, but also raises concerns about capital expenditure and potential market volatility."
     },
     {
-      "theme": "🤖 AI Sector Rebound",
-      "what": "Artificial intelligence-related stocks on Wall Street experienced a rebound today, contrasting with broader market declines.",
-      "impact": "This rebound suggests continued investor confidence in the AI sector, even as other market segments face headwinds."
+      "theme": "⛽ Rising Oil Prices",
+      "what": "Brent Crude oil prices climbed today, fueling concerns about imported inflation and its impact on corporate profitability and national import bills.",
+      "impact": "Negative for industries reliant on energy, potentially leading to higher operational costs and consumer prices, but positive for energy sector stocks."
     },
     {
-      "theme": "🌍 Global Market Caution",
-      "what": "Most global stock markets, including major Asian and European indices, were lower today.",
-      "impact": "Investors are exhibiting caution due to geopolitical uncertainties and anticipation of upcoming corporate earnings reports."
+      "theme": "🌍 Global Economic Sentiment",
+      "what": "World shares are mostly higher following strong corporate earnings in the US and a recovery in Asian technology shares, indicating a generally positive, albeit mixed, global economic mood.",
+      "impact": "Supports broader market stability and investor confidence, but regional disparities and ongoing geopolitical concerns introduce an element of caution."
     },
     {
-      "theme": "🏛️ Central Bank Focus",
-      "what": "The Federal Open Market Committee (FOMC) Meeting is a significant economic event, occurring eight times a year.",
-      "impact": "These meetings are crucial for setting monetary policy, which directly influences interest rates, inflation, and overall market liquidity."
+      "theme": "☁️ Cloud and Data Sovereignty",
+      "what": "Microsoft is expanding its sovereign cloud offerings as concerns over data control and national security grow, highlighting a trend towards localized data solutions.",
+      "impact": "Creates new opportunities for cloud providers offering specialized, secure services, and may influence regulatory landscapes and international tech partnerships."
     },
     {
-      "theme": "📈 Treasury Yields Rise",
-      "what": "The 10-Year Treasury yield saw an increase today.",
-      "impact": "Rising Treasury yields can indicate investor concerns about inflation or a stronger economic outlook, potentially drawing capital away from riskier assets like stocks."
+      "theme": "🎮 Gaming and AI Integration",
+      "what": "AMD's FSR 4.1 expansion to older GPUs and Xbox consoles, alongside Microsoft's plans for next-gen Xbox, indicates a strong push for AI integration in gaming and consumer electronics.",
+      "impact": "Positive for semiconductor companies and gaming platforms, driving demand for advanced graphics and processing units, and enhancing user experience."
     }
   ],
   "calendar": [
     {
       "date": "Wed Oct 21",
-      "event": "FOMC Meeting Minutes",
-      "why": "Provides detailed insights into the Federal Reserve's monetary policy discussions and economic outlook."
+      "event": "Nvidia DSX AI Factory Platform Momentum",
+      "why": "Highlights continued innovation and adoption in the critical AI infrastructure sector."
     },
     {
-      "date": "Thu Oct 22",
-      "event": "US Jobless Claims",
-      "why": "A key indicator of labor market health, providing insights into unemployment trends."
-    },
-    {
-      "date": "Fri Oct 23",
-      "event": "Flash PMIs (US, Eurozone)",
-      "why": "Offers an early look at manufacturing and services sector activity, indicating economic momentum."
-    },
-    {
-      "date": "Mon Oct 26",
-      "event": "US Durable Goods Orders",
-      "why": "Measures new orders for long-lasting goods, reflecting manufacturing activity and business investment."
-    },
-    {
-      "date": "Tue Oct 27",
-      "event": "US Consumer Confidence",
-      "why": "Indicates consumer sentiment about the economy, which can influence spending and economic growth."
+      "date": "Wed Oct 21",
+      "event": "AMD FSR 4.1 Driver Release",
+      "why": "Expands advanced upscaling technology to a wider range of GPUs and consoles, impacting the gaming and consumer tech markets."
     },
     {
       "date": "Wed Oct 28",
-      "event": "Microsoft (MSFT) Earnings Report",
-      "why": "Microsoft's earnings will provide crucial insights into the tech sector's performance, particularly in cloud services and AI."
+      "event": "Microsoft Q1 2027 Earnings Report",
+      "why": "A key indicator for the performance of the cloud computing and AI sectors, with significant market implications."
+    },
+    {
+      "date": "Wed Oct 28",
+      "event": "Fed Rate Decision and Press Conference",
+      "why": "A major economic event that will influence interest rates and broader market sentiment."
+    },
+    {
+      "date": "Thu Oct 29",
+      "event": "ECB Rate Decision and Press Conference",
+      "why": "Crucial for European markets, impacting monetary policy and economic outlook in the Eurozone."
+    },
+    {
+      "date": "Fri Oct 30",
+      "event": "Bank of Japan Monetary Policy Meeting",
+      "why": "Will provide insights into Japan's economic direction and potentially influence Asian markets."
     }
   ],
   "quote": {
-    "text": "The most trustworthy agentic system will not be the one with the model we trust, but the one with the controls we trust.",
-    "source": "Microsoft Blog Post · October 19, 2026"
+    "text": "AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable. Now, compute is revenue.",
+    "source": "Jensen Huang, CEO of NVIDIA · October 19, 2026"
   }
 };
