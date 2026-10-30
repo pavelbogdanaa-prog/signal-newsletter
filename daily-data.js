@@ -1,131 +1,131 @@
 window.SIGNAL_DATA = {
-  "date": "Thursday · October 29, 2026",
+  "date": "Friday · October 30, 2026",
   "alert": {
-    "type": "positive",
-    "icon": "🚀",
-    "title": "Market Rallies on Strong Earnings and Fed Pause",
-    "body": "Major indices closed higher as investors digested a wave of positive Q3 earnings and the Federal Reserve's decision to hold interest rates steady. AI-driven sectors continue to show robust performance."
+    "type": "critical",
+    "icon": "⚠️",
+    "title": "Tech Sector Under Pressure",
+    "body": "Intel's disappointing earnings guidance has sent shockwaves through the semiconductor industry, dragging down major tech stocks and raising concerns about the PC market's demand outlook."
   },
   "ticker": [
     {
       "label": "S&P 500",
-      "value": "7,743.98",
-      "dir": "up",
-      "arrow": "▲ 0.28%"
+      "value": "7,720.39",
+      "dir": "down",
+      "arrow": "▼ 0.30%"
     },
     {
       "label": "NASDAQ",
-      "value": "26,549.85",
-      "dir": "up",
-      "arrow": "▲ 0.27%"
+      "value": "26,184.72",
+      "dir": "down",
+      "arrow": "▼ 1.38%"
     },
     {
       "label": "Dow Jones",
-      "value": "52,475.10",
-      "dir": "up",
-      "arrow": "▲ 0.19%"
+      "value": "52,342.56",
+      "dir": "down",
+      "arrow": "▼ 0.25%"
     },
     {
       "label": "DAX",
-      "value": "25,887.55",
-      "dir": "up",
-      "arrow": "▲ 0.71%"
+      "value": "25,841.76",
+      "dir": "down",
+      "arrow": "▼ 0.76%"
     },
     {
       "label": "Nikkei 225",
-      "value": "64,659.47",
-      "dir": "up",
-      "arrow": "▲ 1.10%"
+      "value": "63,290.11",
+      "dir": "down",
+      "arrow": "▼ 2.12%"
     },
     {
       "label": "Hang Seng",
-      "value": "22,958.65",
-      "dir": "down",
-      "arrow": "▼ 0.59%"
+      "value": "23,294.42",
+      "dir": "up",
+      "arrow": "▲ 1.46%"
     }
   ],
   "market": [
     {
       "label": "S&P 500",
-      "value": "7,743.98",
-      "change": "▲ 0.28%",
-      "dir": "up"
+      "value": "7,720.39",
+      "change": "▼ 0.30%",
+      "dir": "down"
     },
     {
       "label": "NASDAQ",
-      "value": "26,549.85",
-      "change": "▲ 0.27%",
-      "dir": "up"
+      "value": "26,184.72",
+      "change": "▼ 1.38%",
+      "dir": "down"
     },
     {
       "label": "Dow Jones",
-      "value": "52,475.10",
-      "change": "▲ 0.19%",
-      "dir": "up"
+      "value": "52,342.56",
+      "change": "▼ 0.25%",
+      "dir": "down"
     },
     {
       "label": "DAX",
-      "value": "25,887.55",
-      "change": "▲ 0.71%",
-      "dir": "up"
+      "value": "25,841.76",
+      "change": "▼ 0.76%",
+      "dir": "down"
     },
     {
       "label": "Nikkei 225",
-      "value": "64,659.47",
-      "change": "▲ 1.10%",
-      "dir": "up"
+      "value": "63,290.11",
+      "change": "▼ 2.12%",
+      "dir": "down"
     },
     {
       "label": "Hang Seng",
-      "value": "22,958.65",
-      "change": "▼ 0.59%",
-      "dir": "down"
+      "value": "23,294.42",
+      "change": "▲ 1.46%",
+      "dir": "up"
     }
   ],
-  "marketSummary": "The market displayed a positive sentiment today, with the S&P 500, NASDAQ, and Dow Jones all closing in the green. This upward momentum was largely fueled by strong third-quarter earnings reports and the Federal Reserve's decision to maintain current interest rates, signaling a pause in monetary tightening. Technology and energy sectors were notable outperformers.",
+  "marketSummary": "The broader market is experiencing a downturn today, with major indices like the S&P 500, NASDAQ, and Dow Jones all in the red. The tech sector is particularly hit hard following Intel's weak earnings outlook, which has cast a shadow over the semiconductor industry and raised concerns about future demand in the PC market. Geopolitical tensions and rising oil prices are also contributing to market uncertainty.",
   "stocks": [
     {
       "ticker": "RHM.DE",
       "name": "Rheinmetall AG · XETRA",
-      "price": "€1,034.80",
-      "change": "▲ 2.25%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> Rheinmetall AG secured a significant contract to supply Schakal wheeled infantry fighting vehicles to the German and Dutch armed forces. The order, valued in the medium three-digit million-euro range, includes 35 vehicles for Germany and 34 for the Netherlands, with deliveries expected between May 2032 and November 2033.",
-      "outlook": "Rheinmetall is strategically pivoting to become a pure-play defense company, capitalizing on increased European defense spending. Its focus on advanced armored vehicles and weaponry positions it for continued growth in the security sector.",
-      "badge": "🛡️ Defense Leader",
+      "price": "€1,036.00",
+      "change": "▼ 1.16%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> Rheinmetall AG continues to be a focal point in the defense sector, with its stock price influenced by ongoing contract activity and geopolitical developments. The company's robust order book, estimated at around €80 billion, provides strong visibility for future revenue.",
+      "outlook": "Analysts maintain a generally positive outlook for Rheinmetall in 2026, with an average price target suggesting significant upside potential, driven by sustained European defense spending.",
+      "badge": "🛡️ Buy",
       "badgeClass": "badge-buy"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corp · NASDAQ",
-      "price": "$215.38",
-      "change": "▼ 1.17%",
+      "price": "$213.66",
+      "change": "▼ 0.80%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Nvidia's stock saw a slight dip following reports of a DOJ inquiry into its proposed $12.9 billion acquisition of Hugging Face, focusing on potential impacts on AI competition. Despite this, the company announced a $3 billion investment in Meta to expand AI infrastructure partnerships, including the deployment of its Vera Rubin platform and Vera CPUs.",
-      "outlook": "Nvidia continues to be a dominant force in AI infrastructure, with expanding partnerships and new hardware offerings. However, regulatory scrutiny and increasing competition pose potential headwinds.",
-      "badge": "💡 AI Powerhouse",
-      "badgeClass": "badge-hold"
+      "news": "<strong>🔑 Today:</strong> Nvidia is reportedly in negotiations to provide substantial credit guarantees for Nscale's AI data center project, which will support Anthropic's AI operations. This strategic move underscores Nvidia's deepening involvement in the AI infrastructure ecosystem.",
+      "outlook": "Despite today's dip, Wall Street remains broadly bullish on Nvidia for the second half of 2026, anticipating continued investment in AI infrastructure and robust demand for its AI chips.",
+      "badge": "💡 Buy",
+      "badgeClass": "badge-buy"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices · NASDAQ",
-      "price": "$578.44",
-      "change": "▲ 3.24%",
-      "dir": "up",
-      "news": "<strong>🔑 Today:</strong> AMD announced a $1 billion investment in Meta's equity offering to bolster their AI infrastructure relationship, with Meta planning to deploy AMD's Helios rack-scale systems. The company also confirmed its Versal chips will remain in production until at least 2045, highlighting long-term product commitment.",
-      "outlook": "AMD is experiencing strong momentum in the data center and AI markets, underscored by its significant investment in Meta. Continued innovation and strategic partnerships are key to its growth trajectory.",
-      "badge": "📈 AI Innovator",
-      "badgeClass": "badge-buy"
+      "price": "$566.42",
+      "change": "▼ 2.08%",
+      "dir": "down",
+      "news": "<strong>🔑 Today:</strong> AMD's stock experienced a significant drop today, largely attributed to Intel's disappointing earnings guidance and concerns about a weakening PC market. Investors are keenly awaiting AMD's own quarterly earnings report on November 3rd for further clarity.",
+      "outlook": "AMD's stock forecast for 2026 remains generally favorable, with expectations of strong growth in its data center segment, although analysts anticipate elevated volatility.",
+      "badge": "📉 Hold",
+      "badgeClass": "badge-hold"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corp · NASDAQ",
-      "price": "$531.01",
-      "change": "▼ 0.06%",
+      "price": "$530.14",
+      "change": "▼ 0.16%",
       "dir": "down",
-      "news": "<strong>🔑 Today:</strong> Microsoft reported strong Q1 FY2027 results, with Microsoft Cloud revenue surpassing $63 billion and accelerating to 30% year-over-year growth. The company also announced its biggest update to Copilot, unifying various work functions into a single experience, positioning it as the 'new OS for work'.",
-      "outlook": "Microsoft's strategic focus on cloud services and AI, particularly with its enhanced Copilot offering, positions it for sustained growth. The company's robust financial performance and expanding Azure capabilities are key drivers.",
-      "badge": "☁️ Cloud Dominance",
+      "news": "<strong>🔑 Today:</strong> Microsoft reported strong fiscal Q1 revenue and adjusted earnings, exceeding analyst estimates, with Azure revenue surging. This reinforces the company's position as a leading beneficiary of enterprise AI adoption. Additionally, Microsoft plans to issue up to $25 billion in bonds to fund its AI and data center investments.",
+      "outlook": "Analysts have a positive outlook on Microsoft, with several raising price targets due to strong cloud growth, a substantial commercial backlog, and expanding Copilot and AI-agent adoption.",
+      "badge": "☁️ Strong Buy",
       "badgeClass": "badge-buy"
     }
   ],
@@ -133,92 +133,92 @@ window.SIGNAL_DATA = {
     {
       "ticker": "EUNL.DE",
       "name": "iShares Core MSCI World UCITS ETF · XETRA",
-      "stats": "Price: €131.61\nChange: ▼ 0.08%\nTER: 0.20%\nExchange: XETRA",
-      "badge": "Global Diversification",
-      "badgeClass": "badge-buy",
-      "desc": "The iShares Core MSCI World UCITS USD ETF (EUNL.DE) offers broad exposure to global equities, tracking the MSCI World Index. It aims to provide investors with diversification across developed markets worldwide.",
-      "verdict": "With a positive technical score and a history of upward price movement since September, EUNL.DE remains a compelling option for investors seeking diversified global equity exposure."
+      "stats": "Price: €129.90\nChange: ▼ 1.19%\nTER: 0.20%\nExchange: XETRA",
+      "badge": "Hold",
+      "badgeClass": "badge-hold",
+      "desc": "EUNL.DE, an iShares Core MSCI World UCITS ETF, aims to track the performance of global developed markets. Today's decline reflects the broader negative sentiment across major global indices, including the S&P 500, NASDAQ, and Nikkei 225.",
+      "verdict": "Given the current global market volatility, EUNL.DE remains a solid long-term holding for diversified exposure, but short-term fluctuations are to be expected."
     },
     {
       "ticker": "4MMR.DE",
       "name": "Global X Defense Tech UCITS ETF · XETRA",
-      "stats": "Price: €25.95\nChange: ▲ 1.37%\nTER: 0.50%\nExchange: XETRA",
-      "badge": "Defense Tech Exposure",
-      "badgeClass": "badge-watch",
-      "desc": "The Global X Defence Tech UCITS ETF (4MMR.DE) focuses on companies involved in the defense technology sector. It aims to capture growth opportunities arising from increased global defense spending and technological advancements in the industry.",
-      "verdict": "While the ETF shows signs of a short-term bounce, the underlying trend remains downward. Investors should await a clearer trend reversal before considering an entry."
+      "stats": "Price: €26.20\nChange: ▼ 0.38%\nTER: 0.50%\nExchange: XETRA",
+      "badge": "Hold",
+      "badgeClass": "badge-hold",
+      "desc": "4MMR.DE, a global aggregate bond ETF, is experiencing a slight dip today. This could be influenced by the broader market's cautious mood and a slight decrease in the 10-year Treasury yield.",
+      "verdict": "In a volatile market, bond ETFs like 4MMR.DE can offer some stability, but investors should monitor interest rate movements closely."
     },
     {
       "ticker": "ITA",
       "name": "iShares U.S. Aerospace & Defense ETF · NYSE Arca",
-      "stats": "Price: $207.74\nChange: ▲ 0.74%\nTER: 0.42%\nExchange: NYSE Arca",
-      "badge": "Aerospace & Defense",
+      "stats": "Price: $214.30\nChange: ▲ 3.16%\nTER: 0.42%\nExchange: NYSE Arca",
+      "badge": "✈️ Buy",
       "badgeClass": "badge-buy",
-      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) tracks U.S. companies in the aerospace and defense sector, including manufacturers of commercial and military aircraft. It holds significant positions in GE Aerospace and RTX.",
-      "verdict": "The ETF is well-positioned to benefit from ongoing geopolitical tensions and increased defense spending, maintaining a 'Moderate Buy' rating from analysts."
+      "desc": "The iShares U.S. Aerospace & Defense ETF (ITA) is showing positive movement today. This ETF tracks U.S. equities in the aerospace and defense sector, including manufacturers of commercial and military aircraft. A forward stock split for ITA was filed on October 5, 2026, with the record date set for November 3, 2026, and split-adjusted trading beginning on November 5, 2026.",
+      "verdict": "The aerospace and defense sector appears resilient, and the upcoming stock split may generate additional investor interest."
     }
   ],
   "macro": [
     {
-      "theme": "🤖 AI Investment Boom",
-      "what": "Significant capital is being invested in data centers, semiconductors, and related infrastructure to support the growing demand for AI computing capacity. Major tech companies are projecting substantial increases in capital spending for AI and data center infrastructure.",
-      "impact": "Drives economic growth, boosts semiconductor and hardware demand, and creates opportunities across various technology sectors."
+      "theme": "🤖 AI Infrastructure Spending",
+      "what": "Major technology companies are increasingly investing heavily in AI infrastructure, including data centers and advanced chips. This is driving significant capital expenditures across the industry.",
+      "impact": "Positive for semiconductor companies and cloud service providers, but raises concerns about the sustainability and returns of these massive investments for some tech giants."
     },
     {
-      "theme": "📈 Resilient Economic Growth",
-      "what": "The U.S. economy continues to show resilience, with Q3 GDP growth accelerating. Consumer spending and business investment, particularly in AI, are key drivers, although higher interest rates and inflation present challenges.",
-      "impact": "Supports corporate earnings and stock market performance, but sustained inflation could lead to tighter monetary policy."
+      "theme": "💻 PC Market Weakness",
+      "what": "Intel's disappointing earnings guidance highlighted a weakening demand outlook for the personal computer (PC) market, with inventory corrections expected to extend into the first half of 2027.",
+      "impact": "Negative for semiconductor companies heavily reliant on PC sales, leading to downward pressure on stock prices in the sector."
     },
     {
-      "theme": "🏦 Fed Holds Rates Steady",
-      "what": "The Federal Reserve has decided to keep its benchmark interest rate unchanged, signaling a pause in monetary tightening. This decision was influenced by a combination of moderating inflation and a desire to assess the impact of previous rate hikes.",
-      "impact": "Reduces borrowing costs for businesses and consumers, potentially boosting investment and spending, and providing a tailwind for equity markets."
+      "theme": "🌍 Geopolitical Tensions",
+      "what": "Ongoing geopolitical events, such as the conflict in Ukraine and political developments in other regions, continue to create uncertainty in global markets.",
+      "impact": "Contributes to overall market volatility and can impact specific sectors like defense, depending on the nature of the developments."
     },
     {
-      "theme": "⚡ Geopolitical Tensions & Energy Markets",
-      "what": "Ongoing conflicts in the Middle East and Ukraine continue to impact global energy markets, with higher shipping costs and reduced refining capacity contributing to price pressures, especially ahead of winter.",
-      "impact": "Contributes to inflationary pressures, particularly in energy prices, and creates volatility in commodity markets. May also influence defense sector spending."
+      "theme": "🏛️ Central Bank Decisions",
+      "what": "Upcoming interest rate decisions from major central banks, including the Federal Reserve and the European Central Bank, are closely watched by investors.",
+      "impact": "These decisions can significantly influence market sentiment, borrowing costs, and overall economic growth prospects."
     },
     {
-      "theme": "⚖️ Regulatory Scrutiny in Tech",
-      "what": "Increased attention from regulatory bodies, such as the DOJ's inquiry into Nvidia's proposed acquisition of Hugging Face, highlights potential antitrust concerns in the rapidly evolving AI landscape.",
-      "impact": "Can create uncertainty and potential deal risks for major tech companies, influencing stock performance and strategic decisions."
+      "theme": "📈 Inflation Concerns",
+      "what": "Inflation reports, such as the US CPI, remain a key economic indicator that can influence central bank policy and consumer spending.",
+      "impact": "Higher-than-expected inflation could lead to more aggressive monetary tightening, potentially dampening economic growth and market performance."
     }
   ],
   "calendar": [
     {
-      "date": "Thu Oct 29",
-      "event": "U.S. Personal Income & Spending",
-      "why": "Provides insights into consumer behavior and inflation trends."
+      "date": "Mon Nov 03",
+      "event": "AMD Earnings Report",
+      "why": "Investors will be closely watching AMD's quarterly results and outlook for insights into the semiconductor industry and PC market, especially after Intel's recent guidance."
     },
     {
-      "date": "Thu Oct 29",
-      "event": "U.S. GDP (3Q Advance)",
-      "why": "Key indicator of economic growth and health."
+      "date": "Mon Nov 03",
+      "event": "ITA ETF Forward Stock Split Record Date",
+      "why": "This is the record date for the iShares U.S. Aerospace & Defense ETF (ITA) forward stock split, which will be effectuated after the close of trading on November 4, 2026."
     },
     {
-      "date": "Thu Oct 29",
-      "event": "ECB Meeting",
-      "why": "Decision on interest rates and monetary policy for the Eurozone."
+      "date": "Tue Nov 04",
+      "event": "ITA ETF Forward Stock Split Effectuated",
+      "why": "The forward stock split for ITA will take effect after market close, with shares beginning to trade on a split-adjusted basis the following day."
     },
     {
-      "date": "Fri Oct 30",
-      "event": "U.S. Employment Cost Index (3Q)",
-      "why": "Measures changes in labor costs, a key inflation component."
+      "date": "Wed Nov 05",
+      "event": "ITA ETF Split-Adjusted Trading Begins",
+      "why": "Shares of the iShares U.S. Aerospace & Defense ETF (ITA) will begin trading on a split-adjusted basis."
     },
     {
-      "date": "Fri Oct 30",
-      "event": "Chicago PMI (Oct)",
-      "why": "Indicates manufacturing activity in the region."
+      "date": "Mon Nov 17",
+      "event": "Nvidia Fiscal Q3 2027 Earnings Report",
+      "why": "Nvidia is expected to report its fiscal third-quarter results, with analysts anticipating strong earnings and revenue, particularly from its data center segment."
     },
     {
-      "date": "Fri Oct 30",
-      "event": "Canada GDP (Aug)",
-      "why": "Measures economic growth in Canada."
+      "date": "Thu Oct 30",
+      "event": "Bank of Japan Rate Decision",
+      "why": "The Bank of Japan's monetary policy decision can impact global currency markets and investor sentiment, particularly in Asia."
     }
   ],
   "quote": {
-    "text": "The biggest risk is not taking a risk... In a world that is changing really quickly, the only strategy that is guaranteed to fail is not taking risks.",
-    "source": "Mark Zuckerberg, CEO of Meta · October 29, 2026"
+    "text": "The stock market is a device for transferring money from the impatient to the patient.",
+    "source": "Warren Buffett"
   }
 };
